@@ -1,5 +1,4 @@
-Your Task, Should You Accept It
-===============================
+# Your Task, Should You Accept It
 
 To show your ability and interest and stuff, we want you to tackle a simple task to show you've got moxie.
 
@@ -17,15 +16,16 @@ The button to do so is on the home page of the repo, in the top right,
 so that's not too hard if you're logged in.
 
 You're then going to need to get it on your computer.
-You'll want a basic understanding of git, I'm afraid.
+You'll want a basic understanding of *git*, I'm afraid.
 There are plenty of places on the Internet to get that information,
 you'll want to check some out. GitHub has some!
 
-You might like this?
+You might like these?
 
-https://speakerdeck.com/nrrrdcore/github-for-designers
+* https://speakerdeck.com/nrrrdcore/github-for-designers
+* https://help.github.com/
 
-h2. The Goal
+### The Goal
 
 Your goal it to make a basic one-page website at `index.html` that demonstrates the following.
 
@@ -45,7 +45,7 @@ and what problems you encountered.
 This stuff is never super easy! Just document your thoughts and put them in the notes when you
 submit the pull request. That will help me get an idea of where you're at with this stuff.
 
-h2. Why the hassle?
+### Why the hassle?
 
 This really is going to help me get an idea of where your at. Honest.
 We really don't expect that you're an expert already or anything,
