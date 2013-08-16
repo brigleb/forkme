@@ -36,6 +36,10 @@ Your goal it to make a basic one-page website at `index.html` that demonstrates 
 5. Uses a tasteful pairing of two Google Web Fonts.
 6. Uses Compass/SASS in an intellgent way.
 
+If you want inspiration, refer to these fantastic images in the slide show.
+
+http://www.fastcodesign.com/1673137/check-out-these-vintage-rock-posters-remixed-with-swiss-modernism
+
 Once you're done, send a **pull request** to me. Here's the basics.
 
 https://help.github.com/articles/creating-a-pull-request
