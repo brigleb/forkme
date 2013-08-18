@@ -29,23 +29,22 @@ You might like these?
 
 Answer the following questions about yourself, your work, and why you'd like to join the team at Needmore:
 
-1.  {Question 1}
-2.  {Question 2}
-3.  {Question 3}
-4.  Etc...
+1. What is your favorite WordPress function? Why?
+2. Name three good reasons to start a branch in a version control system.
+3. Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?
+4. What is your favorite project that you've done? (include link and/or image)
+5. Look at our portfolio and find something we've built that could be improved. Suggest how.
 
 And submit your answers in the form of a basic one-page website at `index.html` that demonstrates the following
 
 1. Has a vertically centered block of content with a tasteful page background.
 2. Has a title across the top of that block.
-3. Below that, has a row of three equally-sized images.
-4. Below that, has a nice big link button.
-5. Uses a tasteful pairing of two Google Web Fonts.
-6. Uses Compass/SASS in an intellgent way.
+3. Below that, answer the above 5 questions in an attractive way.
+4. Uses a tasteful pairing of two Google Web Fonts.
+5. Uses Compass/SASS in an intellgent way.
 
-If you want inspiration, refer to these fantastic images in the slide show.
-
-http://www.fastcodesign.com/1673137/check-out-these-vintage-rock-posters-remixed-with-swiss-modernism
+Please use this project to express your own sense of style, ability to code well, and a little bit of creativity.
+Assume that we'll dissect your code and discuss it during our interviews, if we get to that point!
 
 Once you're done, send a **pull request** to me. Here's the basics.
 
