@@ -27,7 +27,14 @@ You might like these?
 
 ### The Goal
 
-Your goal it to make a basic one-page website at `index.html` that demonstrates the following.
+Answer the following questions about yourself, your work, and why you'd like to join the team at Needmore:
+
+1.  {Question 1}
+2.  {Question 2}
+3.  {Question 3}
+4.  Etc...
+
+And submit your answers in the form of a basic one-page website at `index.html` that demonstrates the following
 
 1. Has a vertically centered block of content with a tasteful page background.
 2. Has a title across the top of that block.
