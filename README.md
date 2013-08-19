@@ -37,13 +37,13 @@ And submit your answers in the form of a basic one-page website at `index.html` 
 2. Has a title across the top of that block.
 3. Below that, answer the above 5 questions in an attractive way.
 4. Uses a tasteful pairing of two Google Web Fonts.
-5. Uses Compass/SASS in an intellgent way.
+5. Uses Compass/SASS in an intelligent way.
 
 Please use this project to express your own sense of style, ability to code well, and a little bit of creativity.
 Assume that we'll dissect your code and discuss it during our interviews, if we get to that point!
 
 Once you're done, send a **pull request** to me.
-(Here's the basics.)[https://help.github.com/articles/creating-a-pull-request]
+[Here's the basics.](https://help.github.com/articles/creating-a-pull-request)
 
 When you send that pull request, give me an idea of how long the work took you
 and what problems you encountered.
