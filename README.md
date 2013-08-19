@@ -2,14 +2,10 @@
 
 To show your ability and interest and stuff, we want you to tackle a simple task to show you've got moxie.
 
-What we want you to do is build a single-page website based on the Compass framework.
-
-http://compass-style.org/
-
-Your first challenge might well be getting Compass working, but there are instructions on that website.
+What we want you to do is build a single-page website based on the [Compass framework](http://compass-style.org/).
+Your first challenge might well be getting Compass working,
+but there are [instructions](http://compass-style.org/install/) on the website.
 Especially helpful if you're on a Mac and are a bit savvy with Terminal.
-
-http://compass-style.org/install/
 
 You will want to **fork** this here repository from GitHub, and get it on your computer.
 The button to do so is on the home page of the repo, in the top right,
@@ -46,9 +42,8 @@ And submit your answers in the form of a basic one-page website at `index.html` 
 Please use this project to express your own sense of style, ability to code well, and a little bit of creativity.
 Assume that we'll dissect your code and discuss it during our interviews, if we get to that point!
 
-Once you're done, send a **pull request** to me. Here's the basics.
-
-https://help.github.com/articles/creating-a-pull-request
+Once you're done, send a **pull request** to me.
+(Here's the basics.)[https://help.github.com/articles/creating-a-pull-request]
 
 When you send that pull request, give me an idea of how long the work took you
 and what problems you encountered.
