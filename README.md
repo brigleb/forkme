@@ -6,6 +6,7 @@ What we want you to do is build a single-page website based on the [Compass fram
 Your first challenge might well be getting Compass working,
 but there are [instructions](http://compass-style.org/install/) on the website.
 Especially helpful if you're on a Mac and are a bit savvy with Terminal.
+There's also a [Mac app](http://mhs.github.io/scout-app/) you could try.
 
 You will want to **fork** this here repository from GitHub, and get it on your computer.
 The button to do so is on the home page of the repo, in the top right,
@@ -29,13 +30,13 @@ Answer the following questions about yourself, your work, and why you'd like to 
 2. Name three good reasons to start a branch in a version control system.
 3. Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?
 4. What is your favorite project that you've done? (include link and/or image)
-5. Look at our portfolio and find something we've built that could be improved. Suggest how.
+5. Look at our portfolio and find something we've built that could be improved. Suggest how!
 
 And submit your answers in the form of a basic one-page website at `index.html` that demonstrates the following
 
 1. Has a vertically centered block of content with a tasteful page background.
 2. Has a title across the top of that block.
-3. Below that, answer the above 5 questions in an attractive way.
+3. Below that, answers the above 5 questions in an attractive way.
 4. Uses a tasteful pairing of two Google Web Fonts.
 5. Uses Compass/SASS in an intelligent way.
 
