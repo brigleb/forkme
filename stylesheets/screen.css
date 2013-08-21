@@ -78,7 +78,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   color: #333333;
   background: #aaaaaa;
-  font-family: 'Noto Serif', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-size: 16pt;
   line-height: 24pt;
 }
@@ -95,62 +95,36 @@ body {
   box-shadow: 0px 0px 5px blue;
 }
 
-/* */
-/* line 37, ../sass/screen.scss */
+/* line 25, ../sass/screen.scss */
 ol {
-  counter-reset: li;
-  /* Initiate a counter */
+  list-style-type: decimal;
+  margin-left: 40px;
+}
+/* line 28, ../sass/screen.scss */
+ol li {
+  margin: 0 0 10px 0;
+}
+/* line 30, ../sass/screen.scss */
+ol li:last-child {
+  margin: 0;
+}
+
+/* line 36, ../sass/screen.scss */
+ul.main-list {
+  background-color: #f6f6f6;
+  margin: 0 20px;
 }
 
 /* line 41, ../sass/screen.scss */
-ol > li {
-  position: relative;
-  /* Create a positioning context */
-  margin: 0 0 0 40px;
-  /* Give each list item a left margin to make room for the numbers */
-  list-style: none;
-  /* Disable the normal item numbering */
-  background: #f6f6f6;
-}
-
-/* line 48, ../sass/screen.scss */
 ul.main-list > li {
-  margin: 20px 20px 20px 40px;
   padding: 15px;
+  margin: 20px 0;
+  -webkit-border-radius: 16px 16px;
+  -moz-border-radius: 16px / 16px;
+  border-radius: 16px / 16px;
 }
 
-/* line 53, ../sass/screen.scss */
-ol > li:before {
-  content: counter(li);
-  /* Use the counter as content */
-  counter-increment: li;
-  /* Increment the counter by 1 */
-  /* Position and style the number */
-  position: absolute;
-  top: 0;
-  left: -40px;
-  /* Some space between the number and the content in browsers that support
-     generated content but not positioning it (Camino 2 is one example) */
-  margin-right: 8px;
-  padding: 4px;
-  font-weight: bold;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  text-align: center;
-}
-
-/* line 70, ../sass/screen.scss */
-li ol,
-li ul {
-  margin-top: 6px;
-}
-
-/* line 71, ../sass/screen.scss */
-ol ol li:last-child {
-  margin-bottom: 0;
-}
-
-/**/
-/* line 75, ../sass/screen.scss */
+/* line 47, ../sass/screen.scss */
 .odd {
   background-color: #dddddd;
 }
@@ -158,7 +132,7 @@ ol ol li:last-child {
 /*
 Helpers
 */
-/* line 82, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 .center-text {
   text-align: center;
 }
