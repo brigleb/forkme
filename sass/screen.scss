@@ -45,7 +45,7 @@ ol > li {
     background:#f6f6f6;
 }
 
-ol.main-list > li {
+ul.main-list > li {
 	margin: 20px 20px 20px 40px;
 	padding: 15px;
 }
@@ -61,15 +61,9 @@ ol > li:before {
        generated content but not positioning it (Camino 2 is one example) */
     margin-right:8px;
     padding:4px;
-    background:lightblue;
     font-weight:bold;
     font-family:"Helvetica Neue", Arial, sans-serif;
     text-align:center;
-}
-
-ol.main-list > li:before {
-	font-size: 30pt;
-	padding: 0px 10px;
 }
 
 li ol,
