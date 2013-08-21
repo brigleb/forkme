@@ -3,4 +3,90 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+@import "_base.scss";
+
+body {
+	color: $font-color;
+	background: $background;
+	font-family: 'Noto Serif', sans-serif;
+	font-size: 16pt;
+	line-height: 24pt;
+}
+
+.container {
+	width: 90%;
+	max-width: 960px;
+	margin: 3% auto;
+	background: white;
+	padding: 30px;
+	@include box-shadow(0px 0px 5px blue);
+}
+
+// ol.main-list > li:before { 
+//         content:counter(li);
+//     	counter-increment:li; 
+//         background-color: blue;
+//         margin-right: 15px;
+//         padding: 10px;
+//     }
+
+
+ /* */
+
+
+ol {
+    counter-reset:li; /* Initiate a counter */
+}
+
+ol > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 0 40px; /* Give each list item a left margin to make room for the numbers */
+    list-style:none; /* Disable the normal item numbering */
+    background:#f6f6f6;
+}
+
+ol.main-list > li {
+	margin: 20px 20px 20px 40px;
+	padding: 15px;
+}
+
+ol > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:0;
+    left:-40px;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    background:lightblue;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+
+ol.main-list > li:before {
+	font-size: 30pt;
+	padding: 0px 10px;
+}
+
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+ /**/
+
+.odd {
+	background-color: #dddddd;
+}
+
+/*
+Helpers
+*/
+.center-text {
+	text-align: center;
+}
+
+@import "_typography.scss";
