@@ -31,40 +31,76 @@
         </div>
     </header>
 
-    <div class="container">
 
         <section id="the-goal">
-            <p id="question"></p>
-            <p id="answer"></p>
+            <div class="container">
+                <div id="question"><p></p></div>
+                <div id="answer"></div>
+            </div><!-- /.container -->
         </section>
 
         <section id="favorite-function">
-            <p id="question">What is your favorite WordPress function? Pourquoi?</p>
-            <p id="answer"></p>
+            <div class="container">
+                <div id="question"><p>What is your favorite WordPress function? Pourquoi?</p></div>
+                <div id="answer">
+                    <p><a href="http://codex.wordpress.org/Shortcode_API" target="_blank">Shortcodes</a>, which I guess techinally is more of an API than a function or method.  Would you accept <code>do_shortcode()</code>?  Honestly, I'm not a Wordpress expert, so I don't have a lot of experience to draw from to offer a true favorite.  It's exposure really.  I've built apps using other frameworks like <a href="http://www.magentocommerce.com/" target="_blank">Magento Commerce</a>, <a href="http://ellislab.com/codeigniter" target="_blank">CodeIgniter</a>, and <a href="http://laravel.com/" target="_blank">Laravel</a>.</p>
+                    <p>I'm not completely inexperienced with Wordpress however.  I maintain several Wordpress installations, but they are mostly default installs using well supported plugins.  My exposure to shortcodes has been through plugins I've used like Gravity Forms and Event Espresso.  It is a wonderful way to expose a tool to a website administrator without having her build complex HTML, or worse, handle PHP script through a form input.  As a matter of fact, I was inspired by this concept enough to build my own code shorthand PHP helpers that I use in most of my apps.</p>
+                </div>
+            </div><!-- /.container -->
         </section>
 
         <section id="why-branch">
-            <p id="question">Name three good reasons to start a branch in a version control system.</p>
-            <p id="answer"></p>
+            <div class="container">
+                <div id="question"><p>Name three good reasons to start a branch in a version control system.</p></div>
+                <div id="answer">
+                    <ol>
+                        <li>Branches keep your sandbox work out of your stable codebase.</li>
+                        <li>With branches, participants produce a cleaner more logical workflow.</li>
+                        <li>It is far easy to merge distributed code from multiple developers using branches.</li>
+                        <li>Hard drives die and a <a href="http://en.wikipedia.org/wiki/Distributed_version_control_system" target="_blank">DVCS</a> is an excellent backup.</li>
+                        <li>People leave companies and version control allows those companies to keep the code.</li>
+                    </ol>
+                    <p><b>Full Disclosure:</b> I have taken the lazy path before and started work on a small feature within the stable branch of an application. At just about the point of no return, I found myself scrambling to put fix a bug on that same branch.  I had to copy directories, roll back code, fix the bug and try to piece it all together after. The lesson was learned.</p>
+                </div>
+            </div><!-- /.container -->
         </section>
 
         <section id="css-or-js">
-            <p id="question">Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</p>
-            <p id="answer"></p>
+            <div class="container">
+                <div id="question"><p>Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</p></div>
+                <div id="answer">
+                    <p>CSS is almost always better supported on browsers (and more difficult to disable).  CSS loads faster than Javascript, which is why all the cool kids load their JS at the end of their HTML.  Many Javascript animations also require jQuery and some assortment of plugins which can be difficult to maintain.  For most modern browsers I would imagine the difference to be negligible, but CSS animation requires a browser that can understand properties like <code>@keyframe</code> or <code>animation</code>.  Sorry IE9.</p>
+                </div>
+            </div><!-- /.container -->
         </section>
 
         <section id="favorite-project">
-            <p id="question">What is your favorite project that you've done?</p>
-            <p id="answer"></p>
+            <div class="container">
+                <div id="question"><p>What is your favorite project that you've done?</p></div>
+                <div id="answer">
+                    <p>Hands down the <a href="http://store.oetc.org/" target="_blank">OETC Consortium Store</a>.  The evolution of this monster has been a labour of love.  It has gone through 3 major iterations on the front end, and countless updates under the hood.</p>
+                </div>
+                <div class="image-block">
+                    <span class="polaroid">
+                        <img src="assets/img/store.png" alt="OETC Store">
+                    </span>
+                    <span class="polaroid">
+                        <img src="assets/img/owa.png" alt="OETC Web Admin">
+                    </span>
+                </div>
+            </div><!-- /.container -->
         </section>
 
-        <section id="akwardly-suggest-future-employer-how-to-improve-their-stuff">
-            <p id="question">Look at our portfolio and find something we've built that could be improved. Suggest how!</p>
-            <p id="answer"></p>
+        <section id="akwardly-suggest-future-employer-how-to-improve">
+            <div class="container">
+                <div id="question"><p>Look at our portfolio and find something we've built that could be improved. Suggest how!</p></div>
+                <div id="answer">
+                    <p>Ok, so this is like one of those "do I look fat in these jeans" type questions... should be fun.</p>
+                    <p>First of all I love many of the Needmore projects.  Take <a href="http://equalityhouse.org/">http://equalityhouse.org/</a> for example.  Beautiful flat design.  Very responsive. And it's rocking the Proxima Nova!</p>
+                    <p><a href="http://www.cookeortho.com/">Cooke Orthodontics</a> stood out to me as a site that could use some decluttering.  The header block seems a little overwhelming to me.  I think I counted over a dozen links in the first 90 pixels, not counting the dropdowns.  I would be curious what analytics told us about how Cooke Ortho's customers used them.  Maybe they could be culled down in the small form media queries.  Also, the site when viewed on a smaller screen has quirkieness when the menu expands.  Again, it's a long list, but it displays on the bottom of the page at first and then expands on the top and disappears on the bottom.</p>
+                </div>
+            </div><!-- /.container -->
         </section>
-
-
-    </div><!-- /.container -->
 
     <!-- start js -->
     <!-- end js -->
