@@ -11,6 +11,10 @@ body {
 	font-size: 14pt;
 	line-height: 20pt;
 	font-weight: 300;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 12pt;
+		line-height: 18pt;
+	}
 }
 
 .container {
@@ -21,6 +25,10 @@ body {
 	background-color: rgba(#000, 0.3);
 	border: 30px rgba(#000, 0.3) solid;
 	@include border-radius($roundcorners);
+	@media screen and (max-width: $breakpoint) {
+		border: 10px rgba(#000, 0.3) solid;
+		padding: 10px;
+	}
 }
 
 header#main {
@@ -40,11 +48,17 @@ ol {
 
 ul.main-list {
 	margin: 0 20px;
+	@media screen and (max-width: $breakpoint) {
+		margin: 0 10px;
+	}
 	> li {
 		padding: 25px;
 		margin: 30px 0;
 		background-color: rgba($questionbg, 0.7);
 		@include border-radius($roundcorners);
+		@media screen and (max-width: $breakpoint) {
+			padding: 15px;
+		}
 	}
 }
 

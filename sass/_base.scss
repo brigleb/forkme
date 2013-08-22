@@ -9,6 +9,8 @@ $bodyfont: "Oxygen", sans-serif;
 $questionbg: #2B2E30;
 /*Units*/
 $roundcorners: 10px;
+/*Responsive*/
+$breakpoint: 720px;
 
 @import "compass/reset";
 @import "compass/css3";

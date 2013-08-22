@@ -5,14 +5,22 @@ h1, h2, h3 {
 	color: $headingtext;
 }
 
-h1 {
+header h1 {
 	font-size: 45pt;
 	line-height: 50pt;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 35pt;
+		line-height: 40pt;
+	}
 }
 
 h2 {
 	font-size: 30pt;
 	line-height: 34pt;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 25pt;
+		line-height: 30pt;
+	}
 }
 
 h3 {
@@ -20,6 +28,10 @@ h3 {
 	font-weight: 500;
 	line-height: 28pt;
 	margin: 5px 0;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 17pt;
+		line-height: 23pt;
+	}
 }
 
 p {

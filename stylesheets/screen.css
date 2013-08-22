@@ -5,6 +5,7 @@
 /*Text*/
 /*Divs, etc*/
 /*Units*/
+/*Responsive*/
 /* line 17, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -70,14 +71,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 16, ../sass/_base.scss */
+/* line 18, ../sass/_base.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 22, ../sass/_base.scss */
+/* line 24, ../sass/_base.scss */
 html {
   background: black url(../img/background.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -86,7 +87,7 @@ html {
   background-size: cover;
 }
 
-/* line 30, ../sass/_base.scss */
+/* line 32, ../sass/_base.scss */
 img {
   max-width: 100%;
 }
@@ -99,8 +100,15 @@ body {
   line-height: 20pt;
   font-weight: 300;
 }
+@media screen and (max-width: 720px) {
+  /* line 8, ../sass/screen.scss */
+  body {
+    font-size: 12pt;
+    line-height: 18pt;
+  }
+}
 
-/* line 16, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 .container {
   width: 90%;
   max-width: 960px;
@@ -114,31 +122,44 @@ body {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
+@media screen and (max-width: 720px) {
+  /* line 20, ../sass/screen.scss */
+  .container {
+    border: 10px rgba(0, 0, 0, 0.3) solid;
+    padding: 10px;
+  }
+}
 
-/* line 26, ../sass/screen.scss */
+/* line 34, ../sass/screen.scss */
 header#main {
   margin-bottom: 30px;
 }
 
-/* line 30, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 ol {
   list-style-type: decimal;
   margin-left: 40px;
 }
-/* line 33, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 ol li {
   margin: 0 0 10px 0;
 }
-/* line 35, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 ol li:last-child {
   margin: 0;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 ul.main-list {
   margin: 0 20px;
 }
-/* line 43, ../sass/screen.scss */
+@media screen and (max-width: 720px) {
+  /* line 49, ../sass/screen.scss */
+  ul.main-list {
+    margin: 0 10px;
+  }
+}
+/* line 54, ../sass/screen.scss */
 ul.main-list > li {
   padding: 25px;
   margin: 30px 0;
@@ -149,8 +170,14 @@ ul.main-list > li {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
+@media screen and (max-width: 720px) {
+  /* line 54, ../sass/screen.scss */
+  ul.main-list > li {
+    padding: 15px;
+  }
+}
 
-/* line 51, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 footer {
   width: 100%;
   color: #bfbfbf;
@@ -160,7 +187,7 @@ footer {
 /*
 Helpers
 */
-/* line 60, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 .center-text {
   text-align: center;
 }
@@ -174,44 +201,65 @@ h1, h2, h3 {
 }
 
 /* line 8, ../sass/_typography.scss */
-h1 {
+header h1 {
   font-size: 45pt;
   line-height: 50pt;
 }
+@media screen and (max-width: 720px) {
+  /* line 8, ../sass/_typography.scss */
+  header h1 {
+    font-size: 35pt;
+    line-height: 40pt;
+  }
+}
 
-/* line 13, ../sass/_typography.scss */
+/* line 17, ../sass/_typography.scss */
 h2 {
   font-size: 30pt;
   line-height: 34pt;
 }
+@media screen and (max-width: 720px) {
+  /* line 17, ../sass/_typography.scss */
+  h2 {
+    font-size: 25pt;
+    line-height: 30pt;
+  }
+}
 
-/* line 18, ../sass/_typography.scss */
+/* line 26, ../sass/_typography.scss */
 h3 {
   font-size: 22pt;
   font-weight: 500;
   line-height: 28pt;
   margin: 5px 0;
 }
+@media screen and (max-width: 720px) {
+  /* line 26, ../sass/_typography.scss */
+  h3 {
+    font-size: 17pt;
+    line-height: 23pt;
+  }
+}
 
-/* line 25, ../sass/_typography.scss */
+/* line 37, ../sass/_typography.scss */
 p {
   padding: 15px 0;
 }
-/* line 27, ../sass/_typography.scss */
+/* line 39, ../sass/_typography.scss */
 p:last-child {
   padding: 0;
 }
-/* line 30, ../sass/_typography.scss */
+/* line 42, ../sass/_typography.scss */
 p:only-of-type {
   padding: 15px 0;
 }
 
-/* line 35, ../sass/_typography.scss */
+/* line 47, ../sass/_typography.scss */
 a {
   text-decoration: none;
   color: #91caf2;
 }
-/* line 38, ../sass/_typography.scss */
+/* line 50, ../sass/_typography.scss */
 a:hover {
   color: #8fa5b5;
   text-shadow: 1px 1px 3px #111111;
@@ -221,19 +269,19 @@ a:hover {
   transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
 }
 
-/* line 45, ../sass/_typography.scss */
+/* line 57, ../sass/_typography.scss */
 span.tagline {
   display: inline-block;
   border: 2px solid #d9d9d9;
   padding: 3px 6px;
 }
 
-/* line 51, ../sass/_typography.scss */
+/* line 63, ../sass/_typography.scss */
 .question {
   font-style: italic;
 }
 
-/* line 55, ../sass/_typography.scss */
+/* line 67, ../sass/_typography.scss */
 footer p {
   font-size: 10pt;
 }
