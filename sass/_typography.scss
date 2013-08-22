@@ -1,0 +1,57 @@
+h1, h2, h3 {
+	font-family: $headingfont;
+	font-weight: 700;
+	margin: 15px 0;
+	color: $headingtext;
+}
+
+h1 {
+	font-size: 45pt;
+	line-height: 50pt;
+}
+
+h2 {
+	font-size: 30pt;
+	line-height: 34pt;
+}
+
+h3 {
+	font-size: 22pt;
+	font-weight: 500;
+	line-height: 28pt;
+	margin: 5px 0;
+}
+
+p {
+	padding: 15px 0;
+	&:last-child {
+		padding: 0;
+	}
+		&:only-of-type {
+		padding: 15px 0;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $linktext;
+	&:hover {
+			color: $hovertext;
+			@include text-shadow (1px 1px 3px #111);
+  			@include transition(color 0.5s ease-out, text-shadow 0.5s ease-out);
+  		}
+}
+
+span.tagline {
+	display: inline-block;
+	border: 2px solid $bodytext;
+	padding: 3px 6px;
+}
+
+.question {
+	font-style: italic;
+}
+
+footer p {
+	font-size: 10pt;
+}
