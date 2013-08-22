@@ -69,102 +69,159 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /*
- * 
  * urls
- *
  */
-/*
- * 
+/* 
  * images
- *
  */
 /*
- * 
  * fonts
- *
  */
 /*
- * 
  * colors
- *
  */
-/* line 44, ../../sass/screen.scss */
+/* line 46, ../../sass/screen.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Fjalla One', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   background-image: url('../img/cream_pixels.png');
 }
 
-/** add transparency and nest the logo and a links **/
-/* line 51, ../../sass/screen.scss */
-header {
-  /** background: $navBarBase; **/
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
-  min-height: 80px;
-  margin-bottom: 20px;
-  padding-top: 20px;
-  border-bottom: solid 1px #000;
-}
-/* line 60, ../../sass/screen.scss */
-header a {
-  color: rgba(0, 0, 0, 0.5);
-  text-decoration: none;
+/* line 52, ../../sass/screen.scss */
+.copy {
+  margin: 40px 0 48px;
 }
 
-/* line 67, ../../sass/screen.scss */
+/* line 56, ../../sass/screen.scss */
+header {
+  background: rgba(101, 101, 101, 0.8);
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  min-height: 60px;
+  padding-top: 40px;
+  border-bottom: solid 1px #000;
+}
+/* line 64, ../../sass/screen.scss */
+header a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+/* line 68, ../../sass/screen.scss */
+header a:hover {
+  color: #f0e8d0;
+}
+
+/* line 73, ../../sass/screen.scss */
+footer {
+  min-height: 120px;
+  background-color: #353433;
+  padding-top: 20px;
+  color: rgba(229, 229, 229, 0.8);
+  font-size: 0.9em;
+  border-top: 24px solid #656565;
+}
+/* line 81, ../../sass/screen.scss */
+footer a {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+/* line 85, ../../sass/screen.scss */
+footer a:hover {
+  color: #f0e8d0;
+}
+
+/* line 90, ../../sass/screen.scss */
 .container {
   height: 100%;
   margin: 0 auto;
   width: 940px;
 }
 @media screen and (max-width: 940px) {
-  /* line 67, ../../sass/screen.scss */
+  /* line 90, ../../sass/screen.scss */
   .container {
+    margin: 4px;
     width: auto;
   }
 }
 
-/* line 78, ../../sass/screen.scss */
+/* line 103, ../../sass/screen.scss */
+a {
+  color: #888888;
+  text-decoration: none;
+}
+
+/* line 107, ../../sass/screen.scss */
+a:hover {
+  color: #ffad99;
+}
+
+/* line 111, ../../sass/screen.scss */
 .pull-right {
   float: right;
 }
 
-/* line 82, ../../sass/screen.scss */
-section {
-  margin: 12px 0 18px;
+/* line 115, ../../sass/screen.scss */
+p {
+  margin-bottom: 6px;
 }
 
-/* line 86, ../../sass/screen.scss */
+/* line 119, ../../sass/screen.scss */
+code {
+  padding: 2px 4px;
+  color: #656565;
+  white-space: nowrap;
+  background-color: #f7f7f9;
+  border: 1px solid #bbbbbb;
+}
+
+/* line 127, ../../sass/screen.scss */
+section {
+  margin: 24px 0 36px;
+}
+
+/* line 131, ../../sass/screen.scss */
 ul, ol {
   padding: 0;
-  margin: 0 0 10px 25px;
+  margin: 0 0 10px 50px;
 }
 
-/* line 91, ../../sass/screen.scss */
+/* line 136, ../../sass/screen.scss */
 ol {
   display: block;
   list-style-type: decimal;
 }
 
-/* line 96, ../../sass/screen.scss */
+/* line 141, ../../sass/screen.scss */
 #answer {
-  font-family: 'Domine', serif;
-  font-size: 1.5em;
+  font-family: "Domine", serif;
+  font-size: 18px;
+  line-height: 30px;
 }
 
-/* line 101, ../../sass/screen.scss */
+/* line 147, ../../sass/screen.scss */
 #question {
-  font-family: 'Fjalla One', sans-serif;
-  font-family: 'Domine', serif;
-  font-size: 2.0em;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 26px;
+  color: #ff3300;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #bbbbbb;
 }
 
-/* line 111, ../../sass/screen.scss */
+/* line 155, ../../sass/screen.scss */
+.image-block {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* line 161, ../../sass/screen.scss */
 .polaroid img {
   border: 1px solid rgba(91, 113, 120, 0.5);
-  padding: 6px;
+  padding: 8px;
+  background: #f0e8d0;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
   border-radius: 4px;
 }

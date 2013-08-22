@@ -4,64 +4,87 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
 
 /*
- * 
  * urls
- *
  */
 $googleFontUrl: "http://fonts.googleapis.com/css?family=Domine|Fjalla+One";
 
 
-/*
- * 
+/* 
  * images
- *
  */
 $subtleBodyBackground: image-url("cream_pixels.png",false,false);
 
 
 /*
- * 
  * fonts
- *
  */
 @import url($googleFontUrl);
+$sansSerifFonts: 'Fjalla One', sans-serif;
+$serifFonts: 'Domine', serif;
 
 
 /*
- * 
  * colors
- *
  */
+$white: #f0e8d0;
 $lightGrey: #bbb;
 $darkGrey: #656565;
-$navBarBase: rgba($darkGrey, .5);
-$navBarText: darken($navBarBase, 90%);
+$navBarBase: rgba($darkGrey, .8);
+$navBarText: lighten($navBarBase, 50%);
 $navBarLinks: darken($navBarBase, 70%);
+$footerBackground: #353433;
+$questionColor: #f30;
+$copyLink: darken($lightGrey, 20%);
+$copyLinkHover: lighten($questionColor, 30%);
+$greyLine: 1px solid $lightGrey;
 
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Fjalla One', "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 14px;
     background-image: $subtleBodyBackground;
 }
 
-/** add transparency and nest the logo and a links **/
+.copy {
+    margin: 40px 0 48px;
+}
+
 header {
-    /** background: $navBarBase; **/
+    background: $navBarBase;
     color: $navBarLinks;
     font-size: 20px;
-    min-height: 80px;
-    margin-bottom: 20px;
-    padding-top: 20px;
+    min-height: 60px;
+    padding-top: 40px;
     border-bottom: solid 1px #000;
 
     a {
         color: $navBarLinks;
         text-decoration: none;
     }
+    a:hover {
+        color: $white;
+    }
+}
 
+footer {
+    min-height: 120px;
+    background-color: $footerBackground;
+    padding-top: 20px;
+    color: $navBarText;
+    font-size: 0.9em;
+    border-top: 24px solid $darkGrey;
+
+    a {
+        color: $navBarLinks;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $white;
+    }
 }
 
 .container {
@@ -71,21 +94,43 @@ header {
     width: 940px;
   
     @media screen and (max-width:940px) {
+        margin: 4px;
         width: auto;
   }
+}
+
+
+a {
+    color: $copyLink;
+    text-decoration: none;
+}
+a:hover {
+    color: $copyLinkHover;
 }
 
 .pull-right {
     float: right;
 }
 
+p {
+    margin-bottom: 6px;
+}
+
+code {
+    padding: 2px 4px;
+    color: $darkGrey;
+    white-space: nowrap;
+    background-color: #f7f7f9;
+    border: $greyLine;
+}
+
 section {
-    margin: 12px 0 18px;
+    margin: 24px 0 36px;
 }
 
 ul, ol {
     padding: 0;
-    margin: 0 0 10px 25px;
+    margin: 0 0 10px 50px;
 }
 
 ol {
@@ -94,24 +139,28 @@ ol {
 }
 
 #answer {
-    font-family: 'Domine', serif;
-    font-size: 1.5em; 
+    font-family: $serifFonts;
+    font-size: 18px;
+    line-height: 30px;
 }
 
 #question {
-    font-family: 'Fjalla One', sans-serif;
-    font-family: 'Domine', serif;
-    font-size: 2.0em;
+    font-family: $sansSerifFonts;
+    font-size: 26px;
+    color: $questionColor;
+    margin-bottom: 12px;
+    border-bottom: $greyLine;
 }
 
-.row {
-    
+.image-block {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .polaroid img {
     border: 1px solid rgba(91,113,120,.5);
-    padding: 6px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    padding: 8px;
+    background: $white;
+    @include border-radius(4px);
 }
