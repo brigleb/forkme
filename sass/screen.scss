@@ -6,20 +6,25 @@
 @import "_base.scss";
 
 body {
-	color: $font-color;
-	background: $background;
-	font-family: 'Noto Serif', serif;
-	font-size: 16pt;
-	line-height: 24pt;
+	color: $bodytext;
+	font-family: $bodyfont;
+	font-size: 14pt;
+	line-height: 20pt;
+	font-weight: 300;
 }
 
 .container {
 	width: 90%;
 	max-width: 960px;
-	margin: 3% auto;
-	background: white;
+	margin: 5% auto;
 	padding: 30px;
-	@include box-shadow(0px 0px 5px blue);
+	background-color: rgba(#000, 0.3);
+	border: 30px rgba(#000, 0.3) solid;
+	@include border-radius($roundcorners);
+}
+
+header#main {
+	margin-bottom: 30px;
 }
 
 ol {
@@ -34,18 +39,19 @@ ol {
 }
 
 ul.main-list {
-	background-color: #f6f6f6;
 	margin: 0 20px;
+	> li {
+		padding: 25px;
+		margin: 30px 0;
+		background-color: rgba($questionbg, 0.7);
+		@include border-radius($roundcorners);
+	}
 }
 
-ul.main-list > li {
-	padding: 15px;
-	margin: 20px 0;
-	@include border-radius(16px, 16px);
-}
-
-.odd {
-	background-color: #dddddd;
+footer {
+	width: 100%;
+	color: #bfbfbf;
+	background-color: #000;
 }
 
 /*

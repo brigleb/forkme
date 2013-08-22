@@ -2,6 +2,9 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*Text*/
+/*Divs, etc*/
+/*Units*/
 /* line 17, ../../../../../usr/local/rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -67,72 +70,97 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 8, ../sass/_base.scss */
+/* line 16, ../sass/_base.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+/* line 22, ../sass/_base.scss */
+html {
+  background: black url(../img/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 30, ../sass/_base.scss */
+img {
+  max-width: 100%;
+}
+
 /* line 8, ../sass/screen.scss */
 body {
-  color: #333333;
-  background: #aaaaaa;
-  font-family: 'Noto Serif', serif;
-  font-size: 16pt;
-  line-height: 24pt;
+  color: #d9d9d9;
+  font-family: "Oxygen", sans-serif;
+  font-size: 14pt;
+  line-height: 20pt;
+  font-weight: 300;
 }
 
 /* line 16, ../sass/screen.scss */
 .container {
   width: 90%;
   max-width: 960px;
-  margin: 3% auto;
-  background: white;
+  margin: 5% auto;
   padding: 30px;
-  -webkit-box-shadow: 0px 0px 5px blue;
-  -moz-box-shadow: 0px 0px 5px blue;
-  box-shadow: 0px 0px 5px blue;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 30px rgba(0, 0, 0, 0.3) solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
 }
 
-/* line 25, ../sass/screen.scss */
+/* line 26, ../sass/screen.scss */
+header#main {
+  margin-bottom: 30px;
+}
+
+/* line 30, ../sass/screen.scss */
 ol {
   list-style-type: decimal;
   margin-left: 40px;
 }
-/* line 28, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 ol li {
   margin: 0 0 10px 0;
 }
-/* line 30, ../sass/screen.scss */
+/* line 35, ../sass/screen.scss */
 ol li:last-child {
   margin: 0;
 }
 
-/* line 36, ../sass/screen.scss */
+/* line 41, ../sass/screen.scss */
 ul.main-list {
-  background-color: #f6f6f6;
   margin: 0 20px;
 }
-
-/* line 41, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 ul.main-list > li {
-  padding: 15px;
-  margin: 20px 0;
-  -webkit-border-radius: 16px 16px;
-  -moz-border-radius: 16px / 16px;
-  border-radius: 16px / 16px;
+  padding: 25px;
+  margin: 30px 0;
+  background-color: rgba(43, 46, 48, 0.7);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
 }
 
-/* line 47, ../sass/screen.scss */
-.odd {
-  background-color: #dddddd;
+/* line 51, ../sass/screen.scss */
+footer {
+  width: 100%;
+  color: #bfbfbf;
+  background-color: #000;
 }
 
 /*
 Helpers
 */
-/* line 54, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 .center-text {
   text-align: center;
 }
@@ -142,55 +170,70 @@ h1, h2, h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   margin: 15px 0;
+  color: white;
 }
 
-/* line 7, ../sass/_typography.scss */
+/* line 8, ../sass/_typography.scss */
 h1 {
-  font-size: 40pt;
-  line-height: 44pt;
+  font-size: 45pt;
+  line-height: 50pt;
 }
 
-/* line 12, ../sass/_typography.scss */
+/* line 13, ../sass/_typography.scss */
 h2 {
   font-size: 30pt;
   line-height: 34pt;
 }
 
-/* line 17, ../sass/_typography.scss */
+/* line 18, ../sass/_typography.scss */
 h3 {
-  font-size: 20pt;
-  line-height: 24pt;
+  font-size: 22pt;
+  font-weight: 500;
+  line-height: 28pt;
   margin: 5px 0;
 }
 
-/* line 23, ../sass/_typography.scss */
+/* line 25, ../sass/_typography.scss */
+p {
+  padding: 15px 0;
+}
+/* line 27, ../sass/_typography.scss */
+p:last-child {
+  padding: 0;
+}
+/* line 30, ../sass/_typography.scss */
+p:only-of-type {
+  padding: 15px 0;
+}
+
+/* line 35, ../sass/_typography.scss */
 a {
-  background-color: pink;
   text-decoration: none;
-  padding: 2px;
-  -webkit-border-radius: 6px 6px;
-  -moz-border-radius: 6px / 6px;
-  border-radius: 6px / 6px;
-  color: #333333;
+  color: #91caf2;
 }
-/* line 29, ../sass/_typography.scss */
+/* line 38, ../sass/_typography.scss */
 a:hover {
-  background-color: purple;
-  -webkit-transition: background-color 1s ease-out;
-  -moz-transition: background-color 1s ease-out;
-  -o-transition: background-color 1s ease-out;
-  transition: background-color 1s ease-out;
+  color: #8fa5b5;
+  text-shadow: 1px 1px 3px #111111;
+  -webkit-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
+  -moz-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
+  -o-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
+  transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
 }
 
-/* line 33, ../sass/_typography.scss */
+/* line 45, ../sass/_typography.scss */
 span.tagline {
-  width: 100%;
   display: inline-block;
-  margin: 0 auto;
-  text-align: center;
+  border: 2px solid #d9d9d9;
+  padding: 3px 6px;
 }
 
-/* line 40, ../sass/_typography.scss */
+/* line 51, ../sass/_typography.scss */
 .question {
   font-style: italic;
+}
+
+/* line 55, ../sass/_typography.scss */
+footer p {
+  font-size: 10pt;
 }
