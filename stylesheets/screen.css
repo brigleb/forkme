@@ -80,7 +80,7 @@ create row behavior*/
 }
 @media (max-width: 900px) {
   .test .question .answer {
-    line-height: 130%;
+    line-height: 150%;
   }
 }
 @media (max-width: 480px) {

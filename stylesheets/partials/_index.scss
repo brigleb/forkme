@@ -35,7 +35,7 @@
 		.answer{
 			font-size: 0.75em;
 			text-align: left;
-  			@include breakpoint(mama-bear) { line-height: 130%; }
+  			@include breakpoint(mama-bear) { line-height: 150%; }
   			@include breakpoint(baby-bear) { line-height: 130%; }
 		}
 
