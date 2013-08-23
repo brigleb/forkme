@@ -1,68 +1,177 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
+@import url(http://fonts.googleapis.com/css?family=Numans);
+@import url(http://fonts.googleapis.com/css?family=Rochester);
+* html {
   font-size: 100%;
-  vertical-align: baseline;
 }
 
-/* line 22, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
-  line-height: 1;
+  font-size: 16px;
+  line-height: 1.875em;
 }
 
-/* line 24, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
+/*control elements nested in rows*/
+/*
+create row behavior*/
+/*for the last element in a row, there's no gutter and we float it right*/
+.test {
+  margin: 0;
+  background-image: url("../images/escheresque.png");
 }
-
-/* line 26, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.test .question {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  padding: 0;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  font-family: "Numans", sans-serif;
+  width: 66%;
+  margin-left: 15%;
+  text-align: center;
+  background-color: #15827a;
+  margin-top: 1.5em;
+  height: 4.5em;
+  padding: 0 10px;
 }
-
-/* line 28, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
+.test .question:before, .test .question:after {
   content: "";
-  content: none;
+  display: table;
 }
-
-/* line 32, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
+.test .question:after {
+  clear: both;
 }
-
-/* line 116, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
+.test .question > div {
+  float: left;
+  margin-right: gutter;
+  /*check this!*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*include our border-box mixin*/
+}
+.test .question:hover {
+  margin-top: 0;
+  margin-bottom: -1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  transition-duration: .7s;
+  cursor: pointer;
+}
+.test .question h2 {
+  font-size: 1.4em;
+}
+@media (max-width: 900px) {
+  .test .question h2 {
+    line-height: 130%;
+  }
+}
+@media (max-width: 480px) {
+  .test .question h2 {
+    font-size: 0.65em;
+  }
+}
+.test .question .answer {
+  font-size: 0.75em;
+  text-align: left;
+}
+@media (max-width: 900px) {
+  .test .question .answer {
+    line-height: 130%;
+  }
+}
+@media (max-width: 480px) {
+  .test .question .answer {
+    line-height: 130%;
+  }
+}
+.test .content {
+  margin: 6em 0 4.5em 0;
+  padding: 1.5em 0;
+  background-color: floralwhite;
+}
+.test .title-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  padding: 0;
+  width: 100%;
+  height: 12em;
+}
+.test .title-container:before, .test .title-container:after {
+  content: "";
+  display: table;
+}
+.test .title-container:after {
+  clear: both;
+}
+.test .title-container > div {
+  float: left;
+  margin-right: gutter;
+  /*check this!*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*include our border-box mixin*/
+}
+.test .title-container h1 {
+  font-family: "Rochester", cursive;
+  color: #cf2128;
+  text-align: right;
+  margin-top: -20px;
+  padding: .75em 150px .75em 0;
+  background: url("../images/needmore-logo.png") no-repeat right;
+}
+@media (max-width: 1600px) {
+  .test .title-container h1 {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 900px) {
+  .test .title-container h1 {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 480px) {
+  .test .title-container h1 {
+    font-size: 1.5em;
+  }
+}
+.test footer {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  zoom: 1;
+  padding: 0;
+  width: 100%;
+  font-family: "Numans", sans-serif;
+}
+.test footer:before, .test footer:after {
+  content: "";
+  display: table;
+}
+.test footer:after {
+  clear: both;
+}
+.test footer > div {
+  float: left;
+  margin-right: gutter;
+  /*check this!*/
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /*include our border-box mixin*/
+}
+.test footer a, .test footer .byline, .test footer .vertical-rhythm-button:hover {
+  color: #cf2128;
+}
+.test footer .vertical-rhythm-button {
+  background-color: #15827a;
+}
+.test footer .vertical-rhythm-button:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,86 @@
+.test{
+
+	margin: 0;
+	background-image: $primary-background-jenny;
+
+	.question{
+		@include row;
+		@include vendor-prefix(transition, all 0.5s linear);
+		font-family: $primary-font;
+		width: columns(4,6);
+		margin-left: columns(1,6);
+		text-align: center;
+		background-color: $button-color;
+		margin-top: 1.5em;
+		height: 4.5em;
+		padding: 0 10px;
+
+// tried using compass here for vertical rhytht but it caused shakey effect 
+// on buttons so omitted it for now
+		&:hover{
+			margin-top: 0;
+			margin-bottom: -1.5em;
+			padding-top: 1.5em;
+			padding-bottom: 1.5em;
+			transition-duration: .7s;
+			cursor: pointer;
+		}
+
+		h2{
+		font-size: 1.4em;
+		@include breakpoint(mama-bear) { line-height: 130%; }
+  			@include breakpoint(baby-bear) { font-size: 0.65em; }
+		}
+
+		.answer{
+			font-size: 0.75em;
+			text-align: left;
+  			@include breakpoint(mama-bear) { line-height: 130%; }
+  			@include breakpoint(baby-bear) { line-height: 130%; }
+		}
+
+	}
+
+	.content{
+		margin: 6em 0 4.5em 0;
+		padding: 1.5em 0;
+		background-color: $background-color;
+	}
+
+	.title-container{
+		@include row;
+		width: columns(6);
+		height: 12em;
+
+		h1{
+			font-family: $secondary-font;
+			color: $needmore-red;
+			// font-size: 3.5em;
+			text-align: right;
+			margin-top: -20px;
+			padding: .75em 150px .75em 0;
+			background: $needmore-logo no-repeat right;
+			@include breakpoint(papa-bear) { font-size: 3.5em; }
+  			@include breakpoint(mama-bear) { font-size: 2.5em; }
+  			@include breakpoint(baby-bear) { font-size: 1.5em; }
+
+		}
+	}
+
+	footer{
+		@include row;
+		width: columns(6);
+		font-family: $primary-font;
+
+		a, .byline, .vertical-rhythm-button:hover{
+			color: $needmore-red;
+		}
+
+		.vertical-rhythm-button{
+			background-color: $button-color;
+			&:hover{
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,0 +1,21 @@
+//import compass!
+@import "compass";
+
+@import url(http://fonts.googleapis.com/css?family=Numans);
+@import url(http://fonts.googleapis.com/css?family=Rochester);
+
+$primary-font: 'Numans', sans-serif;
+$secondary-font: 'Rochester', cursive;
+$background-color: #FFFAF0;
+$needmore-red: #CF2128;
+$button-color: #15827A;
+// pattern downloaded from www.subtlepatterns.com 
+$primary-background-jenny: url('../images/escheresque.png');
+//your logo!
+$needmore-logo: url('../images/needmore-logo.png');
+
+
+//get the modules so you need only import this file in the screen.scss file
+
+@import "../modules/_myGrid";
+@import "../modules/_mixins";

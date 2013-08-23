@@ -1,0 +1,28 @@
+@import "compass/typography/vertical_rhythm";
+
+
+// Vertical rhythm vars
+$base-font-size: 16px;
+$base-line-height: 30px;
+@include establish-baseline;
+
+//max width of the grid/page
+$max-width: 1000px;
+//column and gutter width (dependent on max of 6 columns)
+$column-width: 15%;
+$gutter-width: 2%;
+//max columns
+$maximum-columns: 6;
+
+//returns correct percentage width for columns given their width and container
+@function columns($columns, $container-columns: $maximum-columns){
+	$width: $columns * $column-width + ($columns - 1) * $gutter-width;
+	$container-width : $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+	@return percentage($width / $container-width);
+}
+
+//returns correct percentage width for gutters
+@function gutter($container-columns: $maximum-columns, $gutter: $gutter-width){
+	$container-width: $container-columns * $column-width + ($container-columns - 1) * $gutter-width;
+	@return percentage($gutter / $container-width);
+}
