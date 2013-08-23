@@ -22,6 +22,7 @@
 @import "compass/css3";
 @import "inc/_var";
 @import "inc/_mixins";
+@import "inc/_colors";
 
 /* Initial Resets
  */
@@ -32,6 +33,7 @@
 /* Site-Specific
  */
 
+@import "site/_fonts";
 @import "site/_sizes";
 
 /* Terminal Resets

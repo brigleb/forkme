@@ -18,9 +18,24 @@
 /* ==========================================================================
    Variables
    ========================================================================== */
+/* Media Widths
+ *
+ * For use in media queries
+ */
 /* ==========================================================================
    Mixins
    ========================================================================== */
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+/* Base Colors
+ *
+ * These are the neutral tones that comprise backgrounds, text color, etc.
+ */
+/* Accent Colors
+ *
+ * Links, buttons, etc.
+ */
 /* Initial Resets
  */
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
@@ -97,22 +112,9 @@ html {
 }
 
 /**
- * Address `font-family` inconsistency between `textarea` and other form
- * elements.
- */
-/* line 83, ../sass/vendor/_normalize.scss */
-html,
-button,
-input,
-select,
-textarea {
-  font-family: sans-serif;
-}
-
-/**
  * Address margins handled incorrectly in IE 6/7.
  */
-/* line 91, ../sass/vendor/_normalize.scss */
+/* line 78, ../sass/vendor/_normalize.scss */
 body {
   margin: 0;
 }
@@ -123,7 +125,7 @@ body {
 /**
  * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 103, ../sass/vendor/_normalize.scss */
+/* line 90, ../sass/vendor/_normalize.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -131,7 +133,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 112, ../sass/vendor/_normalize.scss */
+/* line 99, ../sass/vendor/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -141,50 +143,9 @@ a:hover {
    Typography
    ========================================================================== */
 /**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-/* line 126, ../sass/vendor/_normalize.scss */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-/* line 131, ../sass/vendor/_normalize.scss */
-h2 {
-  font-size: 1.5em;
-  margin: 0.83em 0;
-}
-
-/* line 136, ../sass/vendor/_normalize.scss */
-h3 {
-  font-size: 1.17em;
-  margin: 1em 0;
-}
-
-/* line 141, ../sass/vendor/_normalize.scss */
-h4 {
-  font-size: 1em;
-  margin: 1.33em 0;
-}
-
-/* line 146, ../sass/vendor/_normalize.scss */
-h5 {
-  font-size: 0.83em;
-  margin: 1.67em 0;
-}
-
-/* line 151, ../sass/vendor/_normalize.scss */
-h6 {
-  font-size: 0.67em;
-  margin: 2.33em 0;
-}
-
-/**
  * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-/* line 160, ../sass/vendor/_normalize.scss */
+/* line 111, ../sass/vendor/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -192,13 +153,13 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-/* line 169, ../sass/vendor/_normalize.scss */
+/* line 120, ../sass/vendor/_normalize.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-/* line 173, ../sass/vendor/_normalize.scss */
+/* line 124, ../sass/vendor/_normalize.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -206,7 +167,7 @@ blockquote {
 /**
  * Address styling not present in Safari 5 and Chrome.
  */
-/* line 181, ../sass/vendor/_normalize.scss */
+/* line 132, ../sass/vendor/_normalize.scss */
 dfn {
   font-style: italic;
 }
@@ -215,7 +176,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  * Known issue: no IE 6/7 normalization.
  */
-/* line 190, ../sass/vendor/_normalize.scss */
+/* line 141, ../sass/vendor/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -225,7 +186,7 @@ hr {
 /**
  * Address styling not present in IE 6/7/8/9.
  */
-/* line 200, ../sass/vendor/_normalize.scss */
+/* line 151, ../sass/vendor/_normalize.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -234,29 +195,16 @@ mark {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 210, ../sass/vendor/_normalize.scss */
+/* line 161, ../sass/vendor/_normalize.scss */
 p,
 pre {
   margin: 1em 0;
 }
 
 /**
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-/* line 221, ../sass/vendor/_normalize.scss */
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
-  font-size: 1em;
-}
-
-/**
  * Improve readability of pre-formatted text in all browsers.
  */
-/* line 231, ../sass/vendor/_normalize.scss */
+/* line 169, ../sass/vendor/_normalize.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -266,7 +214,7 @@ pre {
 /**
  * Address CSS quotes not supported in IE 6/7.
  */
-/* line 241, ../sass/vendor/_normalize.scss */
+/* line 179, ../sass/vendor/_normalize.scss */
 q {
   quotes: none;
 }
@@ -274,7 +222,7 @@ q {
 /**
  * Address `quotes` property not supported in Safari 4.
  */
-/* line 250, ../sass/vendor/_normalize.scss */
+/* line 188, ../sass/vendor/_normalize.scss */
 q:before,
 q:after {
   content: '';
@@ -282,17 +230,9 @@ q:after {
 }
 
 /**
- * Address inconsistent and variable font size in all browsers.
- */
-/* line 259, ../sass/vendor/_normalize.scss */
-small {
-  font-size: 80%;
-}
-
-/**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 268, ../sass/vendor/_normalize.scss */
+/* line 198, ../sass/vendor/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -301,12 +241,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 275, ../sass/vendor/_normalize.scss */
+/* line 205, ../sass/vendor/_normalize.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 279, ../sass/vendor/_normalize.scss */
+/* line 209, ../sass/vendor/_normalize.scss */
 sub {
   bottom: -0.25em;
 }
@@ -317,7 +257,7 @@ sub {
 /**
  * Address margins set differently in IE 6/7.
  */
-/* line 294, ../sass/vendor/_normalize.scss */
+/* line 224, ../sass/vendor/_normalize.scss */
 dl,
 menu,
 ol,
@@ -325,7 +265,7 @@ ul {
   margin: 1em 0;
 }
 
-/* line 298, ../sass/vendor/_normalize.scss */
+/* line 228, ../sass/vendor/_normalize.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -333,7 +273,7 @@ dd {
 /**
  * Address paddings set differently in IE 6/7.
  */
-/* line 308, ../sass/vendor/_normalize.scss */
+/* line 238, ../sass/vendor/_normalize.scss */
 menu,
 ol,
 ul {
@@ -343,7 +283,7 @@ ul {
 /**
  * Correct list images handled incorrectly in IE 7.
  */
-/* line 317, ../sass/vendor/_normalize.scss */
+/* line 247, ../sass/vendor/_normalize.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -357,7 +297,7 @@ nav ol {
  * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improve image quality when scaled in IE 7.
  */
-/* line 331, ../sass/vendor/_normalize.scss */
+/* line 261, ../sass/vendor/_normalize.scss */
 img {
   border: 0;
   /* 1 */
@@ -368,7 +308,7 @@ img {
 /**
  * Correct overflow displayed oddly in IE 9.
  */
-/* line 340, ../sass/vendor/_normalize.scss */
+/* line 270, ../sass/vendor/_normalize.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -379,7 +319,7 @@ svg:not(:root) {
 /**
  * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-/* line 352, ../sass/vendor/_normalize.scss */
+/* line 282, ../sass/vendor/_normalize.scss */
 figure {
   margin: 0;
 }
@@ -390,7 +330,7 @@ figure {
 /**
  * Correct margin displayed oddly in IE 6/7.
  */
-/* line 364, ../sass/vendor/_normalize.scss */
+/* line 294, ../sass/vendor/_normalize.scss */
 form {
   margin: 0;
 }
@@ -398,7 +338,7 @@ form {
 /**
  * Define consistent border, margin, and padding.
  */
-/* line 372, ../sass/vendor/_normalize.scss */
+/* line 302, ../sass/vendor/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -410,7 +350,7 @@ fieldset {
  * 2. Correct text not wrapping in Firefox 3.
  * 3. Correct alignment displayed oddly in IE 6/7.
  */
-/* line 384, ../sass/vendor/_normalize.scss */
+/* line 314, ../sass/vendor/_normalize.scss */
 legend {
   border: 0;
   /* 1 */
@@ -427,7 +367,7 @@ legend {
  *    and Chrome.
  * 3. Improve appearance and consistency in all browsers.
  */
-/* line 401, ../sass/vendor/_normalize.scss */
+/* line 331, ../sass/vendor/_normalize.scss */
 button,
 input,
 select,
@@ -446,7 +386,7 @@ textarea {
  * Address Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 414, ../sass/vendor/_normalize.scss */
+/* line 344, ../sass/vendor/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -458,7 +398,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 426, ../sass/vendor/_normalize.scss */
+/* line 356, ../sass/vendor/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -473,7 +413,7 @@ select {
  * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-/* line 443, ../sass/vendor/_normalize.scss */
+/* line 373, ../sass/vendor/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -489,7 +429,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 454, ../sass/vendor/_normalize.scss */
+/* line 384, ../sass/vendor/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -501,7 +441,7 @@ html input[disabled] {
  * 3. Remove excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-/* line 466, ../sass/vendor/_normalize.scss */
+/* line 396, ../sass/vendor/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -519,7 +459,7 @@ input[type="radio"] {
  * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-/* line 479, ../sass/vendor/_normalize.scss */
+/* line 409, ../sass/vendor/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -533,7 +473,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 492, ../sass/vendor/_normalize.scss */
+/* line 422, ../sass/vendor/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -542,7 +482,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 3+.
  */
-/* line 501, ../sass/vendor/_normalize.scss */
+/* line 431, ../sass/vendor/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -553,7 +493,7 @@ input::-moz-focus-inner {
  * 1. Remove default vertical scrollbar in IE 6/7/8/9.
  * 2. Improve readability and alignment in all browsers.
  */
-/* line 511, ../sass/vendor/_normalize.scss */
+/* line 441, ../sass/vendor/_normalize.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -567,7 +507,7 @@ textarea {
 /**
  * Remove most spacing between table cells.
  */
-/* line 524, ../sass/vendor/_normalize.scss */
+/* line 454, ../sass/vendor/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -872,6 +812,34 @@ textarea {
 /* Site-Specific
  */
 /* ==========================================================================
+   Fonts
+   ========================================================================== */
+/* line 10, ../sass/site/_fonts.scss */
+.serif,
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "PT Serif", "Minion Pro", Georgia, serif;
+}
+
+/* line 14, ../sass/site/_fonts.scss */
+.sans {
+  font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+}
+
+/* line 21, ../sass/site/_fonts.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+
+/* ==========================================================================
    Sizes
    ========================================================================== */
 /* line 5, ../sass/site/_sizes.scss */
@@ -884,10 +852,123 @@ body {
     font-size: 100%;
   }
 }
+@media screen and (min-width: 48em) {
+  /* line 5, ../sass/site/_sizes.scss */
+  body {
+    font-size: 112.5%;
+  }
+}
 
-/* line 13, ../sass/site/_sizes.scss */
-.xx-large {
-  font-size: 300%;
+/* line 16, ../sass/site/_sizes.scss */
+.xxxx-large {
+  font-size: 225%;
+  line-height: 1.1;
+  margin-top: .444em;
+  margin-bottom: .444em;
+}
+@media screen and (min-width: 30em) {
+  /* line 16, ../sass/site/_sizes.scss */
+  .xxxx-large {
+    font-size: 375%;
+    margin-top: .533em;
+    margin-bottom: .533em;
+  }
+}
+
+/* line 28, ../sass/site/_sizes.scss */
+.xxx-large {
+  font-size: 200%;
+  line-height: 1.125;
+  margin-top: .5em;
+  margin-bottom: .5em;
+}
+@media screen and (min-width: 30em) {
+  /* line 28, ../sass/site/_sizes.scss */
+  .xxx-large {
+    font-size: 300%;
+    margin-top: .333em;
+    margin-bottom: .333em;
+  }
+}
+
+/* line 41, ../sass/site/_sizes.scss */
+.xx-large,
+h1 {
+  font-size: 175%;
+  line-height: 1.2;
+  margin-top: .572em;
+  margin-bottom: .572em;
+}
+@media screen and (min-width: 30em) {
+  /* line 41, ../sass/site/_sizes.scss */
+  .xx-large,
+  h1 {
+    font-size: 225%;
+    line-height: 1.1;
+    margin-top: .444em;
+    margin-bottom: .444em;
+  }
+}
+
+/* line 55, ../sass/site/_sizes.scss */
+.x-large,
+h2 {
+  font-size: 150%;
+  line-height: 1.25;
+  margin-top: .667em;
+  margin-bottom: .667em;
+}
+
+/* line 62, ../sass/site/_sizes.scss */
+.large,
+h3 {
+  font-size: 131.25%;
+  line-height: 1.3;
+  margin-top: .762em;
+  margin-bottom: .762em;
+}
+
+/* line 69, ../sass/site/_sizes.scss */
+.medium,
+h4 {
+  font-size: 112.5%;
+  line-height: 1.333;
+  margin-top: .889em;
+  margin-bottom: .889em;
+}
+
+/* line 76, ../sass/site/_sizes.scss */
+.regular,
+h4 {
+  font-size: 100%;
+  line-height: 1.4;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 84, ../sass/site/_sizes.scss */
+.small,
+h5,
+small {
+  font-size: 87.5%;
+  line-height: 1.4;
+  margin-top: 1.143em;
+  margin-bottom: 1.143em;
+}
+
+/* line 91, ../sass/site/_sizes.scss */
+.x-small,
+h6 {
+  font-size: 75%;
+  line-height: 1.25;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* line 98, ../sass/site/_sizes.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /* Terminal Resets
