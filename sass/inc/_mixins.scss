@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+@mixin media_query_1 {
+	@media screen and ( min-width: $media_width_1 ) {
+		@content;
+	}
+}
+@mixin media_query_2 {
+	@media screen and ( min-width: $media_width_2 ) {
+		@content;
+	}
+}
+@mixin media_query_3 {
+	@media screen and ( min-width: $media_width_3 ) {
+		@content;
+	}
+}
+@mixin media_query_4 {
+	@media screen and ( min-width: $media_width_4 ) {
+		@content;
+	}
+}
+@mixin media_high_dpi {
+	@media print,
+	(-o-min-device-pixel-ratio: 5 / 4),
+	(-webkit-min-device-pixel-ratio: 1.25),
+	(min-resolution: 120dpi) {
+		@content;
+	}
+}

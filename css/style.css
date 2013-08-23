@@ -1,5 +1,27 @@
-/**
- * Style
+/* ==========================================================================
+   Style
+   ========================================================================== */
+/* By: [Cory Reed](http://swashcap.com/)
+ * For: [Needmore](https://github.com/brigleb/forkme)
+ */
+/* The SASS through which all other SASSes flow.
+ *
+ * In the interest of producing _one_ final stylesheet, this serves as an
+ * import directory which is evaluated into a single CSS file, _style.css_.
+ * This way, styles are modularized and easily edited, and the browser
+ * doesn't have to download 20 CSS files.
+ */
+/* Includes
+ *
+ * Anything that won’t be explicitely dumped.
+ */
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/* Initial Resets
  */
 /*! normalize.css v1.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -847,6 +869,38 @@ textarea {
     page-break-after: avoid;
   }
 }
+/* Site-Specific
+ */
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+/* line 5, ../sass/site/_sizes.scss */
+body {
+  font-size: 87.5%;
+}
+@media screen and (min-width: 30em) {
+  /* line 5, ../sass/site/_sizes.scss */
+  body {
+    font-size: 100%;
+  }
+}
+
+/* line 13, ../sass/site/_sizes.scss */
+.xx-large {
+  font-size: 300%;
+}
+
+/* Terminal Resets
+ */
+/* ==========================================================================
+   Helpers
+   ========================================================================== */
+/* line 5, ../sass/site/_helpers.scss */
+.no-list {
+  list-style-type: none;
+  padding-left: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

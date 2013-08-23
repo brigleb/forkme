@@ -1,10 +1,41 @@
-/**
- * Style
+/* ==========================================================================
+   Style
+   ========================================================================== */
+
+/* By: [Cory Reed](http://swashcap.com/)
+ * For: [Needmore](https://github.com/brigleb/forkme)
+ */
+
+/* The SASS through which all other SASSes flow.
+ *
+ * In the interest of producing _one_ final stylesheet, this serves as an
+ * import directory which is evaluated into a single CSS file, _style.css_.
+ * This way, styles are modularized and easily edited, and the browser
+ * doesn't have to download 20 CSS files.
+ */
+
+/* Includes
+ *
+ * Anything that won’t be explicitely dumped.
  */
 
 @import "compass/css3";
+@import "inc/_var";
+@import "inc/_mixins";
+
+/* Initial Resets
+ */
 
 @import "vendor/_normalize";
 @import "vendor/_h5bp-start";
 
+/* Site-Specific
+ */
+
+@import "site/_sizes";
+
+/* Terminal Resets
+ */
+
+@import "site/_helpers";
 @import "vendor/_h5bp-end";
