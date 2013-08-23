@@ -35,13 +35,7 @@ h3 {
 }
 
 p {
-	padding: 15px 0;
-	&:last-child {
-		padding: 0;
-	}
-		&:only-of-type {
-		padding: 15px 0;
-	}
+	padding: 0px 0 15px 0;
 }
 
 a {
@@ -49,9 +43,15 @@ a {
 	color: $linktext;
 	&:hover {
 			color: $hovertext;
-			@include text-shadow (1px 1px 3px #111);
-  			@include transition(color 0.5s ease-out, text-shadow 0.5s ease-out);
+  			@include transition(color 0.1s ease-out);
   		}
+}
+
+code {
+	font-family: courier;
+	background: lighten($questionbg, 30%);
+	display: inline-block;
+	padding: 0 5px;
 }
 
 span.tagline {

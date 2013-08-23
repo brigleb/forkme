@@ -25,34 +25,44 @@
 				<li>
 					<h3 class="question">What is your favorite WordPress function? Why?</h3>
 					<p>
-					My favorite WordPress function is register_post_type. This is one of the main ways Wordpress can be expanded to use more than one post type and, therefore, exist as more than just a blogging platform but a full content management system. It's also easy to work with custom post types, and to create templates for them, and the flexibility and power that this one fairly simple function provides makes it my favorite.
+					My favorite WordPress function is <code>register_post_type</code>. This function is one of the main ways Wordpress works as not just a blogging platform, but a content management system. Behind this fairly simple function is the freedom to create different types of posts and to style them using the standard single-post and post-archive pages and to give them their own taxonomies, and that freedom and flexibility is why this function is my favorite.
 					</p>
 				</li>
 				<li>
 					<h3 class="question">Name three good reasons to start a branch in a version control system.</h3>
 					<p>
 					<ol>
-						<li>Starting a branch allows you to delineate specific tasks more easily, such as bug fixes which can then be folded into the master branch. You can work on one task, check to make sure it works, and then add it to the stable, master branch.</li>
-						<li>Similarly, a new branch is useful for testing new features or other experimental additions that may not be stable enough for the master branch.</li>
-						<li>If you are working with other people on a project, </li>
+						<li>To keep things organized: starting a branch allows you to delineate specific tasks more easily, such as bug fixes, which can then be folded into the master branch. You can create a branch for one specific task, check to make sure it works, and then add it to the stable, master branch with commit notes, keeping things organized.</li>
+						<li>Similarly, to keep the release version stable: a new branch is useful for testing new features or other experimental additions that may not be stable enough for the master branch. It's a way to try out different solution worry-free.</li>
+						<li>To make collaborating with others easier: again, this is all related to the previous points, but </li>
 					</ol>
 					</p>
 				</li>
 				<li>
 					<h3 class="question">Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h3>
 					<p>
-					JavaScript
+					CSS animations are faster than JavaScript because they are rendered by the browser. They require less system resources. They don't require loading scripts and potentially libraries like jQuery, so it will decrease page load and bloat.
 					</p>
-					<p>Additionally, loading JavaScript for something like a page animation, which is generally not a core feature of a site but rather a nice addition (mention progressive enhancement/graceful degradation?) costs the user a performance hit for something non-essential. Therefore, using CSS for page animations would be better in terms of performance, and if visitors to the site didn't have a new enough browser to render CSS3 animations, they wouldn't be missing out on a core feature of the site.</p>
+					<p>You could also make an argument that using CSS instead of JavaScript for animation works with the principles of progressive enhancement. Any page animation is arguably not an integral part of the website's content. Visitors without modern browsers won't see the CSS animations, but they will benefit from not having to load and run scripts whose only purpose is to provide visual interest.</p>
 				</li>
-				<li>
+				<li class="cf">
 					<h3 class="question">What is your favorite project that you've done? (include link and/or image)</h3>
 					<p>
-					The favorite project that I've done to date is my <a href="http://www.hannaliebl.com">homepage</a>. This was the first Wordpress site I built entirely on my own (using the <a href="https://github.com/zencoder/html5-boilerplate-for-wordpress">HTML5 Boilerplate theme</a> as a starting point). I wrote my own grid system.
+					The favorite project that I've done to date is my <a href="http://www.hannaliebl.com">homepage</a>. This was the first Wordpress site I built entirely on my own (using the <a href="https://github.com/zencoder/html5-boilerplate-for-wordpress">HTML5 Boilerplate theme</a> as a starting point). I wrote my own grid system for it. I created custom post types and custom meta fields for the portfolio items, and in general, it was a long labor of love and design and development. It represented a step up for me in terms of design and breadth of Wordpress knowledge.
 					</p>
-					<p>
-
-					</p>
+					<div class="img-row">
+						<div class="img-grid">
+							<img src="./img/homepage1.png" alt="hannaliebl.com homepage screenshot" />
+						</div>
+						<div class="img-grid">
+							<img src="./img/homepage2.png" alt="hannaliebl.com homepage screenshot" />
+						</div>
+					</div>
+					<div class="img-row">
+						<div class="img-grid-full">
+							<img src="./img/homepage3.png" alt="hannaliebl.com homepage screenshot" />
+						</div>
+					</div>
 				</li>
 				<li>
 					<h3 class="question">Look at our portfolio and find something we've built that could be improved. Suggest how!</h3>
@@ -63,7 +73,7 @@
 			</ul>
 		</div>
 	<footer>
-	<p class="center-text">Photo: Farmland outside Grinnell, Iowa fall 2012</p>
+	<p class="center-text">Photo: Farmland Outside Grinnell, Iowa fall 2012</p>
 	</footer>
 </body>
 </html>

@@ -181,15 +181,68 @@ ul.main-list > li {
 footer {
   width: 100%;
   color: #bfbfbf;
-  background-color: #000;
+}
+
+/*
+Image grid
+*/
+/* line 73, ../sass/screen.scss */
+.img-row {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 78, ../sass/screen.scss */
+.img-grid {
+  width: 48%;
+  float: left;
+  margin: 0px 4% 4% 0px;
+}
+/* line 82, ../sass/screen.scss */
+.img-grid:last-child {
+  margin: 0 0 4% 0;
+}
+@media screen and (max-width: 720px) {
+  /* line 78, ../sass/screen.scss */
+  .img-grid {
+    width: 100%;
+  }
+}
+
+/* line 90, ../sass/screen.scss */
+.img-grid-full {
+  width: 100%;
 }
 
 /*
 Helpers
 */
-/* line 74, ../sass/screen.scss */
+/* line 97, ../sass/screen.scss */
 .center-text {
   text-align: center;
+}
+
+/* line 102, ../sass/screen.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+/* line 107, ../sass/screen.scss */
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+/* line 115, ../sass/screen.scss */
+.cf {
+  *zoom: 1;
 }
 
 /* line 1, ../sass/_typography.scss */
@@ -243,30 +296,29 @@ h3 {
 
 /* line 37, ../sass/_typography.scss */
 p {
-  padding: 15px 0;
-}
-/* line 39, ../sass/_typography.scss */
-p:last-child {
-  padding: 0;
-}
-/* line 42, ../sass/_typography.scss */
-p:only-of-type {
-  padding: 15px 0;
+  padding: 0px 0 15px 0;
 }
 
-/* line 47, ../sass/_typography.scss */
+/* line 41, ../sass/_typography.scss */
 a {
   text-decoration: none;
-  color: #91caf2;
+  color: #8ab9db;
 }
-/* line 50, ../sass/_typography.scss */
+/* line 44, ../sass/_typography.scss */
 a:hover {
-  color: #8fa5b5;
-  text-shadow: 1px 1px 3px #111111;
-  -webkit-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
-  -moz-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
-  -o-transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
-  transition: color 0.5s ease-out, text-shadow 0.5s ease-out;
+  color: #c2e5ff;
+  -webkit-transition: color 0.1s ease-out;
+  -moz-transition: color 0.1s ease-out;
+  -o-transition: color 0.1s ease-out;
+  transition: color 0.1s ease-out;
+}
+
+/* line 50, ../sass/_typography.scss */
+code {
+  font-family: courier;
+  background: #737b81;
+  display: inline-block;
+  padding: 0 5px;
 }
 
 /* line 57, ../sass/_typography.scss */

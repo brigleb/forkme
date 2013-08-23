@@ -65,7 +65,30 @@ ul.main-list {
 footer {
 	width: 100%;
 	color: #bfbfbf;
-	background-color: #000;
+}
+
+/*
+Image grid
+*/
+.img-row {
+	width: 100%;
+	text-align: center;
+}
+
+.img-grid {
+	width: 48%;
+	float: left;
+	margin: 0px 4% 4% 0px;
+	&:last-child {
+		margin: 0 0 4% 0;
+	}
+	@media screen and (max-width: $breakpoint) {
+		width: 100%;
+	}
+}
+
+.img-grid-full {
+	width: 100%;
 }
 
 /*
@@ -73,6 +96,24 @@ Helpers
 */
 .center-text {
 	text-align: center;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
 }
 
 @import "_typography.scss";
