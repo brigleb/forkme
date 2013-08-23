@@ -28,12 +28,12 @@
 
 <p><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
 
-<p>With it, a skilled developer can change nearly <strong>everything</strong> about how WordPress works. A few examples:</p>
+<p>With it, a skilled developer can change nearly <strong>everything</strong> about WordPress’s built-in functions. A few examples:</p>
 
 <ul>
-<li><a href="http://codex.wordpress.org/The_WordPress_Gallery">WordPress galleries</a> offer an easy way for users to assemble a group of media. However, galleries’ default markup can be difficult to work with. I like to use <code>add_filter</code> to transform the markup into something that’s suitable for a slideshow.</li>
-<li>WordPress extraneously wraps elements in paragraph tags, even images and videos. This isn’t very semantic. I like to use <code>add_filter</code> to hook onto the <code>the_content</code> to parse out the <code>&lt;p&gt;</code>s.</li>
-<li><a href="http://codex.wordpress.org/Function_Reference/wp_title"><code>wp_title()</code></a>’s default behavior is kind of annoying because it often doesn’t include the site’s title on many views. Adding it manually using a filtering function does the trick.</li>
+<li><a href="http://codex.wordpress.org/The_WordPress_Gallery">WordPress galleries</a> offer an easy way for users to assemble a group of media. However, galleries’ default markup can be difficult to work with. I like to use <code>add_filter()</code> to transform the markup into something that’s suitable for a slideshow.</li>
+<li>WordPress extraneously wraps elements in paragraph tags, even images and videos. This isn’t very semantic. I like to use <code>add_filter()</code> to hook a function onto the <code>the_content</code> and parse out the extra <code>&lt;p&gt;</code> tags.</li>
+<li><a href="http://codex.wordpress.org/Function_Reference/wp_title"><code>wp_title()</code></a>’s default behavior doesn’t include the site’s title on a few views, often leaving pages with no title. This is an easy fix with <code>add_filter()</code>: a custom function can act on the <code>wp_title</code> hook to include the site’s title on every page, remedying the problem.</li>
 </ul>
 
 </section><!-- #question-1 -->
@@ -42,8 +42,8 @@
 <h1>Name three good reasons to start a branch in a version control system.</h1>
 
 <ol>
-<li><strong>Working on a project’s next major version.</strong> Make a new branch and add your planned features. This way, your new features are isolated from the production branch. When you’re ready to launch, merge ‘em.</li>
-<li><strong>Debugging something <em>right now</em>.</strong> What if – while fixing <em>this</em> bug – you inadvertently cause another new problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</li>
+<li><strong>Working on a project’s next major version.</strong> Got some sweet modals and GIFs lined up for your site’s next big iteration? Better start a new branch. This way, your new features are isolated from the production branch. And, you can keep <a href="http://giphy.com/gifs/8BZIGu3DWUdxe">those features</a> all to yourself until you’re ready to launch.</li>
+<li><strong>Debugging something <em>right now</em>.</strong> What if – while fixing <em>this</em> bug – you inadvertently cause another <em>new</em> problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</li>
 <li><strong>Trying out an experimental feature.</strong> Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</li>
 </ol>
 
@@ -54,9 +54,9 @@
 
 <p><strong>CSS animations and transitions run faster than their JavaScript counterparts.</strong></p>
 
-<p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is regulated by the browser.</p>
+<p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is interpreted through the browser, and therefore slower.</p>
 
-<p>The difference is fairly negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops and JavaScript animations are choppy, slow and hold up the page. </p>
+<p>The difference is usually negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops. JavaScript animations on a phone are typically choppy, slow and hold up the scrolling.</p>
 
 </section><!-- #question-3 -->
 <section id="question-4">
@@ -93,18 +93,16 @@
 
 <p>Let’s talk about performance, specifically stylesheets. Remember <a href="http://developer.yahoo.com/performance/rules.html">Yahoo!’s guidelines</a>: minify files, use less HTTP requests, compress files, etc.</p>
 
-<p>On the home page, the site loads <strong>five</strong> stylesheets. (There’s another one hiding on the product page.) One results from Typekit loading, so it can’t be eliminated. The other four, however, could be compressed into a <em>single</em> stylesheet. This would decrease file size (by minimizing plugins’ CSS) and reduce HTTP requests, making the page load and render faster. Here’s how:</p>
+<p>On the home page, the site loads <strong>five</strong> stylesheets. (There’s another one hiding on the product page.) One results from Typekit loading, so it can’t be eliminated. The other four, however, could be compressed into a <em>single</em> stylesheet. This would decrease file size (by minimizing plugins’ CSS) and reduce HTTP requests, making the page load and render faster. Here’s how to do this:</p>
 
 <ol>
 <li>Use WordPress’s <a href="http://codex.wordpress.org/Function_Reference/wp_dequeue_style"><code>wp_dequeue_style</code></a> in the theme’s <em>functions.php</em> to remove plugins’ stylesheets.</li>
 <li>Import all plugins’ stylesheets into <em>app.css</em> and minimize it.</li>
 </ol>
 
-<p>This is more work on the developer: when a vendor updates his or her plugin, you have to manually recompile <em>app.css</em>. In the end, it pays off in performance. (One could add an action function to do this every time a plugin or theme is updated. Plugin idea, anyone?)</p>
+<p>This is more work on the developer: when a vendor updates his or her plugin, you have to manually rebuild <em>app.css</em>. In the end, this would pay off in performance. (One could add an action function that fires every time something is updated. Plugin idea, anyone?)</p>
 
-<p>Another consideration is that none of the stylesheets have a <code>Cache-Control</code> header, most likely because WordPress likes to set query strings on assets. Consider setting <em>app.css</em>’s <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_style"><code>wp_enqueue_style</code></a>’s <code>$ver</code> parameter to <code>NULL</code> so no query string is added.</p>
-
-<p>Also, they’re not G-Zipped. Adding the appropriate rules to the global <em>.ht_access</em> should do the trick.</p>
+<p>There’s also a few server-side issues. None of the stylesheets have a <code>Cache-Control</code> header, nor are they <a href="http://en.wikipedia.org/wiki/Gzip">gzip</a>-ed. This means the browser potentially downloads stylesheets on every page load, and the stylesheets aren’t compressed by the server. WordPress is the likely culprit: it enjoys setting query strings on assets. Setting <em>app.css</em>’s <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_style">queue function</a> with the <code>$ver</code> parameter to <code>NULL</code> will drop the query string. If these problems persist, some tweaking of the server’s configuration file should do the trick.</p>
 
 </section><!-- #question-5 -->
 
