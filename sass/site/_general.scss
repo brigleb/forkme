@@ -2,7 +2,8 @@
    General
    ========================================================================== */
 
-/* Most of the stuff is here is copied from H5BP and customized.
+/* Most of the stuff is here is copied from H5BP and customized. Things are
+ * in alphabetical order for the most part.
  */
 
 ::-moz-selection {
@@ -10,62 +11,68 @@
 	color: $base3;
 	text-shadow: none;
 }
-
 ::selection {
 	background: $accent1;
 	color: $base3;
 	text-shadow: none;
 }
 
-a,
+a {
+	color: $accent1;
+
+	@include media_query_2 {
+		@include transition-duration( .2s );
+		@include transition-property( background, color );
+	}
+}
 a:visited {
 	color: $accent1;
 }
-a:focus,
+a:focus {
+	color: $accent2;
+	outline: thin dotted;
+}
 a:hover {
 	color: $accent2;
+	outline: 0;
 }
 a:active {
 	color: $accent3;
-}
-
-}
-a:focus {
-	outline: thin dotted;
-}
-a:active,
-a:hover {
 	outline: 0;
 }
 blockquote {
 	margin: 1em 0;
 	padding-left: 2em;
 }
+code,
+kbd,
+samp {
+	background-color: $base2;
+	color: $base02;
+	@include border-radius( $border_radius );
+}
 dd {
 	margin: 0 0 0 1em;
 }
 hr {
-	-moz-box-sizing: content-box;
-	box-sizing: content-box;
-	height: 0;
+	@include box-sizing( content-box );
 
+	border-color: $base1;
+	border-style: solid;
+	border-width: thin 0 0 0;
 	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #ccc;
 	margin: 1em 0;
 	padding: 0;
-
+}
+html {
+	background-color: $base3;
+	color: $base03;
 }
 pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
-
-/**
- * Address paddings set differently in IE 6/7.
- */
 
 menu,
 ol,
