@@ -43,3 +43,42 @@
 
 @import "site/_helpers";
 @import "vendor/_h5bp-end";
+
+.portrait-container {
+	height: 15em;
+	position: relative;
+	@include perspective( 0 );
+	width: 15em;
+
+	&:focus,
+	&:hover {
+		.card {
+			@include transform( rotateY( 180deg ) );
+		}
+	}
+}
+	.card {
+		height: 100%;
+		position: absolute;
+		@include transform-style( preserve-3d );
+		@include transition( transform .4s ease-in );
+		width: 100%;
+
+		.front,
+		.back {
+			background-repeat: no-repeat;
+			background-size: 15em 15em;
+			@include backface-visibility( hidden );
+			@include border-radius( 15em );
+			height: 100%;
+			position: absolute;
+			width: 100%;
+		}
+		.front {
+			background-image: url( "../img/portrait.jpg" );
+		}
+		.back {
+			background-color: red;
+			@include transform( rotateY( 180deg ) );
+		}
+	}
