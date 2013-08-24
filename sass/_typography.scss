@@ -1,3 +1,5 @@
+/*Typography*/
+
 h1, h2, h3 {
 	font-family: $headingfont;
 	font-weight: 700;
@@ -58,10 +60,6 @@ span.tagline {
 	display: inline-block;
 	border: 2px solid $bodytext;
 	padding: 3px 6px;
-}
-
-.question {
-	font-style: italic;
 }
 
 footer p {
