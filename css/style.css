@@ -31,6 +31,8 @@
 /* Base Colors
  *
  * These are the neutral tones that comprise backgrounds, text color, etc.
+ * (I use the [Solarized](http://ethanschoonover.com/solarized) model for
+ * colors.)
  */
 /* Accent Colors
  *
@@ -723,14 +725,14 @@ h1, h2, h3, h4, h5, h6 {
 /* line 9, ../sass/site/_general.scss */
 ::-moz-selection {
   background: #d84c41;
-  color: #e2d8cf;
+  color: #f2efeb;
   text-shadow: none;
 }
 
 /* line 14, ../sass/site/_general.scss */
 ::selection {
   background: #d84c41;
-  color: #e2d8cf;
+  color: #f2efeb;
   text-shadow: none;
 }
 
@@ -759,19 +761,19 @@ a:visited {
 
 /* line 31, ../sass/site/_general.scss */
 a:focus {
-  color: #cc0000;
+  color: #c23632;
   outline: thin dotted;
 }
 
 /* line 35, ../sass/site/_general.scss */
 a:hover {
-  color: #cc0000;
+  color: #c23632;
   outline: 0;
 }
 
 /* line 39, ../sass/site/_general.scss */
 a:active {
-  color: red;
+  color: #ac1f23;
   outline: 0;
 }
 
@@ -790,8 +792,8 @@ blockquote {
 code,
 kbd,
 samp {
-  background-color: #dadada;
-  color: #333333;
+  background-color: #d8d4d2;
+  color: #262120;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   -ms-border-radius: 0.25em;
@@ -809,7 +811,7 @@ hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  border-color: #cccccc;
+  border-color: #d8d4d2;
   border-style: solid;
   border-width: thin 0 0 0;
   display: block;
@@ -819,7 +821,7 @@ hr {
 
 /* line 70, ../sass/site/_general.scss */
 html {
-  background-color: #e2d8cf;
+  background-color: #f2efeb;
   color: #262120;
 }
 
@@ -876,18 +878,18 @@ ul {
 .grey,
 .grey a,
 .grey a:visited {
-  color: #666666;
+  color: #87837f;
 }
 
 /* line 27, ../sass/site/_helpers.scss */
 .grey a:focus,
 .grey a:hover {
-  color: #cc0000;
+  color: #c23632;
 }
 
 /* line 30, ../sass/site/_helpers.scss */
 .grey a:active {
-  color: red;
+  color: #ac1f23;
 }
 
 /* line 34, ../sass/site/_helpers.scss */
@@ -915,7 +917,7 @@ ul {
 /* line 52, ../sass/site/_helpers.scss */
 .dark {
   background-color: #262120;
-  color: #e2d8cf;
+  color: #f2efeb;
 }
 
 /* line 56, ../sass/site/_helpers.scss */
@@ -926,7 +928,7 @@ ul {
 /* line 59, ../sass/site/_helpers.scss */
 .orange {
   background-color: #d84c41;
-  color: #e2d8cf;
+  color: #f2efeb;
 }
 /* line 67, ../sass/site/_helpers.scss */
 .orange a,
@@ -934,7 +936,7 @@ ul {
 .orange a:focus,
 .orange a:hover,
 .orange a:active {
-  color: #e2d8cf;
+  color: #f2efeb;
 }
 
 /* line 71, ../sass/site/_helpers.scss */
@@ -944,13 +946,13 @@ ul {
 
 /* line 74, ../sass/site/_helpers.scss */
 .light {
-  background-color: #e2d8cf;
+  background-color: #f2efeb;
   color: #262120;
 }
 
 /* line 78, ../sass/site/_helpers.scss */
 .light-text {
-  color: #e2d8cf;
+  color: #f2efeb;
 }
 
 /* ==========================================================================
