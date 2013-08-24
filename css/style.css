@@ -1140,15 +1140,69 @@ ul {
   }
 }
 /* line 47, ../sass/style.scss */
-#question-2 ol {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  -ms-column-count: 3;
-  -o-column-count: 3;
-  column-count: 3;
+.portrait-container {
+  height: 15em;
+  position: relative;
+  -webkit-perspective: 0;
+  -moz-perspective: 0;
+  -ms-perspective: 0;
+  -o-perspective: 0;
+  perspective: 0;
+  width: 15em;
 }
-/* line 50, ../sass/style.scss */
-#question-2 ol li {
-  -webkit-column-break-inside: avoid;
-  column-break-inside: avoid;
+/* line 55, ../sass/style.scss */
+.portrait-container:focus .card, .portrait-container:hover .card {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+/* line 60, ../sass/style.scss */
+.card {
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  -moz-transition: -moz-transform 0.4s ease-in;
+  -o-transition: -o-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  width: 100%;
+}
+/* line 68, ../sass/style.scss */
+.card .front,
+.card .back {
+  background-repeat: no-repeat;
+  background-size: 15em 15em;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-border-radius: 15em;
+  -moz-border-radius: 15em;
+  -ms-border-radius: 15em;
+  -o-border-radius: 15em;
+  border-radius: 15em;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+/* line 77, ../sass/style.scss */
+.card .front {
+  background-image: url("../img/portrait.jpg");
+}
+/* line 80, ../sass/style.scss */
+.card .back {
+  background-color: red;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
