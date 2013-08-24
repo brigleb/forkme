@@ -1,0 +1,249 @@
+// Global Foundation Settings
+@import "settings";
+
+// Comment out this import if you don't want to use normalize
+@import "normalize";
+
+// Comment out this import if you are customizing you imports below
+@import "foundation";
+@import "grid-5";
+
+$fullwidth: 100%;
+$red: #FFE86E;
+$white: #f6f6f2;
+$gray: #464442;
+$green: #7ACCBE;
+$darkgreen:#67BFDB;
+$lightpink: #FF99A1;
+$padding:50px;
+@mixin icon-medium{
+	width:100px;
+	height:100px;
+}
+@mixin Raleway-thin{
+	font-family: 'Raleway', sans-serif;
+	font-weight:100;
+}
+@mixin Raleway-bold{
+	font-family: 'Raleway', sans-serif;
+	font-weight:600;
+}
+@mixin zeropm{
+	margin:0;
+	padding:0;
+}
+@mixin OpenSans-body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;
+}
+@mixin OpenSans-bold{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:600;
+}
+@mixin Trans{
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+p{
+	line-height:1.75;
+}
+hr {
+	border: 0;
+	height: 1px;
+	background-image: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,0)), color-stop(0.5, rgba(0,0,0,0.75)), to(rgba(0,0,0,0)));
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image: linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+.fullwidth{
+	width:$fullwidth;
+	padding-bottom:30px;
+	padding-top:50px;
+}
+
+ .small-centered .number-of-section{
+	@include Raleway-thin;
+	margin:0 auto;
+	font-size: 10em;
+	color:$gray;
+	line-height: .7em;
+}
+.title{
+	.number-of-section{
+		@include Trans;
+		font-size: 6em;
+		width:100%;
+		span{
+			font-size: 0.5em;
+		}
+	}
+}
+.first{
+	background-color:$red;
+	.small-centered .number-of-section{
+		width:53px;
+	}
+	.answer{
+		a{
+			@include Raleway-bold;
+			color:$darkgreen;
+			@include Trans;
+			&:hover{
+				@include Trans;
+				border-bottom: 3px solid;
+			}
+		}
+	}
+}
+.second{
+	background-color:$darkgreen;
+	.small-centered .number-of-section{
+		width:75px;
+	}
+}
+ .third{
+ 	background-color:$white;
+ 	.small-centered .number-of-section{
+		width:80px;
+		margin-bottom: 42px;
+	}
+ }
+.forth{
+	background-color:$lightpink;
+	.small-centered .number-of-section{
+		width:84px;
+		margin-bottom: 42px;
+	}
+	.answer{
+		a{
+			@include Raleway-bold;
+			color:$white;
+			@include Trans;
+			&:hover{
+				@include Trans;
+				border-bottom: 3px solid;
+			}
+		}
+	}
+}
+.fifth{
+	background-color:$green;
+	.small-centered .number-of-section{
+		width:83px;
+		margin-bottom: 42px;
+	}
+}
+.answer{
+	color:$gray;
+	@include OpenSans-body;
+	padding-top: $padding / 2;
+	img{
+		width:50px;
+		height:50px;
+		float:left;
+		margin-right: 15px;
+	}
+}
+.icon{
+	@include icon-medium;
+	margin:30px auto 15px;
+	img{
+		float:left;
+	}
+}
+.orbit-container {
+	background-color:$lightpink;
+		.orbit-slides-container li p {
+			display: block;
+			width: 50%;
+			max-height:500px;
+			overflow:hidden;
+			margin: 0 auto;
+			@include Trans;
+				    &:hover{
+					@include Trans;
+					opacity:0.7;
+					width:53%;
+		}
+	}
+}
+.orbit-timer, .orbit-bullets{
+	display:none;
+}
+.slide{
+	margin-bottom:1.25em;
+}
+.slide-head{
+	@include Raleway-bold;
+	color:$white;
+}
+.third .icon{
+	float:left;
+	text-align:center;
+}
+.center{
+	margin:0 auto;
+	width:300px;
+	.icon{
+		margin-top:15px;
+	}
+}
+.num{
+	@include OpenSans-bold;
+	font-size: 3em;
+	color:$white;
+	line-height:0.1em;
+	.vs{
+		color:$gray;
+	}
+}
+.vs{
+	color:$gray;
+	line-height: 100px;
+}
+.tiny{
+	display: none;
+}
+@media all and (max-width: 901px) {
+	.title{
+		.number-of-section{
+			@include Trans;
+			font-size: 4em;
+			span{
+				font-size: 0.5em;
+			}
+		}
+	}
+}
+@media all and (max-width: 770px) {
+	.title{
+		.number-of-section{
+			@include Trans;
+			font-size: 3em;
+			span{
+				font-size: 0.5em;
+			}
+		}
+	}
+}
+@media all and (max-width: 500px) {
+	.big{
+		display: none;
+	}
+	.tiny{
+		display: block;
+	}
+	.title{
+		.number-of-section{
+			@include Trans;
+			font-size: 6em;
+			text-align: center;
+			span{
+				font-size: 0.5em;
+			}
+		}
+	}
+}
