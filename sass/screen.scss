@@ -1,6 +1,175 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+ * <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "compass/reset";
+
+
+/***  BASE  ***/
+@import "partials/base";
+
+body {
+	background-image: url(../img/fabric_1.png);
+	font-family: "arvoregular";
+	font-size: 1.2em;
+}
+
+h1 {
+	font-family: "pathway_gothic_oneregular";
+	font-size: 2.2em;
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;  /* This rule will make all images x percent as wide as their parents. */
+}
+
+p {
+	line-height: 1.8em;
+}
+
+
+
+/***  LAYOUT  ***/
+.center-text {
+	text-align: center;
+}
+
+.clear-it {
+	clear: both;
+}
+
+.content-container {
+	height: auto;
+	width: 100%;
+}
+
+.inner {
+	height: auto;
+	max-width: 60%;
+}
+
+.page {
+	height: 500px;
+	position: relative;
+}
+
+.page-footer {
+	height: 31px;
+	position: absolute;
+		bottom: 0;
+		left: 0;
+	width: 100%;
+}
+
+.spaced-top-bottom {
+	margin: 25px auto;
+}
+
+.to-center {
+	margin: 0 auto;
+}
+
+.to-left {
+	float: left;
+}
+
+.to-right {
+	float: right;
+}
+
+
+
+/***  MODULE  ***/
+footer {
+	background-color: #222;
+	color: white;
+	height: 15px;
+	width: 100%;
+}
+
+header {
+	background-color: #222;
+	color: white;
+	height: 60px;
+	position: fixed;
+		top: 0;
+		left: 0;
+	text-transform: uppercase;
+	width: 100%;
+	z-index: 1;
+}
+
+#hero {
+	background-image: url(../img/hero.jpg);
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	height: 600px;
+	margin-top: 60px;
+	padding-top: 107px;
+	width: 100%;
+}
+
+.logo {
+	width: 30%;
+}
+
+.logo > p {
+	font-family: "nevis";
+	font-size: 1em;
+	line-height: 60px;
+	padding-left: 10px;
+}
+
+nav {
+	font-family: "pathway_gothic_oneregular";
+	font-size: 1.3em;
+	line-height: 60px;
+	text-align: right;
+	width: 70%;	
+
+	li {
+		display: inline;
+		padding-right: 10px;
+		width: 100%;
+
+		a {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+/***  THEME  ***/
+@include font-face("pathway_gothic_oneregular", font-files("../fonts/pathwaygothicone-regular-webfont.woff", "../fonts/pathwaygothicone-regular-webfont.ttf", "../fonts/pathwaygothicone-regular-webfont.eot", "../fonts/pathwaygothicone-regular-webfont.svg#pathway_gothic_oneregular"));
+@include font-face("arvoregular", font-files("../fonts/arvo-regular-webfont.woff", "../fonts/arvo-regular-webfont.ttf", "../fonts/arvo-regular-webfont.eot", "../fonts/arvo-regular-webfont.svg#arvoregular"));
+@include font-face("nevis", font-files("../fonts/nevis-webfont.woff", "../fonts/nevis-webfont.ttf", "../fonts/nevis-webfont.eot", "../fonts/nevis-webfont.svg#nevis"));
+
+hr {
+	margin-top: 25px;
+	width: 75%;
+}
+
+#q2 {
+	background-image: url(../img/jagged-red-bg.png);
+	color: white;
+}
+
+#q4 {
+	background-image: url(../img/jagged-blue-bg.png);
+	color: white;
+
+	a {
+		color: white;
+	}
+}
+
+#q5 {
+	a {
+		color: #1b465c;
+	}
+} 
