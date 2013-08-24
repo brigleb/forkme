@@ -43,3 +43,11 @@
 
 @import "site/_helpers";
 @import "vendor/_h5bp-end";
+
+#question-2 ol {
+	@include column-count( 3 );
+
+	li {
+		@include column-break-inside( avoid );
+	}
+}
