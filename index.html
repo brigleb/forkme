@@ -16,17 +16,18 @@
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-
 		<header role="banner">
-			<h1>Forkme!</h1>
+			<div class="wrapper">
+				<h1><a href="#" rel="home">Forkme!</a></h1>
+			</div>
 		</header>
 		<main role="main">
 
 <section id="question-1">
+	<div class="wrapper">
+<h1 class="small sans font-regular text-center">What is your favorite WordPress function? Why?</h1>
 
-<h1>What is your favorite WordPress function? Why?</h1>
-
-<p><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
+<p class="xxxxx-large"><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
 
 <p>With it, a skilled developer can change nearly <strong>everything</strong> about WordPress’s built-in functions. A few examples:</p>
 
@@ -35,10 +36,10 @@
 <li>WordPress extraneously wraps elements in paragraph tags, even images and videos. This isn’t very semantic. I like to use <code>add_filter()</code> to hook a function onto the <code>the_content</code> and parse out the extra <code>&lt;p&gt;</code> tags.</li>
 <li><a href="http://codex.wordpress.org/Function_Reference/wp_title"><code>wp_title()</code></a>’s default behavior doesn’t include the site’s title on a few views, often leaving pages with no title. This is an easy fix with <code>add_filter()</code>: a custom function can act on the <code>wp_title</code> hook to include the site’s title on every page, remedying the problem.</li>
 </ul>
-
+	</div><!-- .wrapper -->
 </section><!-- #question-1 -->
 <section id="question-2">
-
+	<div class="wrapper">
 <h1>Name three good reasons to start a branch in a version control system.</h1>
 
 <ol>
@@ -46,10 +47,10 @@
 <li><strong>Debugging something <em>right now</em>.</strong> What if – while fixing <em>this</em> bug – you inadvertently cause another <em>new</em> problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</li>
 <li><strong>Trying out an experimental feature.</strong> Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</li>
 </ol>
-
+	</div><!-- .wrapper -->
 </section><!-- #question-2 -->
 <section id="question-3">
-
+	<div class="wrapper">
 <h1>Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h1>
 
 <p><strong>CSS animations and transitions run faster than their JavaScript counterparts.</strong></p>
@@ -57,10 +58,10 @@
 <p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is interpreted through the browser, and therefore slower.</p>
 
 <p>The difference is usually negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops. JavaScript animations on a phone are typically choppy, slow and hold up the scrolling.</p>
-
+	</div><!-- .wrapper -->
 </section><!-- #question-3 -->
 <section id="question-4">
-
+	<div class="wrapper">
 <h1>What is your favorite project that you've done? (include link and/or image)</h1>
 
 <p><strong>My favorite live project to date is <a href="http://swashcap.com/oregon-breweries/">Oregon Breweries</a>!</strong></p>
@@ -83,10 +84,10 @@
 </ul>
 
 <p>Sounds like a win-win.</p>
-
-</section>
+	</div><!-- .wrapper -->
+</section><!-- #question-4 -->
 <section id="question-5">
-
+	<div class="wrapper">
 <h1>Look at our portfolio and find something we've built that could be improved. Suggest how!</h1>
 
 <p><strong><a href="http://equalityhouse.org/">Equality House’s site</a> looks great, reads great, and functions great; yet, there is a key area for improvement.</strong></p>
@@ -103,12 +104,36 @@
 <p>This is more work on the developer: when a vendor updates his or her plugin, you have to manually rebuild <em>app.css</em>. In the end, this would pay off in performance. (One could add an action function that fires every time something is updated. Plugin idea, anyone?)</p>
 
 <p>There’s also a few server-side issues. None of the stylesheets have a <code>Cache-Control</code> header, nor are they <a href="http://en.wikipedia.org/wiki/Gzip">gzip</a>-ed. This means the browser potentially downloads stylesheets on every page load, and the stylesheets aren’t compressed by the server. WordPress is the likely culprit: it enjoys setting query strings on assets. Setting <em>app.css</em>’s <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_style">queue function</a> with the <code>$ver</code> parameter to <code>NULL</code> will drop the query string. If these problems persist, some tweaking of the server’s configuration file should do the trick.</p>
-
+	</div><!-- .wrapper -->
 </section><!-- #question-5 -->
 
 		</main>
-		<footer role="contentinfo">
-			<small>by <a href="http://swashcap.com/">Swash Cap</a>.</small>
+		<footer class="clearfix" role="contentinfo">
+			<div class="wrapper">
+				<section id="contact">
+					<h1>Whaddya say?</h1>
+
+					<p>Give this guy a call!</p>
+
+					<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>
+
+
+					<p>Email works just as well:</p>
+
+					<address class="xxx-large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+				</section>
+				<div class="x-small clearfix">
+					<section id="about">
+						<h1 class="regular font-regular text-upper">Purpose</h1>
+						<p><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</p>
+					</section>
+					<section id="colophon">
+						<h1 class="regular font-regular text-upper">Colophon</h1>
+						<p>This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</p>
+						<p>Crafted, August 2013.</p>
+					</section><!-- #colophon -->
+				</div><!-- .small.clearfix -->
+			</div><!-- .wrapper -->
 		</footer>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

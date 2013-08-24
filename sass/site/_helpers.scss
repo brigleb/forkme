@@ -6,3 +6,25 @@
 	list-style-type: none;
 	padding-left: none;
 }
+
+.font-regular {
+	font-weight: 400;
+}
+.font-bold {
+	font-weight: 700;
+}
+
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.text-upper {
+	letter-spacing: .25ex;
+	text-transform: uppercase;
+}
