@@ -1,8 +1,9 @@
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ * <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/***  BASE  ***/
+/* line 17, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +25,239 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
+}
+
+/* line 11, ../sass/screen.scss */
+body {
+  background-image: url(../img/fabric_1.png);
+  font-family: "arvoregular";
+  font-size: 1.2em;
+}
+
+/* line 17, ../sass/screen.scss */
+h1 {
+  font-family: "pathway_gothic_oneregular";
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+
+/* line 23, ../sass/screen.scss */
+img {
+  max-width: 100%;
+  /* This rule will make all images x percent as wide as their parents. */
+}
+
+/* line 27, ../sass/screen.scss */
+p {
+  line-height: 1.8em;
+}
+
+/***  LAYOUT  ***/
+/* line 34, ../sass/screen.scss */
+.center-text {
+  text-align: center;
+}
+
+/* line 38, ../sass/screen.scss */
+.clear-it {
+  clear: both;
+}
+
+/* line 42, ../sass/screen.scss */
+.content-container {
+  height: auto;
+  width: 100%;
+}
+
+/* line 47, ../sass/screen.scss */
+.inner {
+  height: auto;
+  max-width: 60%;
+}
+
+/* line 52, ../sass/screen.scss */
+.page {
+  height: 500px;
+  position: relative;
+}
+
+/* line 57, ../sass/screen.scss */
+.page-footer {
+  height: 31px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* line 65, ../sass/screen.scss */
+.spaced-top-bottom {
+  margin: 25px auto;
+}
+
+/* line 69, ../sass/screen.scss */
+.to-center {
+  margin: 0 auto;
+}
+
+/* line 73, ../sass/screen.scss */
+.to-left {
+  float: left;
+}
+
+/* line 77, ../sass/screen.scss */
+.to-right {
+  float: right;
+}
+
+/***  MODULE  ***/
+/* line 84, ../sass/screen.scss */
+footer {
+  background-color: #222;
+  color: white;
+  height: 15px;
+  width: 100%;
+}
+
+/* line 91, ../sass/screen.scss */
+header {
+  background-color: #222;
+  color: white;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 103, ../sass/screen.scss */
+#hero {
+  background-image: url(../img/hero.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 600px;
+  margin-top: 60px;
+  padding-top: 107px;
+  width: 100%;
+}
+
+/* line 115, ../sass/screen.scss */
+.logo {
+  width: 30%;
+}
+
+/* line 119, ../sass/screen.scss */
+.logo > p {
+  font-family: "nevis";
+  font-size: 1em;
+  line-height: 60px;
+  padding-left: 10px;
+}
+
+/* line 126, ../sass/screen.scss */
+nav {
+  font-family: "pathway_gothic_oneregular";
+  font-size: 1.3em;
+  line-height: 60px;
+  text-align: right;
+  width: 70%;
+}
+/* line 133, ../sass/screen.scss */
+nav li {
+  display: inline;
+  padding-right: 10px;
+  width: 100%;
+}
+/* line 138, ../sass/screen.scss */
+nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+/***  THEME  ***/
+@font-face {
+  font-family: "pathway_gothic_oneregular";
+  src: url('../fonts/../fonts/pathwaygothicone-regular-webfont.woff') format('woff'), url('../fonts/../fonts/pathwaygothicone-regular-webfont.ttf') format('truetype'), url('../fonts/../fonts/pathwaygothicone-regular-webfont.eot') format('embedded-opentype'), url('../fonts/../fonts/pathwaygothicone-regular-webfont.svg#pathway_gothic_oneregular') format('svg');
+}
+
+@font-face {
+  font-family: "arvoregular";
+  src: url('../fonts/../fonts/arvo-regular-webfont.woff') format('woff'), url('../fonts/../fonts/arvo-regular-webfont.ttf') format('truetype'), url('../fonts/../fonts/arvo-regular-webfont.eot') format('embedded-opentype'), url('../fonts/../fonts/arvo-regular-webfont.svg#arvoregular') format('svg');
+}
+
+@font-face {
+  font-family: "nevis";
+  src: url('../fonts/../fonts/nevis-webfont.woff') format('woff'), url('../fonts/../fonts/nevis-webfont.ttf') format('truetype'), url('../fonts/../fonts/nevis-webfont.eot') format('embedded-opentype'), url('../fonts/../fonts/nevis-webfont.svg#nevis') format('svg');
+}
+
+/* line 152, ../sass/screen.scss */
+hr {
+  margin-top: 25px;
+  width: 75%;
+}
+
+/* line 157, ../sass/screen.scss */
+#q2 {
+  background-image: url(../img/jagged-red-bg.png);
+  color: white;
+}
+
+/* line 162, ../sass/screen.scss */
+#q4 {
+  background-image: url(../img/jagged-blue-bg.png);
+  color: white;
+}
+/* line 166, ../sass/screen.scss */
+#q4 a {
+  color: white;
+}
+
+/* line 172, ../sass/screen.scss */
+#q5 a {
+  color: #1b465c;
 }
