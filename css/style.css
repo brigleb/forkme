@@ -792,21 +792,44 @@ blockquote {
 code,
 kbd,
 samp {
-  background-color: #d8d4d2;
-  color: #262120;
-  -webkit-border-radius: 0.25em;
-  -moz-border-radius: 0.25em;
-  -ms-border-radius: 0.25em;
-  -o-border-radius: 0.25em;
-  border-radius: 0.25em;
+  background-color: rgba(216, 212, 210, 0.5);
+  color: #56524f;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: .05em .2em;
+}
+/* line 59, ../sass/site/_general.scss */
+a code, a:visited code, a
+kbd, a:visited
+kbd, a
+samp, a:visited
+samp {
+  color: #d84c41;
+}
+/* line 63, ../sass/site/_general.scss */
+a:focus code, a:hover code, a:focus
+kbd, a:hover
+kbd, a:focus
+samp, a:hover
+samp {
+  color: #c23632;
+}
+/* line 66, ../sass/site/_general.scss */
+a:active code, a:active
+kbd, a:active
+samp {
+  color: #ac1f23;
 }
 
-/* line 57, ../sass/site/_general.scss */
+/* line 70, ../sass/site/_general.scss */
 dd {
   margin: 0 0 0 1em;
 }
 
-/* line 60, ../sass/site/_general.scss */
+/* line 73, ../sass/site/_general.scss */
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -819,20 +842,20 @@ hr {
   padding: 0;
 }
 
-/* line 70, ../sass/site/_general.scss */
+/* line 83, ../sass/site/_general.scss */
 html {
   background-color: #f2efeb;
   color: #262120;
 }
 
-/* line 74, ../sass/site/_general.scss */
+/* line 87, ../sass/site/_general.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 82, ../sass/site/_general.scss */
+/* line 95, ../sass/site/_general.scss */
 menu,
 ol,
 ul {
@@ -919,38 +942,71 @@ ul {
   background-color: #262120;
   color: #f2efeb;
 }
+/* line 58, ../sass/site/_helpers.scss */
+.dark code,
+.dark kbd,
+.dark samp {
+  background-color: rgba(135, 131, 127, 0.33);
+  color: #d8d4d2;
+}
 
-/* line 56, ../sass/site/_helpers.scss */
+/* line 63, ../sass/site/_helpers.scss */
 .dark-text {
   color: #262120;
 }
 
-/* line 59, ../sass/site/_helpers.scss */
+/* line 66, ../sass/site/_helpers.scss */
 .orange {
   background-color: #d84c41;
   color: #f2efeb;
 }
-/* line 67, ../sass/site/_helpers.scss */
+/* line 75, ../sass/site/_helpers.scss */
 .orange a,
+.orange a code,
+.orange a kbd,
+.orange a samp,
 .orange a:visited,
+.orange a:visited code,
+.orange a:visited kbd,
+.orange a:visited samp {
+  color: #d8d4d2;
+}
+/* line 85, ../sass/site/_helpers.scss */
 .orange a:focus,
+.orange a:focus code,
+.orange a:focus kbd,
+.orange a:focus samp,
 .orange a:hover,
-.orange a:active {
+.orange a:hover code,
+.orange a:hover kbd,
+.orange a:hover samp,
+.orange a:active,
+.orange a:active code,
+.orange a:active kbd,
+.orange a:active samp {
   color: #f2efeb;
 }
+/* line 92, ../sass/site/_helpers.scss */
+.orange code,
+.orange kbd,
+.orange samp {
+  background-color: rgba(242, 239, 235, 0.13);
+  color: #f2efeb;
+  color: rgba(242, 239, 235, 0.88);
+}
 
-/* line 71, ../sass/site/_helpers.scss */
+/* line 98, ../sass/site/_helpers.scss */
 .orange-text {
   color: #d84c41;
 }
 
-/* line 74, ../sass/site/_helpers.scss */
+/* line 101, ../sass/site/_helpers.scss */
 .light {
   background-color: #f2efeb;
   color: #262120;
 }
 
-/* line 78, ../sass/site/_helpers.scss */
+/* line 105, ../sass/site/_helpers.scss */
 .light-text {
   color: #f2efeb;
 }

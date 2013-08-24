@@ -52,6 +52,13 @@
 .dark {
 	background-color: $base03;
 	color: $base3;
+
+	code,
+	kbd,
+	samp {
+		background-color: rgba( $base01, .33 );
+		color: $base2;
+	}
 }
 .dark-text {
 	color: $base03;
@@ -61,11 +68,31 @@
 	color: $base3;
 
 	a,
-	a:visited,
+	a:visited {
+		&,
+		code,
+		kbd,
+		samp {
+			color: $base2;
+		}
+	}
 	a:focus,
 	a:hover,
 	a:active {
+		&,
+		code,
+		kbd,
+		samp {
+			color: $base3;
+		}
+	}
+
+	code,
+	kbd,
+	samp {
+		background-color: rgba( $base3, .13 );
 		color: $base3;
+		color: rgba( $base3, .88 );
 	}
 }
 .orange-text {

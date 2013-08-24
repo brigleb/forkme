@@ -50,9 +50,22 @@ blockquote {
 code,
 kbd,
 samp {
-	background-color: $base2;
-	color: $base02;
-	@include border-radius( $border_radius );
+	background-color: rgba( $base2, .5 );
+	color: mix( $base03, $base01 );
+	@include border-radius( $border_radius / 1em * 1rem );
+	padding: .05em .2em;
+
+	a &,
+	a:visited & {
+		color: $accent1;
+	}
+	a:focus &,
+	a:hover & {
+		color: $accent2;
+	}
+	a:active & {
+		color: $accent3;
+	}
 }
 dd {
 	margin: 0 0 0 1em;
