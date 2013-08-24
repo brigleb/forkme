@@ -546,9 +546,17 @@ textarea {
 /* line 14, ../sass/site/_fonts.scss */
 .sans {
   font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+  /* Unfortunately, the font doesn't include obliques or italics. Gotta
+   * suppress 'em, or the browser will do something squirelly.
+   */
+}
+/* line 21, ../sass/site/_fonts.scss */
+.sans em,
+.sans i {
+  font-style: normal;
 }
 
-/* line 21, ../sass/site/_fonts.scss */
+/* line 29, ../sass/site/_fonts.scss */
 code,
 kbd,
 pre,
@@ -851,7 +859,7 @@ ul {
 /* line 9, ../sass/site/_helpers.scss */
 .no-list {
   list-style-type: none;
-  padding-left: none;
+  padding-left: 0;
 }
 
 /* line 14, ../sass/site/_helpers.scss */
@@ -904,6 +912,47 @@ ul {
 
 /* Colors
    ========================================================================== */
+/* line 52, ../sass/site/_helpers.scss */
+.dark {
+  background-color: #262120;
+  color: #e2d8cf;
+}
+
+/* line 56, ../sass/site/_helpers.scss */
+.dark-text {
+  color: #262120;
+}
+
+/* line 59, ../sass/site/_helpers.scss */
+.orange {
+  background-color: #d84c41;
+  color: #e2d8cf;
+}
+/* line 67, ../sass/site/_helpers.scss */
+.orange a,
+.orange a:visited,
+.orange a:focus,
+.orange a:hover,
+.orange a:active {
+  color: #e2d8cf;
+}
+
+/* line 71, ../sass/site/_helpers.scss */
+.orange-text {
+  color: #d84c41;
+}
+
+/* line 74, ../sass/site/_helpers.scss */
+.light {
+  background-color: #e2d8cf;
+  color: #262120;
+}
+
+/* line 78, ../sass/site/_helpers.scss */
+.light-text {
+  color: #e2d8cf;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -1089,9 +1138,4 @@ ul {
   h3 {
     page-break-after: avoid;
   }
-}
-/* line 47, ../sass/style.scss */
-#question-2 {
-  background-color: #d84c41;
-  color: #e2d8cf;
 }

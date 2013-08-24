@@ -8,7 +8,7 @@
 
 .no-list {
 	list-style-type: none;
-	padding-left: none;
+	padding-left: 0;
 }
 
 .font-regular {
@@ -49,6 +49,32 @@
 /* Colors
    ========================================================================== */
 
+.dark {
+	background-color: $base03;
+	color: $base3;
+}
+.dark-text {
+	color: $base03;
+}
 .orange {
-	
+	background-color: $accent1;
+	color: $base3;
+
+	a,
+	a:visited,
+	a:focus,
+	a:hover,
+	a:active {
+		color: $base3;
+	}
+}
+.orange-text {
+	color: $accent1;
+}
+.light {
+	background-color: $base3;
+	color: $base03;
+}
+.light-text {
+	color: $base3;
 }
