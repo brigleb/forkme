@@ -1,0 +1,35 @@
+/*Text*/
+$bodytext: #d9d9d9;
+$headingtext: #fff;
+$linktext: #8AB9DB;
+$hovertext: #C2E5FF;
+$footertext: #bfbfbf;
+$headingfont: "Raleway", sans-serif;
+$bodyfont: "Oxygen", sans-serif;
+/*Divs, etc*/
+$questionbg: #2B2E30;
+/*Units*/
+$roundcorners: 10px;
+/*Responsive*/
+$breakpoint: 720px;
+
+@import "compass/reset";
+@import "compass/css3";
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+ }
+
+html { 
+  background: #000 url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+ img {
+    max-width: 100%;
+}

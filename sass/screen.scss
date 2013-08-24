@@ -1,6 +1,118 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import "_base.scss";
 
-@import "compass/reset";
+body {
+	color: $bodytext;
+	font-family: $bodyfont;
+	font-size: 14pt;
+	line-height: 20pt;
+	font-weight: 300;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 12pt;
+		line-height: 18pt;
+	}
+}
+
+.container {
+	width: 90%;
+	max-width: 960px;
+	margin: 5% auto;
+	padding: 30px;
+	background-color: #d6d6d6; /*fallback*/
+	background-color: rgba(#000, 0.3);
+	border: 30px #d6d6d6 solid; /*fallback*/
+	border: 30px rgba(#000, 0.3) solid;
+	@include border-radius($roundcorners);
+	@media screen and (max-width: $breakpoint) {
+		border: 10px #d6d6d6 solid; /*fallback*/
+		border: 10px rgba(#000, 0.3) solid;
+		padding: 10px;
+	}
+}
+
+header#main {
+	margin-bottom: 30px;
+}
+
+ol {
+	list-style-type: decimal;
+	margin-left: 40px;
+	li {
+		margin: 0 0 10px 0;
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+ul.main-list {
+	margin: 0 20px;
+	@media screen and (max-width: $breakpoint) {
+		margin: 0 10px;
+	}
+	> li {
+		padding: 25px;
+		margin: 30px 0;
+		background-color: $questionbg; /*fallback*/
+		background-color: rgba($questionbg, 0.7);
+		@include border-radius($roundcorners);
+		@media screen and (max-width: $breakpoint) {
+			padding: 15px;
+		}
+	}
+}
+
+footer {
+	width: 100%;
+	color: $footertext;
+}
+
+/*
+Image grid
+*/
+.img-row {
+	width: 100%;
+	text-align: center;
+}
+
+.img-grid {
+	width: 48%;
+	float: left;
+	margin: 0px 4% 4% 0px;
+	&:last-child {
+		margin: 0 0 4% 0;
+	}
+	@media screen and (max-width: $breakpoint) {
+		width: 100%;
+	}
+}
+
+.img-grid-full {
+	width: 100%;
+}
+
+/*
+Helpers
+*/
+.center-text {
+	text-align: center;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+@import "_typography.scss";

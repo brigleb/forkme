@@ -1,68 +1,91 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*Text*/
+/*Divs, etc*/
+/*Units*/
+/*Responsive*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
 
-/* line 22, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
+html { line-height: 1; }
 
-/* line 24, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none; }
 
-/* line 26, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
-/* line 28, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
 
-/* line 30, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
 
-/* line 32, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
+a img { border: none; }
 
-/* line 116, ../../.rvm/gems/ruby-2.0.0-p247/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html { background: black url(../img/background.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
+
+img { max-width: 100%; }
+
+body { color: #d9d9d9; font-family: "Oxygen", sans-serif; font-size: 14pt; line-height: 20pt; font-weight: 300; }
+@media screen and (max-width: 720px) { body { font-size: 12pt; line-height: 18pt; } }
+
+.container { width: 90%; max-width: 960px; margin: 5% auto; padding: 30px; background-color: #d6d6d6; /*fallback*/ background-color: rgba(0, 0, 0, 0.3); border: 30px #d6d6d6 solid; /*fallback*/ border: 30px rgba(0, 0, 0, 0.3) solid; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
+@media screen and (max-width: 720px) { .container { border: 10px #d6d6d6 solid; /*fallback*/ border: 10px rgba(0, 0, 0, 0.3) solid; padding: 10px; } }
+
+header#main { margin-bottom: 30px; }
+
+ol { list-style-type: decimal; margin-left: 40px; }
+ol li { margin: 0 0 10px 0; }
+ol li:last-child { margin: 0; }
+
+ul.main-list { margin: 0 20px; }
+@media screen and (max-width: 720px) { ul.main-list { margin: 0 10px; } }
+ul.main-list > li { padding: 25px; margin: 30px 0; background-color: #2b2e30; /*fallback*/ background-color: rgba(43, 46, 48, 0.7); -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; border-radius: 10px; }
+@media screen and (max-width: 720px) { ul.main-list > li { padding: 15px; } }
+
+footer { width: 100%; color: #bfbfbf; }
+
+/*
+Image grid
+*/
+.img-row { width: 100%; text-align: center; }
+
+.img-grid { width: 48%; float: left; margin: 0px 4% 4% 0px; }
+.img-grid:last-child { margin: 0 0 4% 0; }
+@media screen and (max-width: 720px) { .img-grid { width: 100%; } }
+
+.img-grid-full { width: 100%; }
+
+/*
+Helpers
+*/
+.center-text { text-align: center; }
+
+.cf:before, .cf:after { content: " "; /* 1 */ display: table; /* 2 */ }
+
+.cf:after { clear: both; }
+
+/** For IE 6/7 only Include this rule to trigger hasLayout and contain floats. */
+.cf { *zoom: 1; }
+
+/*Typography*/
+h1, h2, h3 { font-family: "Raleway", sans-serif; font-weight: 700; margin: 15px 0; color: white; }
+
+header h1 { font-size: 45pt; line-height: 50pt; }
+@media screen and (max-width: 720px) { header h1 { font-size: 35pt; line-height: 40pt; } }
+
+h2 { font-size: 30pt; line-height: 34pt; }
+@media screen and (max-width: 720px) { h2 { font-size: 25pt; line-height: 30pt; } }
+
+h3 { font-size: 22pt; font-weight: 500; line-height: 28pt; margin: 5px 0; }
+@media screen and (max-width: 720px) { h3 { font-size: 17pt; line-height: 23pt; } }
+
+p { padding: 0px 0 15px 0; }
+
+a { text-decoration: none; color: #8ab9db; }
+a:hover { color: #c2e5ff; -webkit-transition: color 0.1s ease-out; -moz-transition: color 0.1s ease-out; -o-transition: color 0.1s ease-out; transition: color 0.1s ease-out; }
+
+code { font-family: courier; background: #737b81; display: inline-block; padding: 0 5px; }
+
+span.tagline { display: inline-block; border: 2px solid #d9d9d9; padding: 3px 6px; }
+
+footer p { font-size: 10pt; }

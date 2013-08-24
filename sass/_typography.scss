@@ -1,0 +1,67 @@
+/*Typography*/
+
+h1, h2, h3 {
+	font-family: $headingfont;
+	font-weight: 700;
+	margin: 15px 0;
+	color: $headingtext;
+}
+
+header h1 {
+	font-size: 45pt;
+	line-height: 50pt;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 35pt;
+		line-height: 40pt;
+	}
+}
+
+h2 {
+	font-size: 30pt;
+	line-height: 34pt;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 25pt;
+		line-height: 30pt;
+	}
+}
+
+h3 {
+	font-size: 22pt;
+	font-weight: 500;
+	line-height: 28pt;
+	margin: 5px 0;
+	@media screen and (max-width: $breakpoint) {
+		font-size: 17pt;
+		line-height: 23pt;
+	}
+}
+
+p {
+	padding: 0px 0 15px 0;
+}
+
+a {
+	text-decoration: none;
+	color: $linktext;
+	&:hover {
+			color: $hovertext;
+  			@include transition(color 0.1s ease-out);
+  		}
+}
+
+code {
+	font-family: courier;
+	background: lighten($questionbg, 30%);
+	display: inline-block;
+	padding: 0 5px;
+}
+
+span.tagline {
+	display: inline-block;
+	border: 2px solid $bodytext;
+	padding: 3px 6px;
+}
+
+footer p {
+	font-size: 10pt;
+}
