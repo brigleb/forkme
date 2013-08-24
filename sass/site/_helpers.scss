@@ -2,6 +2,10 @@
    Helpers
    ========================================================================== */
 
+/* In the interest of keeping the stylesheet small, a lot of helper classes
+ * are included here.
+ */
+
 .no-list {
 	list-style-type: none;
 	padding-left: none;
@@ -12,6 +16,19 @@
 }
 .font-bold {
 	font-weight: 700;
+}
+
+.grey,
+.grey a,
+.grey a:visited {
+	color: $base01;
+}
+.grey a:focus,
+.grey a:hover {
+	color: $accent2;
+}
+.grey a:active {
+	color: $accent3;
 }
 
 .text-left {
@@ -25,6 +42,13 @@
 }
 
 .text-upper {
-	letter-spacing: .25ex;
+	//letter-spacing: .33ex;
 	text-transform: uppercase;
+}
+
+/* Colors
+   ========================================================================== */
+
+.orange {
+	
 }
