@@ -13,6 +13,14 @@ textarea {
 
 .sans {
 	font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+
+	/* Unfortunately, the font doesn't include obliques or italics. Gotta
+	 * suppress 'em, or the browser will do something squirelly.
+	 */
+	em,
+	i {
+		font-style: normal;
+	}
 }
 
 code,

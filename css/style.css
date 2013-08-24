@@ -546,9 +546,17 @@ textarea {
 /* line 14, ../sass/site/_fonts.scss */
 .sans {
   font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+  /* Unfortunately, the font doesn't include obliques or italics. Gotta
+   * suppress 'em, or the browser will do something squirelly.
+   */
+}
+/* line 21, ../sass/site/_fonts.scss */
+.sans em,
+.sans i {
+  font-style: normal;
 }
 
-/* line 21, ../sass/site/_fonts.scss */
+/* line 29, ../sass/site/_fonts.scss */
 code,
 kbd,
 pre,
@@ -579,6 +587,22 @@ body {
 }
 
 /* line 16, ../sass/site/_sizes.scss */
+.xxxxx-large {
+  font-size: 250%;
+  line-height: 1.05;
+  margin-top: .4em;
+  margin-bottom: .4em;
+}
+@media screen and (min-width: 30em) {
+  /* line 16, ../sass/site/_sizes.scss */
+  .xxxxx-large {
+    font-size: 450%;
+    margin-top: .444em;
+    margin-bottom: .444em;
+  }
+}
+
+/* line 28, ../sass/site/_sizes.scss */
 .xxxx-large {
   font-size: 225%;
   line-height: 1.1;
@@ -586,7 +610,7 @@ body {
   margin-bottom: .444em;
 }
 @media screen and (min-width: 30em) {
-  /* line 16, ../sass/site/_sizes.scss */
+  /* line 28, ../sass/site/_sizes.scss */
   .xxxx-large {
     font-size: 375%;
     margin-top: .533em;
@@ -594,7 +618,7 @@ body {
   }
 }
 
-/* line 28, ../sass/site/_sizes.scss */
+/* line 40, ../sass/site/_sizes.scss */
 .xxx-large {
   font-size: 200%;
   line-height: 1.125;
@@ -602,7 +626,7 @@ body {
   margin-bottom: .5em;
 }
 @media screen and (min-width: 30em) {
-  /* line 28, ../sass/site/_sizes.scss */
+  /* line 40, ../sass/site/_sizes.scss */
   .xxx-large {
     font-size: 300%;
     margin-top: .333em;
@@ -610,7 +634,7 @@ body {
   }
 }
 
-/* line 41, ../sass/site/_sizes.scss */
+/* line 53, ../sass/site/_sizes.scss */
 .xx-large,
 h1 {
   font-size: 175%;
@@ -619,7 +643,7 @@ h1 {
   margin-bottom: .572em;
 }
 @media screen and (min-width: 30em) {
-  /* line 41, ../sass/site/_sizes.scss */
+  /* line 53, ../sass/site/_sizes.scss */
   .xx-large,
   h1 {
     font-size: 225%;
@@ -629,7 +653,7 @@ h1 {
   }
 }
 
-/* line 55, ../sass/site/_sizes.scss */
+/* line 67, ../sass/site/_sizes.scss */
 .x-large,
 h2 {
   font-size: 150%;
@@ -638,7 +662,7 @@ h2 {
   margin-bottom: .667em;
 }
 
-/* line 62, ../sass/site/_sizes.scss */
+/* line 74, ../sass/site/_sizes.scss */
 .large,
 h3 {
   font-size: 131.25%;
@@ -647,7 +671,7 @@ h3 {
   margin-bottom: .762em;
 }
 
-/* line 69, ../sass/site/_sizes.scss */
+/* line 81, ../sass/site/_sizes.scss */
 .medium,
 h4 {
   font-size: 112.5%;
@@ -656,7 +680,7 @@ h4 {
   margin-bottom: .889em;
 }
 
-/* line 76, ../sass/site/_sizes.scss */
+/* line 88, ../sass/site/_sizes.scss */
 .regular,
 h4 {
   font-size: 100%;
@@ -665,7 +689,7 @@ h4 {
   margin-bottom: 1em;
 }
 
-/* line 84, ../sass/site/_sizes.scss */
+/* line 96, ../sass/site/_sizes.scss */
 .small,
 h5,
 small {
@@ -675,7 +699,7 @@ small {
   margin-bottom: 1.143em;
 }
 
-/* line 91, ../sass/site/_sizes.scss */
+/* line 103, ../sass/site/_sizes.scss */
 .x-small,
 h6 {
   font-size: 75%;
@@ -684,7 +708,7 @@ h6 {
   margin-bottom: 1em;
 }
 
-/* line 98, ../sass/site/_sizes.scss */
+/* line 110, ../sass/site/_sizes.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-right: 0;
   margin-left: 0;
@@ -752,12 +776,17 @@ a:active {
 }
 
 /* line 43, ../sass/site/_general.scss */
+address {
+  font-style: normal;
+}
+
+/* line 46, ../sass/site/_general.scss */
 blockquote {
   margin: 1em 0;
   padding-left: 2em;
 }
 
-/* line 49, ../sass/site/_general.scss */
+/* line 52, ../sass/site/_general.scss */
 code,
 kbd,
 samp {
@@ -770,12 +799,12 @@ samp {
   border-radius: 0.25em;
 }
 
-/* line 54, ../sass/site/_general.scss */
+/* line 57, ../sass/site/_general.scss */
 dd {
   margin: 0 0 0 1em;
 }
 
-/* line 57, ../sass/site/_general.scss */
+/* line 60, ../sass/site/_general.scss */
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -788,20 +817,20 @@ hr {
   padding: 0;
 }
 
-/* line 67, ../sass/site/_general.scss */
+/* line 70, ../sass/site/_general.scss */
 html {
   background-color: #e2d8cf;
   color: #262120;
 }
 
-/* line 71, ../sass/site/_general.scss */
+/* line 74, ../sass/site/_general.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 79, ../sass/site/_general.scss */
+/* line 82, ../sass/site/_general.scss */
 menu,
 ol,
 ul {
@@ -811,12 +840,11 @@ ul {
 /* ==========================================================================
    Layout
    ========================================================================== */
-/* line 6, ../sass/site/_layout.scss */
-.wrapper,
-body {
+/* line 5, ../sass/site/_layout.scss */
+.wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 48em;
+  max-width: 60em;
   width: 91%;
 }
 
@@ -825,10 +853,104 @@ body {
 /* ==========================================================================
    Helpers
    ========================================================================== */
-/* line 5, ../sass/site/_helpers.scss */
+/* In the interest of keeping the stylesheet small, a lot of helper classes
+ * are included here.
+ */
+/* line 9, ../sass/site/_helpers.scss */
 .no-list {
   list-style-type: none;
-  padding-left: none;
+  padding-left: 0;
+}
+
+/* line 14, ../sass/site/_helpers.scss */
+.font-regular {
+  font-weight: 400;
+}
+
+/* line 17, ../sass/site/_helpers.scss */
+.font-bold {
+  font-weight: 700;
+}
+
+/* line 23, ../sass/site/_helpers.scss */
+.grey,
+.grey a,
+.grey a:visited {
+  color: #666666;
+}
+
+/* line 27, ../sass/site/_helpers.scss */
+.grey a:focus,
+.grey a:hover {
+  color: #cc0000;
+}
+
+/* line 30, ../sass/site/_helpers.scss */
+.grey a:active {
+  color: red;
+}
+
+/* line 34, ../sass/site/_helpers.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 37, ../sass/site/_helpers.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 40, ../sass/site/_helpers.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 44, ../sass/site/_helpers.scss */
+.text-upper {
+  text-transform: uppercase;
+}
+
+/* Colors
+   ========================================================================== */
+/* line 52, ../sass/site/_helpers.scss */
+.dark {
+  background-color: #262120;
+  color: #e2d8cf;
+}
+
+/* line 56, ../sass/site/_helpers.scss */
+.dark-text {
+  color: #262120;
+}
+
+/* line 59, ../sass/site/_helpers.scss */
+.orange {
+  background-color: #d84c41;
+  color: #e2d8cf;
+}
+/* line 67, ../sass/site/_helpers.scss */
+.orange a,
+.orange a:visited,
+.orange a:focus,
+.orange a:hover,
+.orange a:active {
+  color: #e2d8cf;
+}
+
+/* line 71, ../sass/site/_helpers.scss */
+.orange-text {
+  color: #d84c41;
+}
+
+/* line 74, ../sass/site/_helpers.scss */
+.light {
+  background-color: #e2d8cf;
+  color: #262120;
+}
+
+/* line 78, ../sass/site/_helpers.scss */
+.light-text {
+  color: #e2d8cf;
 }
 
 /* ==========================================================================
@@ -1016,9 +1138,4 @@ body {
   h3 {
     page-break-after: avoid;
   }
-}
-/* line 47, ../sass/style.scss */
-#question-2 {
-  background-color: #d84c41;
-  color: #e2d8cf;
 }
