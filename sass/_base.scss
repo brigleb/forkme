@@ -1,0 +1,26 @@
+@import "compass/css3";
+
+// Colors
+$peach: #ffc6bf;
+$dark-peach: #a82118;
+$brown: #390802;
+$gradient-white: rgba(255,255,255, 0.6);
+$wrapper-white: rgba(255,255,255, 0.4);
+
+// Font weights
+$light: 300;
+$normal: 400;
+$semi-bold: 600;
+
+// Base Font
+$base-font-family: 'Open Sans', Arial, sans-serif;
+$base-font-color: $brown;
+$base-font-weight: $light;
+
+// Heading Font
+$heading-font-family: 'Josefin Sans', Verdana, sans-serif;
+$heading-font-color: $dark-peach;
+
+// Border
+$default-border-radius: 15px;
+

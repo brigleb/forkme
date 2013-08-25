@@ -1,6 +1,137 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* ==========================================================================
+  Stylesheet for simple site
+  Author: Charlotte Koh
+  ========================================================================== */
 
-@import "compass/reset";
+@import "base";
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, 
+nav, section, summary {
+	display: block;
+}
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+.lt-ie8 body {
+	width: auto;
+}
+html {
+	display: table;
+	background-color: $peach;
+	background-image: -webkit-repeating-linear-gradient(-45deg, $gradient-white, $gradient-white 40px, transparent 40px, transparent 80px);
+	background-image: repeating-linear-gradient(-45deg, $gradient-white, $gradient-white 40px, transparent 40px, transparent 80px);
+}
+.lt-ie10 {
+	background-image: url(../images/background.gif);
+}
+body {
+	padding: 10px;
+	display: table-cell;
+	vertical-align: middle;
+}
+.wrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 1em;
+	background-color: $wrapper-white;
+	@include border-radius;
+}
+.lt-ie9 .wrapper {
+	background-image: url(../images/wrapper.png);
+}
+article {
+	padding: 1.5em 1em;
+	background-color: #fff;
+	@include border-radius;
+}
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */ 
+html {
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+ol {
+	font-family: $heading-font-family;
+	font-size: 1.5em;
+	font-weight: $semi-bold;
+	color: $dark-peach;
+}
+h1 {
+	margin: 0.25em 0;
+	font-family: $heading-font-family;
+	font-size: 2.5em;
+	font-weight: $normal;
+	color: $dark-peach;
+	line-height: 1em;
+	text-align: center;
+}
+h2 {
+	margin: 1em 0;
+	font-size: 1em;
+	font-weight: $semi-bold;
+}
+p, ol ol, ol ul {
+	margin: 1.5em 0;
+	font-family: $base-font-family;
+	font-size: .667em;
+	font-weight: $light;
+	color: $brown;
+}
+header p {
+	margin-top: 0;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid $peach;
+	font-size: 1em;
+	text-align: center;
+}
+code {
+	padding: 2px 4px;
+	background-color: #fff4f2;
+    border: 1px solid $peach;
+    font-weight: $semi-bold;
+    color: #8e1c14;
+}
+*::-moz-selection {
+	background-color: $peach;
+}
+*::selection {
+	background-color: $peach;
+}
+.list-intro {
+	margin-bottom: 0;
+}
+.list-intro + ul {
+	margin-top: 0;
+}
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+a {
+	color: $dark-peach;
+	text-decoration: none;
+}
+a:focus {
+	outline: thin dotted;
+}
+a:active, a:hover {
+	outline: 0;
+	border-bottom: 1px dotted $dark-peach;
+}

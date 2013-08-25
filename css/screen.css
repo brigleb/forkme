@@ -1,0 +1,157 @@
+/* ==========================================================================
+  Stylesheet for simple site
+  Author: Charlotte Koh
+  ========================================================================== */
+/* ==========================================================================
+   Base
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, main,
+nav, section, summary {
+  display: block;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.lt-ie8 body {
+  width: auto;
+}
+
+html {
+  display: table;
+  background-color: #ffc6bf;
+  background-image: -webkit-repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 40px, transparent 40px, transparent 80px);
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6) 40px, transparent 40px, transparent 80px);
+}
+
+.lt-ie10 {
+  background-image: url(../images/background.gif);
+}
+
+body {
+  padding: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.lt-ie9 .wrapper {
+  background-image: url(../images/wrapper.png);
+}
+
+article {
+  padding: 1.5em 1em;
+  background-color: #fff;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+html {
+  line-height: 1.5;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+ol {
+  font-family: "Josefin Sans", Verdana, sans-serif;
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #a82118;
+}
+
+h1 {
+  margin: 0.25em 0;
+  font-family: "Josefin Sans", Verdana, sans-serif;
+  font-size: 2.5em;
+  font-weight: 400;
+  color: #a82118;
+  line-height: 1em;
+  text-align: center;
+}
+
+h2 {
+  margin: 1em 0;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+p, ol ol, ol ul {
+  margin: 1.5em 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: .667em;
+  font-weight: 300;
+  color: #390802;
+}
+
+header p {
+  margin-top: 0;
+  padding-bottom: 1.5em;
+  border-bottom: 1px solid #ffc6bf;
+  font-size: 1em;
+  text-align: center;
+}
+
+code {
+  padding: 2px 4px;
+  background-color: #fff4f2;
+  border: 1px solid #ffc6bf;
+  font-weight: 600;
+  color: #8e1c14;
+}
+
+*::-moz-selection {
+  background-color: #ffc6bf;
+}
+
+*::selection {
+  background-color: #ffc6bf;
+}
+
+.list-intro {
+  margin-bottom: 0;
+}
+
+.list-intro + ul {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+a {
+  color: #a82118;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+  border-bottom: 1px dotted #a82118;
+}
