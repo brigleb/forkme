@@ -1,3 +1,76 @@
-/* Welcome to Compass. Use this file to define print styles.
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* ==========================================================================
+  Print stylesheet for simple site
+  Author: Charlotte Koh
+  ========================================================================== */
+
+@import "base";
+
+
+  /* ==========================================================================
+   Typography
+   ========================================================================== */ 
+html {
+	line-height: 1.5;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+ol {
+	font-family: $heading-font-family;
+	font-size: 1.5em;
+	font-weight: $semi-bold;
+	color: $dark-peach;
+}
+h1 {
+	margin: 0.25em 0;
+	font-family: $heading-font-family;
+	font-size: 2.5em;
+	font-weight: $normal;
+	color: $dark-peach;
+	line-height: 1em;
+	text-align: center;
+}
+h2 {
+	margin: 1em 0;
+	font-size: 1em;
+	font-weight: $semi-bold;
+}
+p, ol ol, ol ul {
+	margin: 1.5em 0;
+	font-family: $base-font-family;
+	font-size: .667em;
+	font-weight: $light;
+	color: $brown;
+}
+h1 + p {
+	margin-top: 0;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid $peach;
+	font-size: 1em;
+	text-align: center;
+}
+code {
+	padding: 2px 4px;
+	background-color: #fff4f2;
+	border: 1px solid $peach;
+	font-weight: $semi-bold;
+	color: #8e1c14;
+}
+.list-intro {
+	margin-bottom: 0;
+}
+.list-intro + ul {
+	margin-top: 0;
+}
+
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+a {
+	color: $dark-peach;
+	border-bottom: 1px dotted $dark-peach;
+	text-decoration: none;
+}
+a:after {
+	content: " ("attr(href)")";
+}
