@@ -1186,8 +1186,48 @@ footer[role="contentinfo"] .fine-print h1 {
 }
 
 /* line 78, ../sass/site/_shame.scss */
+#question-2 ol {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 20em;
+}
+/* line 83, ../sass/site/_shame.scss */
+#question-2 ol h2 {
+  margin-bottom: 0;
+}
+/* line 86, ../sass/site/_shame.scss */
+#question-2 ol p {
+  margin-top: 0;
+}
+
+/* line 94, ../sass/site/_shame.scss */
 #question-4 {
   background-color: #d8d4d2;
+  overflow: hidden;
+  width: 100%;
+}
+/* line 99, ../sass/site/_shame.scss */
+#question-4 img {
+  float: right;
+  height: auto;
+  max-width: 50%;
+  margin: 0 0 1em 1em;
+  width: auto;
+  -webkit-animation: slide-in 10s;
+}
+
+@-webkit-keyframes slide-in {
+  /* line 111, ../sass/site/_shame.scss */
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(10em);
+  }
+
+  /* line 115, ../sass/site/_shame.scss */
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
 }
 
 /* Terminal Resets

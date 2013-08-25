@@ -69,12 +69,51 @@
 .question {
 	padding: 1em 0;
 }
+#question-1 h1 {
+}
+
 #question-2 {
 	@extend .dark;
+
+	ol {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 20em;
+
+		h2 {
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0;
+		}
+	}
 }
 #question-3 {
 	@extend .orange;
 }
 #question-4 {
 	background-color: $base2;
+	overflow: hidden;
+	width: 100%;
+
+	img {
+		float: right;
+		height: auto;
+		max-width: 50%;
+		margin: 0 0 1em 1em;
+		width: auto;
+
+		-webkit-animation: slide-in 10s;
+	}
+}
+
+@-webkit-keyframes slide-in {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateX( 10em );
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: translateX( 0 );
+	}
 }
