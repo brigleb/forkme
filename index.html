@@ -18,14 +18,11 @@
 		<!--[if lt IE 7]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-
 		<header id="header" role="banner">
-			<h1><span class="word-1">5</span> <span class="word-2">Questions</span></h1>
-			<h2>A skill survey by <a href="http://needmoredesigns.com/">Needmore</a></h2>
-			<h3>Completed by <a href="#contact">Cory Reed</a></h3>
-
+			<div class="wrapper">
+			<h1 class="site-title"><span class="word-1">5</span> <span class="word-2">Questions</span></h1>
+			<h2 class="site-subtitle">A web skill survey by <a href="http://needmoredesigns.com/">Needmore</a><br />Completed by <a href="#contact">Cory Reed</a></h2>
 			<nav role="navigation">
-				<h1 class="serif small font-regular text-upper">Questions:</h1>
 				<ol>
 					<li><a href="#question-1" data-number="1">WordPress</a></li>
 					<li><a href="#question-2" data-number="2">Branching</a></li>
@@ -34,11 +31,13 @@
 					<li><a href="#question-5" data-number="5">Improvements</a></li>
 				</ol>
 			</nav>
+			</div><!-- .wrapper -->
 		</header><!-- #header -->
 		<main role="main">
 			<article class="hentry">
 
 <section id="question-1" class="question">
+	<div class="wrapper">
 
 <h1>What is your favorite WordPress function? Why?</h1>
 
@@ -52,8 +51,11 @@
 <li><a href="http://codex.wordpress.org/Function_Reference/wp_title"><code>wp_title()</code></a>’s default behavior doesn’t include the site’s title on a few views, often leaving pages with no title. This is an easy fix with <code>add_filter()</code>: a custom function can act on the <code>wp_title</code> hook to include the site’s title on every page, remedying the problem.</li>
 </ul>
 
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
 </section><!-- #question-1 -->
 <section id="question-2" class="question">
+	<div class="wrapper">
 
 <h1>Name three good reasons to start a branch in a version control system.</h1>
 
@@ -63,8 +65,11 @@
 <li><strong>Trying out an experimental feature.</strong> Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</li>
 </ol>
 
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
 </section><!-- #question-2 -->
 <section id="question-3" class="question">
+	<div class="wrapper">
 
 <h1>Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h1>
 
@@ -74,8 +79,11 @@
 
 <p>The difference is usually negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops. JavaScript animations on a phone are typically choppy, slow and hold up the scrolling.</p>
 
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
 </section><!-- #question-3 -->
 <section id="question-4" class="question">
+	<div class="wrapper">
 
 <h1>What is your favorite project that you've done? (include link and/or image)</h1>
 
@@ -100,8 +108,11 @@
 
 <p>Sounds like a win-win.</p>
 
-</section>
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!--#question-4 -->
 <section id="question-5" class="question">
+	<div class="wrapper">
 
 <h1>Look at our portfolio and find something we've built that could be improved. Suggest how!</h1>
 
@@ -120,29 +131,31 @@
 
 <p>There’s also a few server-side issues. None of the stylesheets have a <code>Cache-Control</code> header, nor are they <a href="http://en.wikipedia.org/wiki/Gzip">gzip</a>-ed. This means the browser potentially downloads stylesheets on every page load, and the stylesheets aren’t compressed by the server. WordPress is the likely culprit: it enjoys setting query strings on assets. Setting <em>app.css</em>’s <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_style">queue function</a> with the <code>$ver</code> parameter to <code>NULL</code> will drop the query string. If these problems persist, some tweaking of the server’s configuration file should do the trick.</p>
 
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
 </section><!-- #question-5 -->
 			</article><!-- .hentry -->
 		</main>
-		<footer id="footer" class="clearfix" role="contentinfo">
-			<section id="contact">
-				<h1>Whaddya say?</h1>
-
-				<p>Give this guy a call!</p>
-
-				<!--<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
-
-				<p>Email works just as well:</p>
-
-				<address class="xxx-large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+		<footer id="footer" role="contentinfo">
+			<section id="contact" class="dark">
+				<div class="wrapper">
+					<h1>Whaddya say?</h1>
+					<p>Give this guy a call!</p>
+					<!--<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
+					<p>Email works just as well:</p>
+					<address class="xxx-large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+				</div><!-- .wrapper -->
 			</section>
-			<section id="about">
-				<h1 class="regular font-regular text-upper">Purpose</h1>
-				<p><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</p>
-			</section>
-			<section id="colophon">
-				<h1 class="regular font-regular text-upper">Colophon</h1>
-				<p>This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>, in August 2013. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</p>
-			</section><!-- #colophon -->
+			<div class="fine-print wrapper clearfix">
+				<section id="about" class="x-small">
+					<h1 class="regular font-regular text-upper">Purpose</h1>
+					<p><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</p>
+				</section>
+				<section id="colophon" class="x-small">
+					<h1 class="regular font-regular text-upper">Colophon</h1>
+					<p>This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>, in August 2013. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</p>
+				</section><!-- #colophon -->
+			</div><!-- .wrapper -->
 		</footer><!-- #footer -->
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

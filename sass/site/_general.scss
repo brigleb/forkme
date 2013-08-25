@@ -44,8 +44,31 @@ address {
 	font-style: normal;
 }
 blockquote {
-	margin: 1em 0;
-	padding-left: 2em;
+	@extend .large;
+
+	color: $base01;
+	font-style: italic;
+	margin: .667em 0;
+	padding-left: 1.333em;
+	position: relative;
+
+	&::before {
+		content: "\201c";
+
+		@extend .sans;
+
+		color: mix( $base01, $base2, 25% );
+		font-size: 200%;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1;
+		position: absolute;
+			top: 0;
+			left: 0;
+		text-align: right;
+		width: .5em;
+		
+	}
 }
 code,
 kbd,

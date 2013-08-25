@@ -546,19 +546,26 @@ textarea {
 }
 
 /* line 14, ../sass/site/_fonts.scss */
-.sans, header[role="banner"] nav ol a::before,
-header[role="banner"] nav ol a:visited::before {
+.sans, blockquote::before, header[role="banner"] .site-title .word-1, header[role="banner"] .site-subtitle a,
+header[role="banner"] .site-subtitle a:visited, header[role="banner"] nav ol a::before,
+header[role="banner"] nav ol a:visited::before, .nav-link {
   font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
   /* Unfortunately, the font doesn't include obliques or italics. Gotta
    * suppress 'em, or the browser will do something squirelly.
    */
 }
 /* line 21, ../sass/site/_fonts.scss */
-.sans em, header[role="banner"] nav ol a::before em,
-header[role="banner"] nav ol a:visited::before em,
+.sans em, blockquote::before em, header[role="banner"] .site-title .word-1 em, header[role="banner"] .site-subtitle a em,
+header[role="banner"] .site-subtitle a:visited em, header[role="banner"] nav ol a::before em,
+header[role="banner"] nav ol a:visited::before em, .nav-link em,
 .sans i,
+blockquote::before i,
+header[role="banner"] .site-title .word-1 i,
+header[role="banner"] .site-subtitle a i,
+header[role="banner"] .site-subtitle a:visited i,
 header[role="banner"] nav ol a::before i,
-header[role="banner"] nav ol a:visited::before i {
+header[role="banner"] nav ol a:visited::before i,
+.nav-link i {
   font-style: normal;
 }
 
@@ -641,8 +648,7 @@ body {
 }
 
 /* line 53, ../sass/site/_sizes.scss */
-.xx-large, header[role="banner"] nav ol a::before,
-header[role="banner"] nav ol a:visited::before,
+.xx-large,
 h1 {
   font-size: 175%;
   line-height: 1.2;
@@ -651,8 +657,7 @@ h1 {
 }
 @media screen and (min-width: 30em) {
   /* line 53, ../sass/site/_sizes.scss */
-  .xx-large, header[role="banner"] nav ol a::before,
-  header[role="banner"] nav ol a:visited::before,
+  .xx-large,
   h1 {
     font-size: 225%;
     line-height: 1.1;
@@ -671,7 +676,9 @@ h2 {
 }
 
 /* line 74, ../sass/site/_sizes.scss */
-.large,
+.large, blockquote, header[role="banner"] .site-subtitle a,
+header[role="banner"] .site-subtitle a:visited, header[role="banner"] nav ol a::before,
+header[role="banner"] nav ol a:visited::before,
 h3 {
   font-size: 131.25%;
   line-height: 1.3;
@@ -689,7 +696,7 @@ h4 {
 }
 
 /* line 88, ../sass/site/_sizes.scss */
-.regular,
+.regular, header[role="banner"] .site-title, header[role="banner"] .site-subtitle,
 h4 {
   font-size: 100%;
   line-height: 1.4;
@@ -698,7 +705,7 @@ h4 {
 }
 
 /* line 96, ../sass/site/_sizes.scss */
-.small,
+.small, .nav-link,
 h5,
 small {
   font-size: 87.5%;
@@ -790,11 +797,28 @@ address {
 
 /* line 46, ../sass/site/_general.scss */
 blockquote {
-  margin: 1em 0;
-  padding-left: 2em;
+  color: #87837f;
+  font-style: italic;
+  margin: .667em 0;
+  padding-left: 1.333em;
+  position: relative;
+}
+/* line 55, ../sass/site/_general.scss */
+blockquote::before {
+  content: "\201c";
+  color: #c3bfbd;
+  font-size: 200%;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  width: .5em;
 }
 
-/* line 52, ../sass/site/_general.scss */
+/* line 75, ../sass/site/_general.scss */
 code,
 kbd,
 samp {
@@ -807,7 +831,7 @@ samp {
   border-radius: 0.25rem;
   padding: .05em .2em;
 }
-/* line 59, ../sass/site/_general.scss */
+/* line 82, ../sass/site/_general.scss */
 a code, a:visited code, a
 kbd, a:visited
 kbd, a
@@ -815,7 +839,7 @@ samp, a:visited
 samp {
   color: #d84c41;
 }
-/* line 63, ../sass/site/_general.scss */
+/* line 86, ../sass/site/_general.scss */
 a:focus code, a:hover code, a:focus
 kbd, a:hover
 kbd, a:focus
@@ -823,19 +847,19 @@ samp, a:hover
 samp {
   color: #c23632;
 }
-/* line 66, ../sass/site/_general.scss */
+/* line 89, ../sass/site/_general.scss */
 a:active code, a:active
 kbd, a:active
 samp {
   color: #ac1f23;
 }
 
-/* line 70, ../sass/site/_general.scss */
+/* line 93, ../sass/site/_general.scss */
 dd {
   margin: 0 0 0 1em;
 }
 
-/* line 73, ../sass/site/_general.scss */
+/* line 96, ../sass/site/_general.scss */
 hr {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
@@ -848,20 +872,20 @@ hr {
   padding: 0;
 }
 
-/* line 83, ../sass/site/_general.scss */
+/* line 106, ../sass/site/_general.scss */
 html {
   background-color: #f2efeb;
   color: #262120;
 }
 
-/* line 87, ../sass/site/_general.scss */
+/* line 110, ../sass/site/_general.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 95, ../sass/site/_general.scss */
+/* line 118, ../sass/site/_general.scss */
 menu,
 ol,
 ul {
@@ -875,7 +899,7 @@ ul {
 .wrapper {
   margin-right: auto;
   margin-left: auto;
-  max-width: 60em;
+  max-width: 48em;
   width: 91%;
 }
 
@@ -884,41 +908,169 @@ ul {
    ========================================================================== */
 /* line 5, ../sass/site/_header.scss */
 header[role="banner"] {
-  background-color: #d8d4d2;
   overflow: hidden;
   padding: 1em 0;
+  /* Navigation */
 }
-/* line 10, ../sass/site/_header.scss */
-header[role="banner"] nav {
-  color: #87837f;
-}
-/* line 13, ../sass/site/_header.scss */
-header[role="banner"] nav ol {
-  list-style-type: decimal;
-}
-/* line 17, ../sass/site/_header.scss */
-header[role="banner"] nav ol a,
-header[role="banner"] nav ol a:visited {
-  color: #262120;
-  display: block;
-  font-weight: 700;
+/* line 11, ../sass/site/_header.scss */
+header[role="banner"] .site-title {
+  border-color: #56524f;
+  border-style: solid;
+  border-width: thin 0;
   margin: 0;
+  text-align: center;
+}
+@media screen and (min-width: 30em) {
+  /* line 11, ../sass/site/_header.scss */
+  header[role="banner"] .site-title {
+    margin: 1em 0;
+    padding: 1em 0;
+  }
+}
+@media screen and (min-width: 48em) {
+  /* line 11, ../sass/site/_header.scss */
+  header[role="banner"] .site-title {
+    margin: 2em 0;
+  }
+}
+/* line 28, ../sass/site/_header.scss */
+header[role="banner"] .site-title .word-1 {
+  color: #d84c41;
+  font-size: 300%;
+  line-height: 1;
+  vertical-align: middle;
+}
+@media screen and (min-width: 30em) {
+  /* line 28, ../sass/site/_header.scss */
+  header[role="banner"] .site-title .word-1 {
+    display: block;
+    font-size: 600%;
+  }
+}
+@media screen and (min-width: 48em) {
+  /* line 28, ../sass/site/_header.scss */
+  header[role="banner"] .site-title .word-1 {
+    font-size: 800%;
+  }
+}
+/* line 44, ../sass/site/_header.scss */
+header[role="banner"] .site-title .word-2 {
+  font-size: 112.5%;
+  font-weight: 400;
+  letter-spacing: .333ex;
+  line-height: 1;
+  padding-left: .333ex;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+@media screen and (min-width: 30em) {
+  /* line 44, ../sass/site/_header.scss */
+  header[role="banner"] .site-title .word-2 {
+    display: block;
+    font-size: 225%;
+  }
+}
+/* line 59, ../sass/site/_header.scss */
+header[role="banner"] .site-subtitle {
+  color: #87837f;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+}
+/* line 68, ../sass/site/_header.scss */
+header[role="banner"] .site-subtitle a,
+header[role="banner"] .site-subtitle a:visited {
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .167ex;
+  padding: 0 .333ex;
   text-decoration: none;
 }
-/* line 26, ../sass/site/_header.scss */
+/* line 84, ../sass/site/_header.scss */
+header[role="banner"] nav ol {
+  margin: 0;
+  padding-left: 0;
+  text-align: center;
+}
+@media screen and (min-width: 30em) {
+  /* line 84, ../sass/site/_header.scss */
+  header[role="banner"] nav ol {
+    margin-bottom: .5em;
+  }
+}
+@media screen and (min-width: 30em) {
+  /* line 95, ../sass/site/_header.scss */
+  header[role="banner"] nav ol li {
+    float: left;
+  }
+}
+/* line 102, ../sass/site/_header.scss */
+header[role="banner"] nav ol a,
+header[role="banner"] nav ol a:visited {
+  background-color: #56524f;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  color: #d8d4d2;
+  display: inline-block;
+  font-weight: 700;
+  margin: .25em 0;
+  padding: .75em 1em;
+  text-decoration: none;
+  vertical-align: middle;
+}
+@media screen and (min-width: 30em) {
+  /* line 102, ../sass/site/_header.scss */
+  header[role="banner"] nav ol a,
+  header[role="banner"] nav ol a:visited {
+    padding: .5em;
+    margin: 0 .5em .5em 0;
+  }
+}
+/* line 118, ../sass/site/_header.scss */
 header[role="banner"] nav ol a::before,
 header[role="banner"] nav ol a:visited::before {
-  content: "";
-  display: none;
+  content: attr(data-number);
+  color: #87837f;
+  line-height: 1;
+  padding-right: .5ex;
+  vertical-align: middle;
 }
-/* line 34, ../sass/site/_header.scss */
+@media screen and (min-width: 48em) {
+  /* line 118, ../sass/site/_header.scss */
+  header[role="banner"] nav ol a::before,
+  header[role="banner"] nav ol a:visited::before {
+    -webkit-transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: color;
+    -moz-transition-property: color;
+    -o-transition-property: color;
+    transition-property: color;
+  }
+}
+/* line 136, ../sass/site/_header.scss */
 header[role="banner"] nav ol a:focus,
 header[role="banner"] nav ol a:hover {
-  color: #c23632;
+  background-color: #c23632;
+  color: #f2efeb;
 }
-/* line 37, ../sass/site/_header.scss */
+/* line 140, ../sass/site/_header.scss */
+header[role="banner"] nav ol a:focus::before,
+header[role="banner"] nav ol a:hover::before {
+  color: #f2efeb;
+}
+/* line 144, ../sass/site/_header.scss */
 header[role="banner"] nav ol a:active {
-  color: #ac1f23;
+  background-color: #ac1f23;
+  color: #f2efeb;
+}
+/* line 148, ../sass/site/_header.scss */
+header[role="banner"] nav ol a:active::before {
+  color: #f2efeb;
 }
 
 /* ==========================================================================
@@ -927,6 +1079,11 @@ header[role="banner"] nav ol a:active {
 /* line 5, ../sass/site/_footer.scss */
 footer[role="contentinfo"] {
   background-color: #d8d4d2;
+}
+/* line 12, ../sass/site/_footer.scss */
+footer[role="contentinfo"] .fine-print h1 {
+  border-bottom: thin solid #c3bfbd;
+  letter-spacing: .333ex;
 }
 
 /* ==========================================================================
@@ -1002,18 +1159,37 @@ footer[role="contentinfo"] {
   transform: rotateY(180deg);
 }
 
-/* And colors:
+/* Navigation Links
+ *
+ * Intended to help navigation on small-screened devices.
+ */
+/* line 52, ../sass/site/_shame.scss */
+.nav-link {
+  display: block;
+  font-weight: 700;
+  padding: .5em 0;
+  text-align: right;
+  text-decoration: none;
+}
+@media screen and (min-width: 30em) {
+  /* line 52, ../sass/site/_shame.scss */
+  .nav-link {
+    display: none;
+  }
+}
 
-#question-2 {
-	@extend .dark;
+/* Questions
+ */
+/* line 69, ../sass/site/_shame.scss */
+.question {
+  padding: 1em 0;
 }
-#question-3 {
-	@extend .orange;
-}
+
+/* line 78, ../sass/site/_shame.scss */
 #question-4 {
-	@extend .dark;
+  background-color: #d8d4d2;
 }
-*/
+
 /* Terminal Resets
  */
 /* ==========================================================================
@@ -1039,20 +1215,23 @@ footer[role="contentinfo"] {
 }
 
 /* line 23, ../sass/site/_helpers.scss */
-.grey,
+.grey, footer[role="contentinfo"] .fine-print,
 .grey a,
-.grey a:visited {
+footer[role="contentinfo"] .fine-print a,
+.grey a:visited,
+footer[role="contentinfo"] .fine-print a:visited {
   color: #87837f;
 }
 
 /* line 27, ../sass/site/_helpers.scss */
-.grey a:focus,
-.grey a:hover {
+.grey a:focus, footer[role="contentinfo"] .fine-print a:focus,
+.grey a:hover,
+footer[role="contentinfo"] .fine-print a:hover {
   color: #c23632;
 }
 
 /* line 30, ../sass/site/_helpers.scss */
-.grey a:active {
+.grey a:active, footer[role="contentinfo"] .fine-print a:active {
   color: #ac1f23;
 }
 
@@ -1072,21 +1251,26 @@ footer[role="contentinfo"] {
 }
 
 /* line 44, ../sass/site/_helpers.scss */
-.text-upper {
+.text-upper, header[role="banner"] .site-subtitle a,
+header[role="banner"] .site-subtitle a:visited {
   text-transform: uppercase;
 }
 
 /* Colors
    ========================================================================== */
 /* line 52, ../sass/site/_helpers.scss */
-.dark {
+.dark, header[role="banner"], #question-2 {
   background-color: #262120;
   color: #f2efeb;
 }
 /* line 58, ../sass/site/_helpers.scss */
-.dark code,
+.dark code, header[role="banner"] code, #question-2 code,
 .dark kbd,
-.dark samp {
+header[role="banner"] kbd,
+#question-2 kbd,
+.dark samp,
+header[role="banner"] samp,
+#question-2 samp {
   background-color: rgba(135, 131, 127, 0.33);
   color: #d8d4d2;
 }
@@ -1097,40 +1281,60 @@ footer[role="contentinfo"] {
 }
 
 /* line 66, ../sass/site/_helpers.scss */
-.orange {
+.orange, #question-3 {
   background-color: #d84c41;
   color: #f2efeb;
 }
 /* line 75, ../sass/site/_helpers.scss */
-.orange a,
+.orange a, #question-3 a,
 .orange a code,
+#question-3 a code,
 .orange a kbd,
+#question-3 a kbd,
 .orange a samp,
+#question-3 a samp,
 .orange a:visited,
+#question-3 a:visited,
 .orange a:visited code,
+#question-3 a:visited code,
 .orange a:visited kbd,
-.orange a:visited samp {
+#question-3 a:visited kbd,
+.orange a:visited samp,
+#question-3 a:visited samp {
   color: #d8d4d2;
 }
 /* line 85, ../sass/site/_helpers.scss */
-.orange a:focus,
+.orange a:focus, #question-3 a:focus,
 .orange a:focus code,
+#question-3 a:focus code,
 .orange a:focus kbd,
+#question-3 a:focus kbd,
 .orange a:focus samp,
+#question-3 a:focus samp,
 .orange a:hover,
+#question-3 a:hover,
 .orange a:hover code,
+#question-3 a:hover code,
 .orange a:hover kbd,
+#question-3 a:hover kbd,
 .orange a:hover samp,
+#question-3 a:hover samp,
 .orange a:active,
+#question-3 a:active,
 .orange a:active code,
+#question-3 a:active code,
 .orange a:active kbd,
-.orange a:active samp {
+#question-3 a:active kbd,
+.orange a:active samp,
+#question-3 a:active samp {
   color: #f2efeb;
 }
 /* line 92, ../sass/site/_helpers.scss */
-.orange code,
+.orange code, #question-3 code,
 .orange kbd,
-.orange samp {
+#question-3 kbd,
+.orange samp,
+#question-3 samp {
   background-color: rgba(242, 239, 235, 0.13);
   color: #f2efeb;
   color: rgba(242, 239, 235, 0.88);
@@ -1234,8 +1438,9 @@ footer[role="contentinfo"] {
  *    `:before` to contain the top-margins of child elements.
  */
 /* line 84, ../sass/vendor/_h5bp-end.scss */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, header[role="banner"] nav ol:before,
+.clearfix:after,
+header[role="banner"] nav ol:after {
   content: " ";
   /* 1 */
   display: table;
@@ -1243,7 +1448,7 @@ footer[role="contentinfo"] {
 }
 
 /* line 89, ../sass/vendor/_h5bp-end.scss */
-.clearfix:after {
+.clearfix:after, header[role="banner"] nav ol:after {
   clear: both;
 }
 
@@ -1252,7 +1457,7 @@ footer[role="contentinfo"] {
  * Include this rule to trigger hasLayout and contain floats.
  */
 /* line 98, ../sass/vendor/_h5bp-end.scss */
-.clearfix {
+.clearfix, header[role="banner"] nav ol {
   *zoom: 1;
 }
 
