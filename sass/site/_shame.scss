@@ -44,9 +44,31 @@
 		}
 	}
 
+/* Navigation Links
+ *
+ * Intended to help navigation on small-screened devices.
+ */
 
-/* And colors:
+.nav-link {
+	@extend .small, .sans;
 
+	display: block;
+	font-weight: 700;
+	padding: .5em 0;
+	text-align: right;
+	text-decoration: none;
+
+	@include media_query_1 {
+		display: none;
+	}
+}
+
+/* Questions
+ */
+
+.question {
+	padding: 1em 0;
+}
 #question-2 {
 	@extend .dark;
 }
@@ -54,6 +76,5 @@
 	@extend .orange;
 }
 #question-4 {
-	@extend .dark;
+	background-color: $base2;
 }
-*/

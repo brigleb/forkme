@@ -4,4 +4,14 @@
 
 footer[ role="contentinfo" ] {
 	background-color: $base2;
+
+
+	.fine-print {
+		@extend .grey;
+
+		h1 {
+			border-bottom: thin solid mix( $base01, $base2, 25% );
+			letter-spacing: .333ex;
+		}
+	}
 }
