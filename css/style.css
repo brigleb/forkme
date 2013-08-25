@@ -547,7 +547,7 @@ textarea {
 
 /* line 14, ../sass/site/_fonts.scss */
 .sans, header[role="banner"] nav ol a::before,
-header[role="banner"] nav ol a:visited::before, .question::before {
+header[role="banner"] nav ol a:visited::before {
   font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
   /* Unfortunately, the font doesn't include obliques or italics. Gotta
    * suppress 'em, or the browser will do something squirelly.
@@ -555,11 +555,10 @@ header[role="banner"] nav ol a:visited::before, .question::before {
 }
 /* line 21, ../sass/site/_fonts.scss */
 .sans em, header[role="banner"] nav ol a::before em,
-header[role="banner"] nav ol a:visited::before em, .question::before em,
+header[role="banner"] nav ol a:visited::before em,
 .sans i,
 header[role="banner"] nav ol a::before i,
-header[role="banner"] nav ol a:visited::before i,
-.question::before i {
+header[role="banner"] nav ol a:visited::before i {
   font-style: normal;
 }
 
@@ -594,7 +593,7 @@ body {
 }
 
 /* line 16, ../sass/site/_sizes.scss */
-.xxxxx-large, .question::before {
+.xxxxx-large {
   font-size: 250%;
   line-height: 1.05;
   margin-top: .4em;
@@ -602,7 +601,7 @@ body {
 }
 @media screen and (min-width: 30em) {
   /* line 16, ../sass/site/_sizes.scss */
-  .xxxxx-large, .question::before {
+  .xxxxx-large {
     font-size: 450%;
     margin-top: .444em;
     margin-bottom: .444em;
@@ -884,46 +883,20 @@ ul {
    Header
    ========================================================================== */
 /* line 5, ../sass/site/_header.scss */
-header[role="banner"] a[rel="home"] {
-  display: block;
-  -webkit-animation: drop-in 1s ease-in;
-  -webkit-transition-property: all;
-}
-
-@-webkit-keyframes drop-in {
-  /* line 12, ../sass/site/_header.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-10em);
-  }
-
-  /* line 16, ../sass/site/_header.scss */
-  80% {
-    -webkit-transform: translateX(2em);
-  }
-
-  /* line 19, ../sass/site/_header.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
-}
-
-/* line 25, ../sass/site/_header.scss */
 header[role="banner"] {
   background-color: #d8d4d2;
   overflow: hidden;
   padding: 1em 0;
 }
-/* line 30, ../sass/site/_header.scss */
+/* line 10, ../sass/site/_header.scss */
 header[role="banner"] nav {
   color: #87837f;
 }
-/* line 33, ../sass/site/_header.scss */
+/* line 13, ../sass/site/_header.scss */
 header[role="banner"] nav ol {
   list-style-type: decimal;
 }
-/* line 37, ../sass/site/_header.scss */
+/* line 17, ../sass/site/_header.scss */
 header[role="banner"] nav ol a,
 header[role="banner"] nav ol a:visited {
   color: #262120;
@@ -932,162 +905,28 @@ header[role="banner"] nav ol a:visited {
   margin: 0;
   text-decoration: none;
 }
-/* line 46, ../sass/site/_header.scss */
+/* line 26, ../sass/site/_header.scss */
 header[role="banner"] nav ol a::before,
 header[role="banner"] nav ol a:visited::before {
   content: "";
   display: none;
 }
-/* line 54, ../sass/site/_header.scss */
+/* line 34, ../sass/site/_header.scss */
 header[role="banner"] nav ol a:focus,
 header[role="banner"] nav ol a:hover {
   color: #c23632;
 }
-/* line 57, ../sass/site/_header.scss */
+/* line 37, ../sass/site/_header.scss */
 header[role="banner"] nav ol a:active {
   color: #ac1f23;
 }
 
-@media screen and (min-width: 48em) {
-  /* line 65, ../sass/site/_header.scss */
-  body {
-    margin-right: 10em;
-  }
-
-  /* line 68, ../sass/site/_header.scss */
-  header[role="banner"] nav {
-    background-color: #262120;
-    border-left: thin solid #56524f;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    text-align: center;
-    width: 10em;
-  }
-  /* line 79, ../sass/site/_header.scss */
-  header[role="banner"] nav .nav-link {
-    display: block;
-    font-style: italic;
-    margin: 1em 0;
-    text-decoration: none;
-  }
-  /* line 85, ../sass/site/_header.scss */
-  header[role="banner"] nav ol {
-    border-top: thin solid #56524f;
-    list-style-type: none;
-    padding-left: 0;
-  }
-  /* line 91, ../sass/site/_header.scss */
-  header[role="banner"] nav ol a,
-  header[role="banner"] nav ol a:visited {
-    color: #d8d4d2;
-    border-bottom: thin solid #56524f;
-    padding: .5em;
-    position: relative;
-  }
-  /* line 99, ../sass/site/_header.scss */
-  header[role="banner"] nav ol a::before,
-  header[role="banner"] nav ol a:visited::before {
-    content: attr(data-number);
-    background-color: #262120;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
-    border-radius: 1em;
-    color: #f2efeb;
-    display: block;
-    line-height: 1;
-    margin: 0 auto;
-    text-align: center;
-    vertical-align: middle;
-    width: 1em;
-  }
-  /* line 114, ../sass/site/_header.scss */
-  header[role="banner"] nav ol a:focus,
-  header[role="banner"] nav ol a:hover {
-    background-color: #c23632;
-    color: #f2efeb;
-  }
-  /* line 118, ../sass/site/_header.scss */
-  header[role="banner"] nav ol a:active {
-    background-color: #ac1f23;
-    color: #f2efeb;
-  }
-}
-/*
-@include media_query_2 {
-	.no-touch {
-		body {
-			margin-right: 8em;
-		}
-		header[ role="banner" ] nav {
-			background-color: $base03;
-			color: $base01;
-			height: 100%;
-			position: fixed;
-				top: 0;
-				right: 0;
-			text-align: center;
-			width: 8em;
-		}
-	}
-}
-
-header[ role="banner" ] nav {
-	ol {
-		padding-left: 0;
-
-		a,
-		a:visited {
-			@extend .sans, .x-large, .font-bold;
-
-			background-color: $base3;
-			@include border-radius( 2em );
-			color: $base03;
-			display: inline-block;
-			height: 1em;
-			line-height: 1;
-			margin: 0;
-			padding: .5em 0;
-			text-align: center;
-			text-decoration: none;
-			width: 2em;
-		}
-		a:focus,
-		a:hover {
-			background-color: $accent2;
-			color: $base3;
-		}
-		a:active {
-			background-color: $accent3;
-			color: $base3;
-		}
-	}
-}
-*/
 /* ==========================================================================
    Footer
    ========================================================================== */
 /* line 5, ../sass/site/_footer.scss */
 footer[role="contentinfo"] {
   background-color: #d8d4d2;
-}
-
-/* line 10, ../sass/site/_footer.scss */
-#about,
-#colophon {
-  float: left;
-  width: 30%;
-}
-/* line 14, ../sass/site/_footer.scss */
-#about h1,
-#colophon h1 {
-  border-bottom: thin solid #afaba8;
 }
 
 /* ==========================================================================
@@ -1163,80 +1002,18 @@ footer[role="contentinfo"] {
   transform: rotateY(180deg);
 }
 
-/* Give the `section`s some padding:
- */
-/* line 52, ../sass/site/_shame.scss */
-#question-1::before {
-  content: "1";
-}
-
-/* line 52, ../sass/site/_shame.scss */
-#question-2::before {
-  content: "2";
-}
-
-/* line 52, ../sass/site/_shame.scss */
-#question-3::before {
-  content: "3";
-}
-
-/* line 52, ../sass/site/_shame.scss */
-#question-4::before {
-  content: "4";
-}
-
-/* line 52, ../sass/site/_shame.scss */
-#question-5::before {
-  content: "5";
-}
-
-/* line 58, ../sass/site/_shame.scss */
-.question {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-/* line 62, ../sass/site/_shame.scss */
-.question::before {
-  display: none;
-}
-@media screen and (min-width: 48em) {
-  /* line 58, ../sass/site/_shame.scss */
-  .question {
-    overflow: hidden;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    position: relative;
-  }
-  /* line 74, ../sass/site/_shame.scss */
-  .question .wrapper {
-    position: relative;
-    z-index: 1;
-  }
-  /* line 79, ../sass/site/_shame.scss */
-  .question::before {
-    background-color: #e5e1de;
-    -webkit-border-radius: 2em;
-    -moz-border-radius: 2em;
-    -ms-border-radius: 2em;
-    -o-border-radius: 2em;
-    border-radius: 2em;
-    color: #f2efeb;
-    display: block;
-    font-weight: 700;
-    line-height: 1;
-    margin: 0;
-    padding: .5em 0;
-    position: absolute;
-    top: -.5em;
-    left: -.5em;
-    text-align: center;
-    width: 2em;
-    z-index: 0;
-  }
-}
-
 /* And colors:
- */
+
+#question-2 {
+	@extend .dark;
+}
+#question-3 {
+	@extend .orange;
+}
+#question-4 {
+	@extend .dark;
+}
+*/
 /* Terminal Resets
  */
 /* ==========================================================================
@@ -1302,18 +1079,14 @@ footer[role="contentinfo"] {
 /* Colors
    ========================================================================== */
 /* line 52, ../sass/site/_helpers.scss */
-.dark, #question-2, #question-4 {
+.dark {
   background-color: #262120;
   color: #f2efeb;
 }
 /* line 58, ../sass/site/_helpers.scss */
-.dark code, #question-2 code, #question-4 code,
+.dark code,
 .dark kbd,
-#question-2 kbd,
-#question-4 kbd,
-.dark samp,
-#question-2 samp,
-#question-4 samp {
+.dark samp {
   background-color: rgba(135, 131, 127, 0.33);
   color: #d8d4d2;
 }
@@ -1324,60 +1097,40 @@ footer[role="contentinfo"] {
 }
 
 /* line 66, ../sass/site/_helpers.scss */
-.orange, #question-3 {
+.orange {
   background-color: #d84c41;
   color: #f2efeb;
 }
 /* line 75, ../sass/site/_helpers.scss */
-.orange a, #question-3 a,
+.orange a,
 .orange a code,
-#question-3 a code,
 .orange a kbd,
-#question-3 a kbd,
 .orange a samp,
-#question-3 a samp,
 .orange a:visited,
-#question-3 a:visited,
 .orange a:visited code,
-#question-3 a:visited code,
 .orange a:visited kbd,
-#question-3 a:visited kbd,
-.orange a:visited samp,
-#question-3 a:visited samp {
+.orange a:visited samp {
   color: #d8d4d2;
 }
 /* line 85, ../sass/site/_helpers.scss */
-.orange a:focus, #question-3 a:focus,
+.orange a:focus,
 .orange a:focus code,
-#question-3 a:focus code,
 .orange a:focus kbd,
-#question-3 a:focus kbd,
 .orange a:focus samp,
-#question-3 a:focus samp,
 .orange a:hover,
-#question-3 a:hover,
 .orange a:hover code,
-#question-3 a:hover code,
 .orange a:hover kbd,
-#question-3 a:hover kbd,
 .orange a:hover samp,
-#question-3 a:hover samp,
 .orange a:active,
-#question-3 a:active,
 .orange a:active code,
-#question-3 a:active code,
 .orange a:active kbd,
-#question-3 a:active kbd,
-.orange a:active samp,
-#question-3 a:active samp {
+.orange a:active samp {
   color: #f2efeb;
 }
 /* line 92, ../sass/site/_helpers.scss */
-.orange code, #question-3 code,
+.orange code,
 .orange kbd,
-#question-3 kbd,
-.orange samp,
-#question-3 samp {
+.orange samp {
   background-color: rgba(242, 239, 235, 0.13);
   color: #f2efeb;
   color: rgba(242, 239, 235, 0.88);

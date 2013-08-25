@@ -44,61 +44,8 @@
 		}
 	}
 
-/* Give the `section`s some padding:
- */
-
-@for $i from 1 through 5 {
-	#question-#{$i} {
-		&::before {
-			content: "#{$i}";
-		}
-	}
-}
-
-.question {
-	padding-top: 1em;
-	padding-bottom: 1em;
-
-	&::before {
-		@extend .xxxxx-large, .sans;
-
-		display: none;
-	}
-
-	@include media_query_2 {
-		overflow: hidden;
-		padding-top: 2em;
-		padding-bottom: 2em;
-		position: relative;
-
-		.wrapper {
-			position: relative;
-			z-index: 1;
-		}
-
-		&::before {
-			background-color: mix( $base2, $base3 );
-			@include border-radius( 2em );
-			color: $base3;
-			display: block;
-			font-weight: 700;
-			line-height: 1;
-			margin: 0;
-			padding: .5em 0;
-			position: absolute;
-				top: -.5em;
-				left: -.5em;
-			text-align: center;
-			width: 2em;
-			z-index: 0;
-		}
-		
-	}
-}
-
 
 /* And colors:
- */
 
 #question-2 {
 	@extend .dark;
@@ -109,3 +56,4 @@
 #question-4 {
 	@extend .dark;
 }
+*/

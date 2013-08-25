@@ -5,13 +5,3 @@
 footer[ role="contentinfo" ] {
 	background-color: $base2;
 }
-
-#about,
-#colophon {
-	float: left;
-	width: 30%;
-
-	h1 {
-		border-bottom: thin solid mix( $base2, $base00 );
-	}
-}
