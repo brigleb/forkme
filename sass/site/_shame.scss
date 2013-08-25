@@ -5,10 +5,17 @@
 /* For stuff that doesn't yet have a home. Be _ashamed!_
  */
 
+/* CSS "Flipping" card.
+ * Learned this one from Desandro:
+ * http://desandro.github.io/3dtransforms/docs/card-flip.html
+ */
+
 .portrait-container {
 	height: 15em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	position: relative;
-	@include perspective( 0 );
+	@include perspective( 15em );
 	width: 15em;
 
 	&:focus,
@@ -39,7 +46,7 @@
 			background-image: url( "../img/portrait.jpg" );
 		}
 		.back {
-			background-color: red;
+			background-image: url( "../img/portrait-flipped.jpg" );
 			@include transform( rotateY( 180deg ) );
 		}
 	}
@@ -76,9 +83,7 @@
 	@extend .dark;
 
 	ol {
-		margin-right: auto;
-		margin-left: auto;
-		max-width: 20em;
+		
 
 		h2 {
 			margin-bottom: 0;
@@ -95,25 +100,56 @@
 	background-color: $base2;
 	overflow: hidden;
 	width: 100%;
+}
+.ob-link,
+.ob-link:visited {
+	border: 1em solid mix( $base01, $base2, 25% );
+	@include border-radius( $border_radius );
+	@include box-sizing( border-box );
+	display: block;
+
+	@include media_query_1 {
+		float: right;
+		margin: 0 0 1em 4%;
+		max-width: 48%;
+	}
+	@include media_query_2 {
+		@include transition-property( border-color );
+	}
 
 	img {
-		float: right;
+		//@include border-radius( $border_radius );
 		height: auto;
-		max-width: 50%;
-		margin: 0 0 1em 1em;
+		max-width: 100%;
 		width: auto;
-
-		-webkit-animation: slide-in 10s;
 	}
 }
+.ob-link:focus,
+.ob-link:hover {
+	border-color: $accent2;
+}
+.ob-link:active {
+	border-color: $accent3;
+}
 
-@-webkit-keyframes slide-in {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateX( 10em );
-	}
-	100% {
-		opacity: 1;
-		-webkit-transform: translateX( 0 );
-	}
+/* Phone Link */
+
+.phone-link,
+.phone-link:visited {
+	background-color: $accent1;
+	@include border-radius( $border_radius / 1em * 1rem );
+	color: mix( $base3, $accent1, 84% );
+	display: inline-block;
+	margin: .25em 0;
+	padding: .25em;
+	text-decoration: none;
+}
+.phone-link:focus,
+.phone-link:hover {
+	background-color: $accent2;
+	color: $base3;
+}
+.phone-link:active {
+	background-color: $accent3;
+	color: $base3;
 }

@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="css/style.css">
-		<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
@@ -98,7 +98,7 @@
 
 <p class="x-large"><strong>My favorite live project to date is <a href="http://swashcap.com/oregon-breweries/">Oregon Breweries</a>!</strong></p>
 
-<a href="http://swashcap.com/oregon-breweries/"><img src="img/portrait.jpg" /></a>
+<a href="http://swashcap.com/oregon-breweries/" class="ob-link"><img src="img/oregon-breweries.jpg" width="500" height="635" alt="Screencap of Oregon Breweries" /></a>
 
 <p>It’s most fun to work on projects you care about. I’ve been fortunate to collaborate on several websites, but, to be honest, they’re all work. <em>Oregon Breweries</em> was different; it was self-initiated, and it grew from a newfound appreciation of craft beer.</p>
 
@@ -121,7 +121,7 @@
 
 		<a href="#header" class="nav-link">Top &uarr;</a>
 	</div><!-- .wrapper -->
-</section><!--#question-4 -->
+</section><!-- #question-4 -->
 <section id="question-5" class="question">
 	<div class="wrapper">
 
@@ -149,13 +149,24 @@
 		</main>
 		<footer id="footer" role="contentinfo">
 			<section id="contact" class="dark">
-				<div class="wrapper">
-					<h1>Whaddya say?</h1>
-					<p>Give this guy a call!</p>
-					<!--<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
-					<address><a href="#">(123) 456–7890</a></address>
-					<p>Email works just as well:</p>
-					<address class="xxx-large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+				<div class="wrapper clearfix">
+					<h1 class="xxxx-large sans text-center">Whaddya say?</h1>
+					<div class="contact-right text-center">
+						<p class="grey small">That wasn’t too bad, was it? How about getting in touch&hellip;</p>
+						<p class="large">Give this guy a call!</p>
+						<address class="xxx-large sans font-bold"><a href="#" class="phone-link">(123) 456–7890</a></address>
+						<!--<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
+						<p class="small">Email works, too:</p>
+						<address class="large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+					</div><!-- .contact-left -->
+					<div class="contact-left">
+						<div class="portrait-container">
+							<div class="card">
+								<div class="front"></div>
+								<div class="back"></div>
+							</div>
+						</div>
+					</div><!-- .contact-right -->
 				</div><!-- .wrapper -->
 			</section>
 			<div class="fine-print wrapper clearfix">
@@ -169,10 +180,11 @@
 				</section><!-- #colophon -->
 			</div><!-- .wrapper -->
 		</footer><!-- #footer -->
-
+		<!--
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
+		-->
 	</body>
 </html>

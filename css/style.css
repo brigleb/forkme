@@ -1080,10 +1080,46 @@ header[role="banner"] nav ol a:active::before {
 footer[role="contentinfo"] {
   background-color: #d8d4d2;
 }
-/* line 12, ../sass/site/_footer.scss */
+/* line 8, ../sass/site/_footer.scss */
+footer[role="contentinfo"] #contact {
+  padding: 1em 0;
+}
+@media screen and (min-width: 30em) {
+  /* line 12, ../sass/site/_footer.scss */
+  footer[role="contentinfo"] #contact .contact-left {
+    float: left;
+    width: 48%;
+  }
+  /* line 16, ../sass/site/_footer.scss */
+  footer[role="contentinfo"] #contact .contact-right {
+    float: right;
+    width: 48%;
+  }
+  /* line 21, ../sass/site/_footer.scss */
+  footer[role="contentinfo"] #contact .portrait-container {
+    float: right;
+  }
+}
+/* line 28, ../sass/site/_footer.scss */
+footer[role="contentinfo"] .fine-print {
+  padding: 1em 0;
+}
+/* line 33, ../sass/site/_footer.scss */
 footer[role="contentinfo"] .fine-print h1 {
   border-bottom: thin solid #c3bfbd;
   letter-spacing: .333ex;
+}
+@media screen and (min-width: 30em) {
+  /* line 40, ../sass/site/_footer.scss */
+  footer[role="contentinfo"] .fine-print #about {
+    float: left;
+    width: 48%;
+  }
+  /* line 44, ../sass/site/_footer.scss */
+  footer[role="contentinfo"] .fine-print #colophon {
+    float: right;
+    width: 48%;
+  }
 }
 
 /* ==========================================================================
@@ -1091,18 +1127,24 @@ footer[role="contentinfo"] .fine-print h1 {
    ========================================================================== */
 /* For stuff that doesn't yet have a home. Be _ashamed!_
  */
-/* line 8, ../sass/site/_shame.scss */
+/* CSS "Flipping" card.
+ * Learned this one from Desandro:
+ * http://desandro.github.io/3dtransforms/docs/card-flip.html
+ */
+/* line 13, ../sass/site/_shame.scss */
 .portrait-container {
   height: 15em;
+  margin-top: 1em;
+  margin-bottom: 1em;
   position: relative;
-  -webkit-perspective: 0;
-  -moz-perspective: 0;
-  -ms-perspective: 0;
-  -o-perspective: 0;
-  perspective: 0;
+  -webkit-perspective: 15em;
+  -moz-perspective: 15em;
+  -ms-perspective: 15em;
+  -o-perspective: 15em;
+  perspective: 15em;
   width: 15em;
 }
-/* line 16, ../sass/site/_shame.scss */
+/* line 23, ../sass/site/_shame.scss */
 .portrait-container:focus .card, .portrait-container:hover .card {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
@@ -1111,7 +1153,7 @@ footer[role="contentinfo"] .fine-print h1 {
   transform: rotateY(180deg);
 }
 
-/* line 21, ../sass/site/_shame.scss */
+/* line 28, ../sass/site/_shame.scss */
 .card {
   height: 100%;
   position: absolute;
@@ -1126,7 +1168,7 @@ footer[role="contentinfo"] .fine-print h1 {
   transition: transform 0.4s ease-in;
   width: 100%;
 }
-/* line 29, ../sass/site/_shame.scss */
+/* line 36, ../sass/site/_shame.scss */
 .card .front,
 .card .back {
   background-repeat: no-repeat;
@@ -1145,13 +1187,13 @@ footer[role="contentinfo"] .fine-print h1 {
   position: absolute;
   width: 100%;
 }
-/* line 38, ../sass/site/_shame.scss */
+/* line 45, ../sass/site/_shame.scss */
 .card .front {
   background-image: url("../img/portrait.jpg");
 }
-/* line 41, ../sass/site/_shame.scss */
+/* line 48, ../sass/site/_shame.scss */
 .card .back {
-  background-color: red;
+  background-image: url("../img/portrait-flipped.jpg");
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
@@ -1163,7 +1205,7 @@ footer[role="contentinfo"] .fine-print h1 {
  *
  * Intended to help navigation on small-screened devices.
  */
-/* line 52, ../sass/site/_shame.scss */
+/* line 59, ../sass/site/_shame.scss */
 .nav-link {
   display: block;
   font-weight: 700;
@@ -1172,7 +1214,7 @@ footer[role="contentinfo"] .fine-print h1 {
   text-decoration: none;
 }
 @media screen and (min-width: 30em) {
-  /* line 52, ../sass/site/_shame.scss */
+  /* line 59, ../sass/site/_shame.scss */
   .nav-link {
     display: none;
   }
@@ -1180,54 +1222,107 @@ footer[role="contentinfo"] .fine-print h1 {
 
 /* Questions
  */
-/* line 69, ../sass/site/_shame.scss */
+/* line 76, ../sass/site/_shame.scss */
 .question {
   padding: 1em 0;
 }
 
-/* line 78, ../sass/site/_shame.scss */
-#question-2 ol {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 20em;
-}
-/* line 83, ../sass/site/_shame.scss */
+/* line 88, ../sass/site/_shame.scss */
 #question-2 ol h2 {
   margin-bottom: 0;
 }
-/* line 86, ../sass/site/_shame.scss */
+/* line 91, ../sass/site/_shame.scss */
 #question-2 ol p {
   margin-top: 0;
 }
 
-/* line 94, ../sass/site/_shame.scss */
+/* line 99, ../sass/site/_shame.scss */
 #question-4 {
   background-color: #d8d4d2;
   overflow: hidden;
   width: 100%;
 }
-/* line 99, ../sass/site/_shame.scss */
-#question-4 img {
-  float: right;
+
+/* line 105, ../sass/site/_shame.scss */
+.ob-link,
+.ob-link:visited {
+  border: 1em solid #c3bfbd;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+}
+@media screen and (min-width: 30em) {
+  /* line 105, ../sass/site/_shame.scss */
+  .ob-link,
+  .ob-link:visited {
+    float: right;
+    margin: 0 0 1em 4%;
+    max-width: 48%;
+  }
+}
+@media screen and (min-width: 48em) {
+  /* line 105, ../sass/site/_shame.scss */
+  .ob-link,
+  .ob-link:visited {
+    -webkit-transition-property: border-color;
+    -moz-transition-property: border-color;
+    -o-transition-property: border-color;
+    transition-property: border-color;
+  }
+}
+/* line 120, ../sass/site/_shame.scss */
+.ob-link img,
+.ob-link:visited img {
   height: auto;
-  max-width: 50%;
-  margin: 0 0 1em 1em;
+  max-width: 100%;
   width: auto;
-  -webkit-animation: slide-in 10s;
 }
 
-@-webkit-keyframes slide-in {
-  /* line 111, ../sass/site/_shame.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(10em);
-  }
+/* line 128, ../sass/site/_shame.scss */
+.ob-link:focus,
+.ob-link:hover {
+  border-color: #c23632;
+}
 
-  /* line 115, ../sass/site/_shame.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-  }
+/* line 131, ../sass/site/_shame.scss */
+.ob-link:active {
+  border-color: #ac1f23;
+}
+
+/* Phone Link */
+/* line 138, ../sass/site/_shame.scss */
+.phone-link,
+.phone-link:visited {
+  background-color: #d84c41;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  color: #edd4cf;
+  display: inline-block;
+  margin: .25em 0;
+  padding: .25em;
+  text-decoration: none;
+}
+
+/* line 148, ../sass/site/_shame.scss */
+.phone-link:focus,
+.phone-link:hover {
+  background-color: #c23632;
+  color: #f2efeb;
+}
+
+/* line 152, ../sass/site/_shame.scss */
+.phone-link:active {
+  background-color: #ac1f23;
+  color: #f2efeb;
 }
 
 /* Terminal Resets
