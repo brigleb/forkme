@@ -8,3 +8,23 @@
 	max-width: 48em;
 	width: 91%;
 }
+
+@include media_query_1 {
+	/* I like to add layout classes that act during certain media queries. It
+	 * can get _super_ complicated and sometimes isn't appropriate for a
+	 * project, but it works better than adding a bunch of styles to an `ID`. 
+	 */
+
+	// Floats
+	.mq1-float-left {
+		float: left;
+	}
+	.mq1-float-right {
+		float: right;
+	}
+
+	// Columns
+	.mq1-col-small {
+		width: 48%;
+	}
+}

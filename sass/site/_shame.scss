@@ -5,10 +5,17 @@
 /* For stuff that doesn't yet have a home. Be _ashamed!_
  */
 
+/* CSS "Flipping" card.
+ * Learned this one from Desandro:
+ * http://desandro.github.io/3dtransforms/docs/card-flip.html
+ */
+
 .portrait-container {
 	height: 15em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 	position: relative;
-	@include perspective( 0 );
+	@include perspective( 15em );
 	width: 15em;
 
 	&:focus,
@@ -39,7 +46,7 @@
 			background-image: url( "../img/portrait.jpg" );
 		}
 		.back {
-			background-color: red;
+			background-image: url( "../img/portrait-flipped.jpg" );
 			@include transform( rotateY( 180deg ) );
 		}
 	}
@@ -68,13 +75,120 @@
 
 .question {
 	padding: 1em 0;
+
+	@include media_query_1 {
+		padding: 2em 0;
+	}
 }
+	.question-text {
+		@extend .sans, .xxx-large;
+
+		margin-bottom: 1em;
+		text-align: center;
+
+
+	}
+
 #question-2 {
 	@extend .dark;
+
+	ol {
+		h2 {
+			letter-spacing: .167ex;
+			margin-bottom: 0;
+		}
+		p {
+			margin-top: 0;
+		}
+	}
 }
 #question-3 {
 	@extend .orange;
+
+	
 }
 #question-4 {
 	background-color: $base2;
+	overflow: hidden;
+	width: 100%;
+}
+.ob-link,
+.ob-link:visited {
+	border: 1em solid mix( $base01, $base2, 25% );
+	@include border-radius( $border_radius );
+	@include box-sizing( border-box );
+	display: block;
+
+	@include media_query_1 {
+		margin: 0 0 1em 4%;
+		position: relative;
+		z-index: 100; // Combat an unresolved issue with `blockquote`
+	}
+	@include media_query_2 {
+		-webkit-transition-property: background, border-color, color, -webkit-transform;
+		   -moz-transition-property: background, border-color, color, -moz-transform;
+		     -o-transition-property: background, border-color, color, -o-transform;
+		        transition-property: background, border-color, color, transform;
+	}
+}
+.ob-link:focus,
+.ob-link:hover {
+	border-color: $accent2;
+
+	@include media_query_2 {
+		.no-touch & {
+			@include transform( scale( 1.05 ) );
+		}
+	}
+}
+.ob-link:active {
+	border-color: $accent3;
+
+	@include media_query_2 {
+		.no-touch & {
+			@include transform( scale( 1.05 ) );
+		}
+	}
+}
+
+/* Phone Link */
+
+.phone-link,
+.phone-link:visited {
+	background-color: $accent1;
+	@include border-radius( $border_radius / 1em * 1rem );
+	color: mix( $base3, $accent1, 84% );
+	display: inline-block;
+	margin: .25em 0;
+	padding: .25em;
+	text-decoration: none;
+}
+.phone-link:focus,
+.phone-link:hover {
+	background-color: $accent2;
+	color: $base3;
+}
+.phone-link:active {
+	background-color: $accent3;
+	color: $base3;
+}
+
+/* Keep line lengths short. They flow a bit long.
+ */
+
+#question-1,
+#question-3,
+#question-5 {
+	ol,
+	p,
+	ul {
+		&:not([class]) {
+			@include tighten-up;
+		}
+	}	
+}
+#question-2 {
+	ol {
+		@include tighten-up;
+	}
 }

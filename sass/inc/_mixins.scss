@@ -30,3 +30,12 @@
 		@content;
 	}
 }
+
+@mixin tighten-up {
+	/* For keeping line-lenghts short
+	 */
+	@include box-sizing( border-box );
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 36em;
+}

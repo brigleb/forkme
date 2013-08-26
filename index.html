@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="css/style.css">
-		<!--<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
 		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	</head>
@@ -39,9 +39,9 @@
 <section id="question-1" class="question">
 	<div class="wrapper">
 
-<h1>What is your favorite WordPress function? Why?</h1>
+<h1 class="question-text">What is your favorite WordPress function? Why?</h1>
 
-<p><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
+<p class="x-large"><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
 
 <p>With it, a skilled developer can change nearly <strong>everything</strong> about WordPress’s built-in functions. A few examples:</p>
 
@@ -57,12 +57,21 @@
 <section id="question-2" class="question">
 	<div class="wrapper">
 
-<h1>Name three good reasons to start a branch in a version control system.</h1>
+<h1 class="question-text">Name three good reasons to start a branch in a version control system.</h1>
 
-<ol>
-<li><strong>Working on a project’s next major version.</strong> Got some sweet modals and GIFs lined up for your site’s next big iteration? Better start a new branch. This way, your new features are isolated from the production branch. And, you can keep <a href="http://giphy.com/gifs/8BZIGu3DWUdxe">those features</a> all to yourself until you’re ready to launch.</li>
-<li><strong>Debugging something <em>right now</em>.</strong> What if – while fixing <em>this</em> bug – you inadvertently cause another <em>new</em> problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</li>
-<li><strong>Trying out an experimental feature.</strong> Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</li>
+<ol class="no-list">
+<li>
+	<h2 class="large orange-text text-upper">Working on a project’s next major version.</h2>
+	<p>Got some sweet modals and GIFs lined up for your site’s next big iteration? Better start a new branch. This way, your new features are isolated from the production branch. And, you can keep <a href="http://giphy.com/gifs/8BZIGu3DWUdxe">those features</a> all to yourself until you’re ready to launch.</p>
+</li>
+<li>
+	<h2 class="large orange-text text-upper">Debugging something <em>right now</em>.</h2>
+	<p>What if – while fixing <em>this</em> bug – you inadvertently cause another <em>new</em> problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</p>
+</li>
+<li>
+	<h2 class="large orange-text text-upper">Trying out an experimental feature.</h2>
+	<p>Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</p>
+</li>
 </ol>
 
 		<a href="#header" class="nav-link">Top &uarr;</a>
@@ -70,24 +79,22 @@
 </section><!-- #question-2 -->
 <section id="question-3" class="question">
 	<div class="wrapper">
+		<h1 class="question-text">Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h1>
 
-<h1>Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h1>
-
-<p><strong>CSS animations and transitions run faster than their JavaScript counterparts.</strong></p>
-
-<p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is interpreted through the browser, and therefore slower.</p>
-
+		<p class="x-large"><strong>CSS animations and transitions run faster than their JavaScript counterparts.</strong></p>
+		<p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is interpreted through the browser, and therefore slower.</p>
 <p>The difference is usually negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops. JavaScript animations on a phone are typically choppy, slow and hold up the scrolling.</p>
 
 		<a href="#header" class="nav-link">Top &uarr;</a>
 	</div><!-- .wrapper -->
 </section><!-- #question-3 -->
 <section id="question-4" class="question">
-	<div class="wrapper">
+	<div class="wrapper clearfix">
+		<h1 class="question-text">What is your favorite project that you’ve done? (include link and/or image)</h1>
 
-<h1>What is your favorite project that you've done? (include link and/or image)</h1>
+<p class="x-large"><strong>My favorite live project to date is <a href="http://swashcap.com/oregon-breweries/">Oregon Breweries</a>!</strong></p>
 
-<p><strong>My favorite live project to date is <a href="http://swashcap.com/oregon-breweries/">Oregon Breweries</a>!</strong></p>
+<a href="http://swashcap.com/oregon-breweries/" class="ob-link mq1-float-right mq1-col-small"><img src="img/oregon-breweries.jpg" width="500" height="635" alt="Screencap of Oregon Breweries" /></a>
 
 <p>It’s most fun to work on projects you care about. I’ve been fortunate to collaborate on several websites, but, to be honest, they’re all work. <em>Oregon Breweries</em> was different; it was self-initiated, and it grew from a newfound appreciation of craft beer.</p>
 
@@ -110,13 +117,12 @@
 
 		<a href="#header" class="nav-link">Top &uarr;</a>
 	</div><!-- .wrapper -->
-</section><!--#question-4 -->
+</section><!-- #question-4 -->
 <section id="question-5" class="question">
 	<div class="wrapper">
+		<h1 class="question-text">Look at our portfolio and find something we've built that could be improved. Suggest how!</h1>
 
-<h1>Look at our portfolio and find something we've built that could be improved. Suggest how!</h1>
-
-<p><strong><a href="http://equalityhouse.org/">Equality House’s site</a> looks great, reads great, and functions great; yet, there is a key area for improvement.</strong></p>
+<p class="x-large"><strong><a href="http://equalityhouse.org/">Equality House’s site</a> looks great, reads great, and functions great; yet, there is a key area for improvement.</strong></p>
 
 <p>Let’s talk about performance, specifically stylesheets. Remember <a href="http://developer.yahoo.com/performance/rules.html">Yahoo!’s guidelines</a>: minify files, use less HTTP requests, compress files, etc.</p>
 
@@ -138,22 +144,34 @@
 		</main>
 		<footer id="footer" role="contentinfo">
 			<section id="contact" class="dark">
-				<div class="wrapper">
-					<h1>Whaddya say?</h1>
-					<p>Give this guy a call!</p>
-					<!--<address class="xxxxx-large sans font-bold text-center"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
-					<p>Email works just as well:</p>
-					<address class="xxx-large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+				<div class="wrapper clearfix text-center">
+					<h1 class="xxxx-large sans text-center">Whaddya say?</h1>
+					<p class="grey">That wasn’t too bad, was it? How about getting in touch&hellip;</p>
+					<div class="mq1-col-small mq1-float-left">
+						<p class="large">Give this guy a call!</p>
+						<address class="xxx-large sans font-bold"><a href="tel:1234567890" class="phone-link">(123) 456–7890</a></address>
+						<!--<address class="xxx-large sans font-bold"><a href="tel:50&#x33;&#x34;&#x37;&#x35;&#x34;&#x37;&#48;&#48;" class="phone-link">(50&#x33;)&#32;&#x34;&#x37;&#x35;&ndash;&#x34;&#x37;&#48;&#48;</a></address>-->
+						<p class="small">Email works, too:</p>
+						<address class="large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+					</div><!-- .contact-left -->
+					<div class="mq1-col-small mq1-float-right">
+						<div class="portrait-container">
+							<div class="card">
+								<div class="front"></div>
+								<div class="back"></div>
+							</div>
+						</div>
+					</div><!-- .contact-right -->
 				</div><!-- .wrapper -->
-			</section>
+			</section><!-- #contact -->
 			<div class="fine-print wrapper clearfix">
-				<section id="about" class="x-small">
-					<h1 class="regular font-regular text-upper">Purpose</h1>
-					<p><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</p>
-				</section>
-				<section id="colophon" class="x-small">
-					<h1 class="regular font-regular text-upper">Colophon</h1>
-					<p>This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>, in August 2013. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</p>
+				<section id="about" class="mq1-col-small mq1-float-left">
+					<h1 class="small font-regular text-upper">Purpose</h1>
+					<small class="x-small"><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</small>
+				</section><!-- #about -->
+				<section id="colophon" class="mq1-col-small mq1-float-right">
+					<h1 class="small font-regular text-upper">Colophon</h1>
+					<small class="x-small">This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>, in August 2013. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</small>
 				</section><!-- #colophon -->
 			</div><!-- .wrapper -->
 		</footer><!-- #footer -->
