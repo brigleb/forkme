@@ -75,17 +75,26 @@
 
 .question {
 	padding: 1em 0;
+
+	@include media_query_1 {
+		padding: 2em 0;
+	}
 }
-#question-1 h1 {
-}
+	.question-text {
+		@extend .sans, .xxx-large;
+
+		margin-bottom: 1em;
+		text-align: center;
+
+
+	}
 
 #question-2 {
 	@extend .dark;
 
 	ol {
-		
-
 		h2 {
+			letter-spacing: .167ex;
 			margin-bottom: 0;
 		}
 		p {
@@ -95,6 +104,8 @@
 }
 #question-3 {
 	@extend .orange;
+
+	
 }
 #question-4 {
 	background-color: $base2;
@@ -109,27 +120,35 @@
 	display: block;
 
 	@include media_query_1 {
-		float: right;
 		margin: 0 0 1em 4%;
-		max-width: 48%;
+		position: relative;
+		z-index: 100; // Combat an unresolved issue with `blockquote`
 	}
 	@include media_query_2 {
-		@include transition-property( border-color );
-	}
-
-	img {
-		//@include border-radius( $border_radius );
-		height: auto;
-		max-width: 100%;
-		width: auto;
+		-webkit-transition-property: background, border-color, color, -webkit-transform;
+		   -moz-transition-property: background, border-color, color, -moz-transform;
+		     -o-transition-property: background, border-color, color, -o-transform;
+		        transition-property: background, border-color, color, transform;
 	}
 }
 .ob-link:focus,
 .ob-link:hover {
 	border-color: $accent2;
+
+	@include media_query_2 {
+		.no-touch & {
+			@include transform( scale( 1.05 ) );
+		}
+	}
 }
 .ob-link:active {
 	border-color: $accent3;
+
+	@include media_query_2 {
+		.no-touch & {
+			@include transform( scale( 1.05 ) );
+		}
+	}
 }
 
 /* Phone Link */
@@ -152,4 +171,24 @@
 .phone-link:active {
 	background-color: $accent3;
 	color: $base3;
+}
+
+/* Keep line lengths short. They flow a bit long.
+ */
+
+#question-1,
+#question-3,
+#question-5 {
+	ol,
+	p,
+	ul {
+		&:not([class]) {
+			@include tighten-up;
+		}
+	}	
+}
+#question-2 {
+	ol {
+		@include tighten-up;
+	}
 }

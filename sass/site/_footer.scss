@@ -5,22 +5,14 @@
 footer[ role="contentinfo" ] {
 	background-color: $base2;
 
+	small {
+		display: block;
+	}
 	#contact {
 		padding: 1em 0;
 
 		@include media_query_1 {
-			.contact-left {
-				float: left;
-				width: 48%;
-			}
-			.contact-right {
-				float: right;
-				width: 48%;
-			}
-
-			.portrait-container {
-				float: right;
-			}
+			padding: 2em 0;
 		}
 		
 	}
@@ -29,22 +21,13 @@ footer[ role="contentinfo" ] {
 		@extend .grey;
 
 		padding: 1em 0;
+
+		@include media_query_1 {
+			padding: 2em 0 3em 0;
+		}
 		
 		h1 {
 			border-bottom: thin solid mix( $base01, $base2, 25% );
-			letter-spacing: .333ex;
-		}
-		
-
-		@include media_query_1 {
-			#about {
-				float: left;
-				width: 48%;
-			}
-			#colophon {
-				float: right;
-				width: 48%;
-			}
 		}
 	}
 }
