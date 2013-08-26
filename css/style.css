@@ -1003,7 +1003,7 @@ header[role="banner"] .site-title .word-2 {
   header[role="banner"] .site-title .word-2 {
     display: block;
     font-size: 225%;
-    padding-left: 0;
+    padding: 0 0 1ex 0;
   }
 }
 /* line 61, ../sass/site/_header.scss */
@@ -1026,18 +1026,18 @@ header[role="banner"] .site-subtitle a:visited {
 header[role="banner"] nav ol {
   margin: 0;
   padding-left: 0;
-  text-align: center;
 }
 @media screen and (min-width: 30em) {
   /* line 86, ../sass/site/_header.scss */
   header[role="banner"] nav ol {
-    margin-bottom: .5em;
+    margin: 3em 0 1.5em 0;
+    text-align: center;
   }
 }
 @media screen and (min-width: 30em) {
   /* line 97, ../sass/site/_header.scss */
   header[role="banner"] nav ol li {
-    float: left;
+    display: inline;
   }
 }
 /* line 104, ../sass/site/_header.scss */
@@ -1239,47 +1239,61 @@ footer[role="contentinfo"] .fine-print h1 {
 @media screen and (min-width: 30em) {
   /* line 59, ../sass/site/_shame.scss */
   .nav-link {
-    display: none;
+    opacity: .5;
+    padding: 1em 0 0 0;
+  }
+  /* line 75, ../sass/site/_shame.scss */
+  .nav-link:focus, .nav-link:hover, .nav-link:active {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 48em) {
+  /* line 59, ../sass/site/_shame.scss */
+  .nav-link {
+    -webkit-transition-property: color, opacity;
+    -moz-transition-property: color, opacity;
+    -o-transition-property: color, opacity;
+    transition-property: color, opacity;
   }
 }
 
 /* Questions
  */
-/* line 76, ../sass/site/_shame.scss */
+/* line 87, ../sass/site/_shame.scss */
 .question {
   padding: 1em 0;
 }
 @media screen and (min-width: 30em) {
-  /* line 76, ../sass/site/_shame.scss */
+  /* line 87, ../sass/site/_shame.scss */
   .question {
     padding: 2em 0;
   }
 }
 
-/* line 83, ../sass/site/_shame.scss */
+/* line 94, ../sass/site/_shame.scss */
 .question-text {
   margin-bottom: 1em;
   text-align: center;
 }
 
-/* line 96, ../sass/site/_shame.scss */
+/* line 107, ../sass/site/_shame.scss */
 #question-2 ol h2 {
   letter-spacing: .167ex;
   margin-bottom: 0;
 }
-/* line 100, ../sass/site/_shame.scss */
+/* line 111, ../sass/site/_shame.scss */
 #question-2 ol p {
   margin-top: 0;
 }
 
-/* line 110, ../sass/site/_shame.scss */
+/* line 121, ../sass/site/_shame.scss */
 #question-4 {
   background-color: #d8d4d2;
   overflow: hidden;
   width: 100%;
 }
 
-/* line 116, ../sass/site/_shame.scss */
+/* line 127, ../sass/site/_shame.scss */
 .ob-link,
 .ob-link:visited {
   border: 1em solid #c3bfbd;
@@ -1294,7 +1308,7 @@ footer[role="contentinfo"] .fine-print h1 {
   display: block;
 }
 @media screen and (min-width: 30em) {
-  /* line 116, ../sass/site/_shame.scss */
+  /* line 127, ../sass/site/_shame.scss */
   .ob-link,
   .ob-link:visited {
     margin: 0 0 1em 4%;
@@ -1303,7 +1317,7 @@ footer[role="contentinfo"] .fine-print h1 {
   }
 }
 @media screen and (min-width: 48em) {
-  /* line 116, ../sass/site/_shame.scss */
+  /* line 127, ../sass/site/_shame.scss */
   .ob-link,
   .ob-link:visited {
     -webkit-transition-property: background, border-color, color, -webkit-transform;
@@ -1313,13 +1327,13 @@ footer[role="contentinfo"] .fine-print h1 {
   }
 }
 
-/* line 135, ../sass/site/_shame.scss */
+/* line 146, ../sass/site/_shame.scss */
 .ob-link:focus,
 .ob-link:hover {
   border-color: #c23632;
 }
 @media screen and (min-width: 48em) {
-  /* line 139, ../sass/site/_shame.scss */
+  /* line 150, ../sass/site/_shame.scss */
   .no-touch .ob-link:focus, .no-touch
   .ob-link:hover {
     -webkit-transform: scale(1.05);
@@ -1330,12 +1344,12 @@ footer[role="contentinfo"] .fine-print h1 {
   }
 }
 
-/* line 144, ../sass/site/_shame.scss */
+/* line 155, ../sass/site/_shame.scss */
 .ob-link:active {
   border-color: #ac1f23;
 }
 @media screen and (min-width: 48em) {
-  /* line 148, ../sass/site/_shame.scss */
+  /* line 159, ../sass/site/_shame.scss */
   .no-touch .ob-link:active {
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
@@ -1346,7 +1360,7 @@ footer[role="contentinfo"] .fine-print h1 {
 }
 
 /* Phone Link */
-/* line 157, ../sass/site/_shame.scss */
+/* line 168, ../sass/site/_shame.scss */
 .phone-link,
 .phone-link:visited {
   background-color: #d84c41;
@@ -1362,14 +1376,14 @@ footer[role="contentinfo"] .fine-print h1 {
   text-decoration: none;
 }
 
-/* line 167, ../sass/site/_shame.scss */
+/* line 178, ../sass/site/_shame.scss */
 .phone-link:focus,
 .phone-link:hover {
   background-color: #c23632;
   color: #f2efeb;
 }
 
-/* line 171, ../sass/site/_shame.scss */
+/* line 182, ../sass/site/_shame.scss */
 .phone-link:active {
   background-color: #ac1f23;
   color: #f2efeb;
@@ -1377,7 +1391,7 @@ footer[role="contentinfo"] .fine-print h1 {
 
 /* Keep line lengths short. They flow a bit long.
  */
-/* line 185, ../sass/site/_shame.scss */
+/* line 196, ../sass/site/_shame.scss */
 #question-1 ol:not([class]),
 #question-1 p:not([class]),
 #question-1 ul:not([class]),
@@ -1397,7 +1411,7 @@ footer[role="contentinfo"] .fine-print h1 {
   max-width: 36em;
 }
 
-/* line 191, ../sass/site/_shame.scss */
+/* line 202, ../sass/site/_shame.scss */
 #question-2 ol {
   /* For keeping line-lenghts short
    */

@@ -66,7 +66,18 @@
 	text-decoration: none;
 
 	@include media_query_1 {
-		display: none;
+		opacity: .5;
+		padding: 1em 0 0 0;
+		//text-align: center;
+
+		&:focus,
+		&:hover,
+		&:active {
+			opacity: 1;
+		}
+	}
+	@include media_query_2 {
+		@include transition-property( color, opacity );
 	}
 }
 

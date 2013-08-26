@@ -54,7 +54,7 @@ header[ role="banner" ] {
 			@include media_query_1 {
 				display: block;
 				font-size: 225%;	// Manually extend `.xx-large`
-				padding-left: 0;
+				padding: 0 0 1ex 0;
 			}
 		}
 	}
@@ -88,15 +88,15 @@ header[ role="banner" ] {
 
 			margin: 0;
 			padding-left: 0;
-			text-align: center;
 
 			@include media_query_1 {
-				margin-bottom: .5em;
+				margin: 3em 0 1.5em 0;
+				text-align: center;
 			}
 
 			li {
 				@include media_query_1 {
-					float: left;
+					display: inline;
 				}
 			}
 
