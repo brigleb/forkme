@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer[ role="contentinfo" ] {
+	background-color: $base2;
+
+	small {
+		display: block;
+	}
+	#contact {
+		padding: 1em 0;
+
+		@include media_query_1 {
+			padding: 2em 0;
+		}
+		
+	}
+
+	.fine-print {
+		@extend .grey;
+
+		padding: 1em 0;
+
+		@include media_query_1 {
+			padding: 2em 0 3em 0;
+		}
+		
+		h1 {
+			border-bottom: thin solid mix( $base01, $base2, 25% );
+		}
+	}
+}

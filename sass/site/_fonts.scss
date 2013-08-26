@@ -1,0 +1,33 @@
+/* ==========================================================================
+   Fonts
+   ========================================================================== */
+
+.serif,
+html,
+button,
+input,
+select,
+textarea {
+	font-family: "PT Serif", "Minion Pro", Georgia, serif;
+}
+
+.sans {
+	font-family: "PT Sans Narrow", "Avenir Next Condensed", "Arial Narrow", Impact, sans-serif;
+
+	/* Unfortunately, the font doesn't include obliques or italics. Gotta
+	 * suppress 'em, or the browser will do something squirelly.
+	 */
+	em,
+	i {
+		font-style: normal;
+	}
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+	_font-family: 'courier new', monospace;
+	font-size: 1em;
+}

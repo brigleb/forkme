@@ -1,0 +1,130 @@
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+/* Most of the stuff is here is copied from H5BP and customized. Things are
+ * in alphabetical order for the most part.
+ */
+
+::-moz-selection {
+	background: $accent1;
+	color: $base3;
+	text-shadow: none;
+}
+::selection {
+	background: $accent1;
+	color: $base3;
+	text-shadow: none;
+}
+
+a {
+	color: $accent1;
+
+	@include media_query_2 {
+		@include transition-duration( .2s );
+		@include transition-property( background, color );
+	}
+}
+a:visited {
+	color: $accent1;
+}
+a:focus {
+	color: $accent2;
+	outline: thin dotted;
+}
+a:hover {
+	color: $accent2;
+	outline: 0;
+}
+a:active {
+	color: $accent3;
+	outline: 0;
+}
+address {
+	font-style: normal;
+}
+blockquote {
+	@extend .large;
+
+	color: $base01;
+	font-style: italic;
+	margin: .667em 0;
+	padding-left: 1.333em;
+	position: relative;
+
+	&::before {
+		content: "\201c";
+
+		@extend .sans;
+
+		color: mix( $base01, $base2, 25% );
+		display: inline-block;
+		font-size: 200%;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1;
+		position: absolute;
+			top: 0;
+			left: 0;
+		text-align: right;
+		width: .5em;
+	}
+
+	blockquote {
+		font-size: 100%;
+		line-height: inherit;
+	}
+}
+code,
+kbd,
+samp {
+	background-color: rgba( $base2, .5 );
+	color: mix( $base03, $base01 );
+	@include border-radius( $border_radius / 1em * 1rem );
+	padding: .05em .2em;
+
+	a &,
+	a:visited & {
+		color: $accent1;
+	}
+	a:focus &,
+	a:hover & {
+		color: $accent2;
+	}
+	a:active & {
+		color: $accent3;
+	}
+}
+dd {
+	margin: 0 0 0 1em;
+}
+hr {
+	@include box-sizing( content-box );
+
+	border-color: $base1;
+	border-style: solid;
+	border-width: thin 0 0 0;
+	display: block;
+	margin: 1em 0;
+	padding: 0;
+}
+html {
+	background-color: $base3;
+	color: $base03;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	width: auto;
+}
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+menu,
+ol,
+ul {
+	padding: 0 0 0 2em;
+}
