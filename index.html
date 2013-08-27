@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>5 Questions | Needmore</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/style.css">
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+		<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<header id="header" role="banner">
+			<div class="wrapper">
+			<h1 class="site-title"><span class="word-1">5</span> <span class="word-2">Questions</span></h1>
+			<h2 class="site-subtitle">A web skill survey by <a href="http://needmoredesigns.com/">Needmore</a><br />Completed by <a href="#contact">Cory Reed</a></h2>
+			<nav role="navigation">
+				<ol>
+					<li><a href="#question-1" data-number="1">WordPress</a></li>
+					<li><a href="#question-2" data-number="2">Branching</a></li>
+					<li><a href="#question-3" data-number="3">Animation</a></li>
+					<li><a href="#question-4" data-number="4">Favorite Project</a></li>
+					<li><a href="#question-5" data-number="5">Improvements</a></li>
+				</ol>
+			</nav>
+			</div><!-- .wrapper -->
+		</header><!-- #header -->
+		<main role="main">
+			<article class="hentry">
+
+<section id="question-1" class="question">
+	<div class="wrapper">
+
+<h1 class="question-text">What is your favorite WordPress function? Why?</h1>
+
+<p class="x-large"><strong>My favorite WordPress function of late is <a href="http://codex.wordpress.org/Function_Reference/add_filter"><code>add_filter()</code></a>.</strong></p>
+
+<p>With it, a skilled developer can change nearly <strong>everything</strong> about WordPress’s built-in functions. A few examples:</p>
+
+<ul>
+<li><a href="http://codex.wordpress.org/The_WordPress_Gallery">WordPress galleries</a> offer an easy way for users to assemble a group of media. However, galleries’ default markup can be difficult to work with. I like to use <code>add_filter()</code> to transform the markup into something that’s suitable for a slideshow.</li>
+<li>WordPress extraneously wraps elements in paragraph tags, even images and videos. This isn’t very semantic. I like to use <code>add_filter()</code> to hook a function onto the <code>the_content</code> and parse out the extra <code>&lt;p&gt;</code> tags.</li>
+<li><a href="http://codex.wordpress.org/Function_Reference/wp_title"><code>wp_title()</code></a>’s default behavior doesn’t include the site’s title on a few views, often leaving pages with no title. This is an easy fix with <code>add_filter()</code>: a custom function can act on the <code>wp_title</code> hook to include the site’s title on every page, remedying the problem.</li>
+</ul>
+
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!-- #question-1 -->
+<section id="question-2" class="question">
+	<div class="wrapper">
+
+<h1 class="question-text">Name three good reasons to start a branch in a version control system.</h1>
+
+<ol class="no-list">
+<li>
+	<h2 class="large orange-text text-upper">Working on a project’s next major version.</h2>
+	<p>Got some sweet modals and GIFs lined up for your site’s next big iteration? Better start a new branch. This way, your new features are isolated from the production branch. And, you can keep <a href="http://giphy.com/gifs/8BZIGu3DWUdxe">those features</a> all to yourself until you’re ready to launch.</p>
+</li>
+<li>
+	<h2 class="large orange-text text-upper">Debugging something <em>right now</em>.</h2>
+	<p>What if – while fixing <em>this</em> bug – you inadvertently cause another <em>new</em> problem? Instead of working directly on the production branch, it’s safer to isolate your code in a new branch. Fix the bug and merge ‘em up.</p>
+</li>
+<li>
+	<h2 class="large orange-text text-upper">Trying out an experimental feature.</h2>
+	<p>Say you want to drop some new hotness on your project, but you’re not sure it will work. Start a new branch to play with that fire. Doesn’t work out? Toss your branch.</p>
+</li>
+</ol>
+
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!-- #question-2 -->
+<section id="question-3" class="question">
+	<div class="wrapper">
+		<h1 class="question-text">Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?</h1>
+
+		<p class="x-large"><strong>CSS animations and transitions run faster than their JavaScript counterparts.</strong></p>
+		<p>A browser is able to execute CSS changes through the device’s <a href="http://en.wikipedia.org/wiki/GPU">GPU</a> when relying on CSS3’s <code>animation</code> or <code>transition</code>. This is <em>way</em> faster than relying on JavaScript execution, which is interpreted through the browser, and therefore slower.</p>
+<p>The difference is usually negligible on a desktop computer with a modern browser; however, the issue becomes obvious on mobile devices, where JavaScript execution is an order of magnitude slower than desktops. JavaScript animations on a phone are typically choppy, slow and hold up the scrolling.</p>
+
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!-- #question-3 -->
+<section id="question-4" class="question">
+	<div class="wrapper clearfix">
+		<h1 class="question-text">What is your favorite project that you’ve done? (include link and/or image)</h1>
+
+<p class="x-large"><strong>My favorite live project to date is <a href="http://swashcap.com/oregon-breweries/">Oregon Breweries</a>!</strong></p>
+
+<a href="http://swashcap.com/oregon-breweries/" class="ob-link mq1-float-right mq1-col-small"><img src="img/oregon-breweries.jpg" width="500" height="635" alt="Screencap of Oregon Breweries" /></a>
+
+<p>It’s most fun to work on projects you care about. I’ve been fortunate to collaborate on several websites, but, to be honest, they’re all work. <em>Oregon Breweries</em> was different; it was self-initiated, and it grew from a newfound appreciation of craft beer.</p>
+
+<p>And, the content is very relevent. According to <em><a href="http://www.oregonlive.com/beer/index.ssf/2013/06/oregon_brewers_guild_nearly_on.html">The Oregonian</a></em>:</p>
+
+<blockquote>
+  <p>47 percent of all draft beer sold in Oregon was brewed in Oregon</p>
+</blockquote>
+
+<p>Pretty impressive, eh? To top it off, I got to learn some new things:</p>
+
+<ul>
+<li>Data scraping and parsing</li>
+<li>Interacting with the Google Maps API</li>
+<li>Using PHP to parse an Atom feed</li>
+<li>Using GitHub to (partially) open-source the project</li>
+</ul>
+
+<p>Sounds like a win-win.</p>
+
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!-- #question-4 -->
+<section id="question-5" class="question">
+	<div class="wrapper">
+		<h1 class="question-text">Look at our portfolio and find something we've built that could be improved. Suggest how!</h1>
+
+<p class="x-large"><strong><a href="http://equalityhouse.org/">Equality House’s site</a> looks great, reads great, and functions great; yet, there is a key area for improvement.</strong></p>
+
+<p>Let’s talk about performance, specifically stylesheets. Remember <a href="http://developer.yahoo.com/performance/rules.html">Yahoo!’s guidelines</a>: minify files, use less HTTP requests, compress files, etc.</p>
+
+<p>On the home page, the site loads <strong>five</strong> stylesheets. (There’s another one hiding on the product page.) One results from Typekit loading, so it can’t be eliminated. The other four, however, could be compressed into a <em>single</em> stylesheet. This would decrease file size (by minimizing plugins’ CSS) and reduce HTTP requests, making the page load and render faster. Here’s how to do this:</p>
+
+<ol>
+<li>Use WordPress’s <a href="http://codex.wordpress.org/Function_Reference/wp_dequeue_style"><code>wp_dequeue_style</code></a> in the theme’s <em>functions.php</em> to remove plugins’ stylesheets.</li>
+<li>Import all plugins’ stylesheets into <em>app.css</em> and minimize it.</li>
+</ol>
+
+<p>This is more work on the developer: when a vendor updates his or her plugin, you have to manually rebuild <em>app.css</em>. In the end, this would pay off in performance. (One could add an action function that fires every time something is updated. Plugin idea, anyone?)</p>
+
+<p>There’s also a few server-side issues. None of the stylesheets have a <code>Cache-Control</code> header, nor are they <a href="http://en.wikipedia.org/wiki/Gzip">gzip</a>-ed. This means the browser potentially downloads stylesheets on every page load, and the stylesheets aren’t compressed by the server. WordPress is the likely culprit: it enjoys setting query strings on assets. Setting <em>app.css</em>’s <a href="http://codex.wordpress.org/Function_Reference/wp_enqueue_style">queue function</a> with the <code>$ver</code> parameter to <code>NULL</code> will drop the query string. If these problems persist, some tweaking of the server’s configuration file should do the trick.</p>
+
+		<a href="#header" class="nav-link">Top &uarr;</a>
+	</div><!-- .wrapper -->
+</section><!-- #question-5 -->
+			</article><!-- .hentry -->
+		</main>
+		<footer id="footer" role="contentinfo">
+			<section id="contact" class="dark">
+				<div class="wrapper clearfix text-center">
+					<h1 class="xxxx-large sans text-center">Whaddya say?</h1>
+					<p class="grey">That wasn’t too bad, was it? How about getting in touch&hellip;</p>
+					<div class="mq1-col-small mq1-float-left">
+						<p class="large">Give this guy a call!</p>
+						<address class="xxx-large sans font-bold"><a href="#" class="phone-link">(123) 456&ndash;7890</a></address>
+						<p class="small">Email works, too:</p>
+						<address class="large sans font-bold text-center"><a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;">&#115;&#x77;&#x61;&#x73;&#x68;&#99;&#97;p&#64;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;co&#109;</a></address>
+					</div><!-- .contact-left -->
+					<div class="mq1-col-small mq1-float-right">
+						<div class="portrait-container">
+							<div class="card">
+								<div class="front"></div>
+								<div class="back"></div>
+							</div>
+						</div>
+					</div><!-- .contact-right -->
+				</div><!-- .wrapper -->
+			</section><!-- #contact -->
+			<div class="fine-print wrapper clearfix">
+				<section id="about" class="mq1-col-small mq1-float-left">
+					<h1 class="small font-regular text-upper">Purpose</h1>
+					<small class="x-small"><em>What is this thing?</em> It’s a little test cooked up by the folks at <a href="http://needmoredesigns.com/">Needmore</a> for job applicants. Check it out at the <a href="https://github.com/brigleb/forkme">original repo on GitHub</a>.</small>
+				</section><!-- #about -->
+				<section id="colophon" class="mq1-col-small mq1-float-right">
+					<h1 class="small font-regular text-upper">Colophon</h1>
+					<small class="x-small">This page was lovingly hand-coded by Cory Reed, AKA <a href="http://swashcap.com/">Swash Cap</a>, in August 2013. Text is set in <a href="https://www.google.com/fonts/specimen/PT+Serif">PT Serif</a> and <a href="https://www.google.com/fonts/specimen/PT+Sans+Narrow">PT Sans Narrow</a>, served up by <a href="https://www.google.com/fonts/#AboutPlace:about">Google Fonts</a>.</small>
+				</section><!-- #colophon -->
+			</div><!-- .wrapper -->
+		</footer><!-- #footer -->
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

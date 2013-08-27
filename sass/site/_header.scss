@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+header[ role="banner" ] {
+	@extend .dark;
+
+	overflow: hidden;
+	padding: 1em 0;
+
+	.site-title {
+		@extend .regular;
+
+		border-color: mix( $base01, $base03 );
+		border-style: solid;
+		border-width: thin 0;
+		margin: 0;
+		padding: .25em 0;
+		text-align: center;
+
+		@include media_query_1 {
+			margin: 1em 0;
+			padding: 1em 0;
+		}
+		@include media_query_2 {
+			margin: 2em 0;
+		}
+
+		.word-1 {
+			@extend .sans;
+
+			color: $accent1;
+			font-size: 300%;
+			line-height: 1;
+			vertical-align: middle;
+
+			@include media_query_1 {
+				display: block;
+				font-size: 600%;
+			}
+			@include media_query_2 {
+				font-size: 1000%;
+			}
+		}
+		.word-2 {
+			font-size: 112.5%;	// Manually extend `.medium`
+			font-weight: 400;
+			letter-spacing: .333ex;
+			line-height: 1;
+			padding-left: .333ex;
+			text-transform: uppercase;
+			vertical-align: middle;
+
+			@include media_query_1 {
+				display: block;
+				font-size: 225%;	// Manually extend `.xx-large`
+				padding: 0 0 1ex 0;
+			}
+		}
+	}
+	.site-subtitle {
+		@extend .regular;
+
+		color: $base01;
+		font-style: italic;
+		font-weight: 400;
+		text-align: center;
+
+		a,
+		a:visited {
+			@extend .sans, .large, .text-upper;
+
+			//color: $base01;
+			font-style: normal;
+			font-weight: 700;
+			letter-spacing: .167ex;
+			padding: 0 .333ex;
+			text-decoration: none;
+		}
+	}
+
+	/* Navigation */
+
+	nav {
+
+		ol {
+			@extend .clearfix;
+
+			margin: 0;
+			padding-left: 0;
+
+			@include media_query_1 {
+				margin: 3em 0 1.5em 0;
+				text-align: center;
+			}
+
+			li {
+				@include media_query_1 {
+					display: inline;
+				}
+			}
+
+			a,
+			a:visited {
+				background-color: mix( $base01, $base03 );
+				@include border-radius( $border_radius );
+				color: $base2;
+				display: inline-block;
+				font-weight: 700;
+				margin: .25em 0;
+				padding: .75em 1em;
+				text-decoration: none;
+				vertical-align: middle;
+
+				@include media_query_1 {
+					padding: .5em;
+					margin: 0 .5em .5em 0;
+				}
+
+				&::before {
+					content: attr( data-number );
+
+					@extend .sans, .large;
+
+					color: $base01;
+					line-height: 1;
+					padding-right: .5ex;
+					vertical-align: middle;
+
+					@include media_query_2 {
+						@include transition-duration( .2s );
+						@include transition-property( color );
+					}
+					
+				}
+			}
+			a:focus,
+			a:hover {
+				background-color: $accent2;
+				color: $base3;
+
+				&::before {
+					color: $base3;
+				}
+			}
+			a:active {
+				background-color: $accent3;
+				color: $base3;
+
+				&::before {
+					color: $base3;
+				}
+			}
+		}
+	}
+}
