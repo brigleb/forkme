@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bryan Wahlstrom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="stylesheets/bootstrap.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap-responsive.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/screen.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="jumbotron row-fluid">
+        <h1>Bryan Wahlstrom</h1>
+        <a href="http://needmoredesigns.com"><img src="img/needmore.png"></a>
+      </div>
+      <div class="row-fluid questions" id="questions">
+        <div class="span8 offset2">
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  What is your favorite WordPress function? Why?
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  I'm not going to lie... my knowledge of custom theming Wordpress sites is not that good. But from what I've seen on the web, register_post_type seems to be very similar to how you can create custom content types in Drupal. Obviously this is good if you are moving beyond a simple blog or website and want more freedom in how you display your content.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Name three good reasons to start a branch in a version control system.
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Apart from the obvious answers like using it as a sandbox to experiment in or creating branches for individual features to keep them isolated until you merge them, it is also great to use a branch when you are pulling down from the main master and are unsure of potential merge conflicts. This way if you pull into a branch first, you can handle any merge conflicts should they arise, and not taint the master on your local machine. This comes in quite useful on group projects.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                  Why is it better to use CSS (rather than JavaScript, if possible) for a basic web page animation?
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  CSS is for styling, Javascript is for user interaction. In my book, a simple animation falls into the style category. Your browser is also able to process CSS more quickly than Javascript.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                  What is your favorite project that you've done?
+                </a>
+              </div>
+              <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  <a href="http://currentconditions.herokuapp.com">Current Conditions</a> is a Rails site layed out with Foundation utilizing the USGS Water API to provide current conditions for all surface water sites in the USA. The site is searchable by state or keyword, and allows users to log in and subscribe to specific site gauges and have them display in a table on their profile page. Users also have the ability to receive email notifications when subscribed sites rise or fall above a user-specified flow threshold. This was a team project I worked on at Portland Code School.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                  Look at our portfolio and find something we've built that could be improved. Suggest how!
+                </a>
+              </div>
+              <div id="collapseFive" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  I took a look at your site for The Woodsman Tavern as that is an establishment I enjoy. My initial impression of the home page was that some of the rotating images didn't really fit the feel of the tavern. The food shots are very pretty but don't reflect the dark, woody feel of the place. I would have utilized them elsewhere and stuck to the two table shots and the fire shot. The content block on the reservations page could perhaps use some center text alignment? It didn't look proper to me. The latest news page isn't loading its background image or else doesn't have one; either way, the cream colored content boxes on top of the white background are not visually appealing. The site also definitely needs a favicon, especially since they have such a nice logo!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="row-fluid">
+          <div class="span6">
+            <p>&copy; Bryan Wahlstrom 2013</p>
+            <p><a href="mailto:bryan.wahlstrom@gmail.com">bryan.wahlstrom@gmail.com</a></p>
+            <p><a href="tel:5415155972">541.515.5972</a></p>
+          </div>
+          <div class="span6 text-right">
+            <p><a href="https://github.com/BryanWahlstrom"><i class="icon-github-sign"></i> Github</a></p>
+            <p><a href="https://twitter.com/BryanWahlstrom"><i class="icon-twitter-sign"></i> Twitter</a></p>
+            <p><a href="http://www.linkedin.com/in/bryanwahlstrom"><i class="icon-linkedin-sign"></i> LinkedIn</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> <!-- /container -->
+
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
